@@ -1,0 +1,33 @@
+/*
+  Localizable.strings
+*/
+
+// MARK: - Common
+"common.appName" = "HelixPay";
+"common.done" = "Done";
+"common.yes" = "Yes";
+"common.no" = "No";
+"common.cancel" = "Cancel";
+"common.delete" = "Delete";
+"common.ok" = "Ok";
+"common.save" = "Save";
+"common.continue" = "Continue";
+"common.edit" = "Edit";
+
+// MARK: - Tab bar
+"tabBar.home" = "Home";
+"tabBar.settings" = "Settings";
+
+// MARK: - Upsert Event
+"newEvent.title" = "New Event";
+"newEvent.name" = "Name";
+"newEvent.namePlaceholder" = "Fill in your event name";
+"newEvent.category" = "Category";
+"newEvent.date" = "Date";
+"newEvent.repeat" = "Repeat";
+"newEvent.repeat.none" = "None";
+"newEvent.repeat.weekly" = "Weekly";
+"newEvent.repeat.monthly" = "Monthly";
+"newEvent.repeat.yearly" = "Yearly";
+"newEvent.reminder" = "Reminder";
+"newEvent.reminder.sameAsDueDate" = "Same as The Due Date";
