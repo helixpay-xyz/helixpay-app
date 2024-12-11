@@ -1,0 +1,73 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "app/assets/fonts/GoogleSans-Black.ttf",
+      "sha1": "5aa40c037e757df6a620cec507e0288d03c52878"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-BlackItalic.ttf",
+      "sha1": "509c85c8c8e6601b6704c3b240c5ceb2a5b7b5f0"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Bold.ttf",
+      "sha1": "63a439c803ab84b9f6427a01d63ddb12527925d7"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-BoldItalic.ttf",
+      "sha1": "0efce2fcb268d70ac21d0f5d75525cca11fe4b69"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Italic.ttf",
+      "sha1": "e47a04bae6be6ceb910f56fa2220f636014a27db"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Light.ttf",
+      "sha1": "96dad5a0a5710077569dbc2fa81eae22e91c15fb"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-LightItalic.ttf",
+      "sha1": "efb02a700ac7e613ea1cd12f25888f92816b333a"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Medium.ttf",
+      "sha1": "7691cf957a24f4be176bc9c7895c2909f914214a"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-MediumItalic.ttf",
+      "sha1": "339ab7f30ad8b9047befea00510015d9ceec553f"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Regular.ttf",
+      "sha1": "e67db00713e957798fbac2b87ad5c0d18d2dcf32"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-Thin.ttf",
+      "sha1": "916776ea24931f06862eee144ebea15e6568b5fc"
+    },
+    {
+      "path": "app/assets/fonts/GoogleSans-ThinItalic.ttf",
+      "sha1": "59097b852af23143edc33b9da9f02a7f4faae884"
+    },
+    {
+      "path": "app/assets/fonts/Px-Grotesk-Bold-Italic.ttf",
+      "sha1": "aa7e089aa51d40d65292a53d9a1341b222cd516a"
+    },
+    {
+      "path": "app/assets/fonts/Px-Grotesk-Bold.ttf",
+      "sha1": "18f7a246b04fa8fb9ae0df43896c037a9453450f"
+    },
+    {
+      "path": "app/assets/fonts/Px-Grotesk-Light.ttf",
+      "sha1": "c56474c34bffe0c33e704dc9b6243cb2fc62718f"
+    },
+    {
+      "path": "app/assets/fonts/Px-Grotesk-Regular-Italic.ttf",
+      "sha1": "2db202a963d967c66521a091026b61e2c87a0d22"
+    },
+    {
+      "path": "app/assets/fonts/Px-Grotesk-Regular.ttf",
+      "sha1": "0ce6669b41d006834c63a1f9bdfbc8014dae936b"
+    }
+  ]
+}

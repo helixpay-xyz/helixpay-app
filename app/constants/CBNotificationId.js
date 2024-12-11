@@ -1,0 +1,5 @@
+export default {
+    INFORMATION: 98,
+    NEW_VERSION: 99,
+    POPUP_NOTIFICATION: 100
+}

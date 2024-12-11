@@ -1,0 +1,48 @@
+buildscript {
+    ext {
+        buildToolsVersion = "34.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+
+        // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
+        ndkVersion = "25.1.8937393"
+        kotlinVersion = "1.8.10"
+        kotlin_version = "1.8.10"
+        googlePlayServicesAuthVersion = "19.2.0"
+        playServicesVersion = "18.0.0"
+        androidMapsUtilsVersion = "0.5"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("de.undercouch:gradle-download-task:5.0.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath 'com.google.gms:google-services:4.4.1'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
+        classpath 'com.google.firebase:perf-plugin:1.4.2'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+allprojects {
+    repositories {
+        configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                def requested = details.requested
+                if (requested.group == 'androidx.core' && requested.name == 'core') {
+                    details.useVersion '1.10.1'
+                }
+            }
+        }
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"

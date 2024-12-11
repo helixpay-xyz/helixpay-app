@@ -1,0 +1,142 @@
+diff --git a/node_modules/react-native-orientation/android/build.gradle b/node_modules/react-native-orientation/android/build.gradle
+index e09fb27..179aaab 100644
+--- a/node_modules/react-native-orientation/android/build.gradle
++++ b/node_modules/react-native-orientation/android/build.gradle
+@@ -1,12 +1,12 @@
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 23
+-    buildToolsVersion "23.0.1"
++    compileSdkVersion rootProject.ext.compileSdkVersion
++    buildToolsVersion rootProject.ext.buildToolsVersion
+ 
+     defaultConfig {
+-        minSdkVersion 16
+-        targetSdkVersion 22
++        minSdkVersion rootProject.ext.minSdkVersion
++        targetSdkVersion rootProject.ext.targetSdkVersion
+         versionCode 1
+         versionName "1.0"
+         ndk {
+@@ -16,5 +16,5 @@ android {
+ }
+ 
+ dependencies {
+-    compile "com.facebook.react:react-native:+"
++    implementation "com.facebook.react:react-native:+"
+ }
+diff --git a/node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.m b/node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.m
+index 15e9927..568f0fb 100644
+--- a/node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.m
++++ b/node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.m
+@@ -39,15 +39,36 @@ + (BOOL)requiresMainQueueSetup
+   return YES;
+ }
+ 
++- (void)dispatchOrientationChangeEvent:(UIDeviceOrientation)orientation {
++    [self.bridge.eventDispatcher sendDeviceEventWithName:@"specificOrientationDidChange"
++                                                body:@{@"specificOrientation": [self getSpecificOrientationStr:orientation]}];
++
++    [self.bridge.eventDispatcher sendDeviceEventWithName:@"orientationDidChange"
++                                                body:@{@"orientation": [self getOrientationStr:orientation]}];
++}
++
++- (void)lockToOrientationWithMask:(UIInterfaceOrientationMask)maskOrientation interfaceOrientation:(UIInterfaceOrientation)interfaceOrientation deviceOrientation:(UIDeviceOrientation)deviceOrientation {
++    if (@available(iOS 16, *)) {
++        dispatch_sync(dispatch_get_main_queue(), ^{
++            NSArray *array = [[[UIApplication sharedApplication] connectedScenes] allObjects];
++            UIWindowScene *scene = (UIWindowScene *)array[0];
++            [UIViewController attemptRotationToDeviceOrientation];
++            UIWindowSceneGeometryPreferencesIOS *geometryPreferences = [[UIWindowSceneGeometryPreferencesIOS alloc] initWithInterfaceOrientations:maskOrientation];
++            [scene requestGeometryUpdateWithPreferences:geometryPreferences errorHandler:^(NSError * _Nonnull error) {}];
++        });
++        [self dispatchOrientationChangeEvent:deviceOrientation];
++    } else {
++        [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
++            [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
++            [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:interfaceOrientation] forKey:@"orientation"];
++        }];
++    }
++}
++
+ - (void)deviceOrientationDidChange:(NSNotification *)notification
+ {
+-  UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+-  [self.bridge.eventDispatcher sendDeviceEventWithName:@"specificOrientationDidChange"
+-                                              body:@{@"specificOrientation": [self getSpecificOrientationStr:orientation]}];
+-
+-  [self.bridge.eventDispatcher sendDeviceEventWithName:@"orientationDidChange"
+-                                              body:@{@"orientation": [self getOrientationStr:orientation]}];
+-
++    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
++    [self dispatchOrientationChangeEvent:orientation];
+ }
+ 
+ - (NSString *)getOrientationStr: (UIDeviceOrientation)orientation {
+@@ -156,12 +177,8 @@ - (NSString *)getSpecificOrientationStr: (UIDeviceOrientation)orientation {
+   #if DEBUG
+     NSLog(@"Locked to Portrait");
+   #endif
+-  [Orientation setOrientation:UIInterfaceOrientationMaskPortrait];
+-  [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
+-  }];
+-
++    [Orientation setOrientation:UIInterfaceOrientationMaskPortrait];
++    [self lockToOrientationWithMask:UIInterfaceOrientationMaskPortrait interfaceOrientation:UIInterfaceOrientationPortrait deviceOrientation:UIDeviceOrientationPortrait];
+ }
+ 
+ RCT_EXPORT_METHOD(lockToLandscape)
+@@ -172,17 +189,11 @@ - (NSString *)getSpecificOrientationStr: (UIDeviceOrientation)orientation {
+   UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+   NSString *orientationStr = [self getSpecificOrientationStr:orientation];
+   if ([orientationStr isEqualToString:@"LANDSCAPE-LEFT"]) {
+-    [Orientation setOrientation:UIInterfaceOrientationMaskLandscape];
+-    [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+-      [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+-      [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
+-    }];
++      [Orientation setOrientation:UIInterfaceOrientationMaskLandscapeRight];
++      [self lockToOrientationWithMask:UIInterfaceOrientationMaskLandscapeRight interfaceOrientation:UIInterfaceOrientationLandscapeRight deviceOrientation:UIDeviceOrientationLandscapeRight];
+   } else {
+-    [Orientation setOrientation:UIInterfaceOrientationMaskLandscape];
+-    [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+-      [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+-      [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeLeft] forKey:@"orientation"];
+-    }];
++      [Orientation setOrientation:UIInterfaceOrientationMaskLandscapeLeft];
++      [self lockToOrientationWithMask:UIInterfaceOrientationMaskLandscapeLeft interfaceOrientation:UIInterfaceOrientationLandscapeLeft deviceOrientation:UIDeviceOrientationLandscapeLeft];
+   }
+ }
+ 
+@@ -192,11 +203,7 @@ - (NSString *)getSpecificOrientationStr: (UIDeviceOrientation)orientation {
+     NSLog(@"Locked to Landscape Left");
+   #endif
+     [Orientation setOrientation:UIInterfaceOrientationMaskLandscapeLeft];
+-    [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+-        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+-        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeLeft] forKey:@"orientation"];
+-    }];
+-
++    [self lockToOrientationWithMask:UIInterfaceOrientationMaskLandscapeLeft interfaceOrientation:UIInterfaceOrientationLandscapeLeft deviceOrientation:UIDeviceOrientationLandscapeLeft];
+ }
+ 
+ RCT_EXPORT_METHOD(lockToLandscapeRight)
+@@ -204,13 +211,8 @@ - (NSString *)getSpecificOrientationStr: (UIDeviceOrientation)orientation {
+   #if DEBUG
+     NSLog(@"Locked to Landscape Right");
+   #endif
+-  [Orientation setOrientation:UIInterfaceOrientationMaskLandscapeRight];
+-  [[NSOperationQueue mainQueue] addOperationWithBlock:^ {
+-    // this seems counter intuitive
+-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
+-  }];
+-
++    [Orientation setOrientation:UIInterfaceOrientationMaskLandscapeRight];
++    [self lockToOrientationWithMask:UIInterfaceOrientationMaskLandscapeRight interfaceOrientation:UIInterfaceOrientationLandscapeRight deviceOrientation:UIDeviceOrientationLandscapeRight];
+ }
+ 
+ RCT_EXPORT_METHOD(unlockAllOrientations)

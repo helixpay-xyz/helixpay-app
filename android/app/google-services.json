@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356234291619",
+    "project_id": "count-down-mapp",
+    "storage_bucket": "count-down-mapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356234291619:android:a6bad71011cade19865216",
+        "android_client_info": {
+          "package_name": "com.mienpv.countdownapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv-I2ePVPrl04xzMmlZABErSDvYkyRifQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
