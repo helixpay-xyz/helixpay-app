@@ -18,7 +18,10 @@ export default class ImageUtil {
         ic_zalo: require('assets/images/ic_zalo.png'),
         logo_intro_0: require('assets/images/logo_intro_0.png'),
         logo_intro_1: require('assets/images/logo_intro_1.png'),
-        logo_intro_2: require('assets/images/logo_intro_2.png')
+        logo_intro_2: require('assets/images/logo_intro_2.png'),
+        background_1: require('assets/images/background_1.png'),
+        background_2: require('assets/images/background_2.png'),
+        background_3: require('assets/images/background_3.png')
     };
 
     static getImage(imageUrl) {

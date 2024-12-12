@@ -7,19 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004B617931F148719B80AB64 /* Saira_SemiCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 756862E3FFB04EC4A079AFD1 /* Saira_SemiCondensed-MediumItalic.ttf */; };
+		08C045B67C2242B1844E5EC0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16880600EA6E4E368A497375 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */; };
+		0A74C16423634BA6B81C4857 /* Saira_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F163D6DE05446E8A998F2EF /* Saira_Condensed-Medium.ttf */; };
+		0B03D75F55544A3C9B140983 /* Saira_ExtraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85C3AA3ECEAA44AAB55B4857 /* Saira_ExtraCondensed-Regular.ttf */; };
+		0B242A340A01494196B46FED /* Saira_ExtraCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E7EB42C9F834963B5468BE1 /* Saira_ExtraCondensed-ThinItalic.ttf */; };
+		0B7EADE115734B37AE672524 /* Saira_SemiCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46225826EF4449A5A8DB93D6 /* Saira_SemiCondensed-LightItalic.ttf */; };
+		0CC60BD3F0134B39B721B76D /* Saira_ExtraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988CCD3CE64244CAAF418E24 /* Saira_ExtraCondensed-ExtraBold.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		156106BD6D934A60B3B95FD1 /* Saira_SemiExpanded-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 383BCD71454A4D00863D4B66 /* Saira_SemiExpanded-Thin.ttf */; };
+		16787EE943D44EB5BD268632 /* Saira-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D3E1C2E00423280481894 /* Saira-SemiBold.ttf */; };
+		16D8B24BB9B642589B337FB7 /* Saira_ExtraCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E04921E46CA4715A2C21076 /* Saira_ExtraCondensed-LightItalic.ttf */; };
 		17720E23BF7247A89D99395C /* GoogleSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D9B1473510E4DB7AB2F6F33 /* GoogleSans-Regular.ttf */; };
+		1953975738DE40ACA6282905 /* Saira-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C792FCAD0DF64F49AE7F3751 /* Saira-Light.ttf */; };
+		1DB4FDD62B3D49DFBBA961F1 /* Saira_ExtraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72F623B0D6EF44D381940898 /* Saira_ExtraCondensed-Thin.ttf */; };
+		1ECC3976DFF444279E73B0D3 /* Saira_SemiExpanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 830CE348AC9B41C9AD6CD06F /* Saira_SemiExpanded-SemiBold.ttf */; };
+		20F98CAC1D7148548D1204BF /* Saira_Expanded-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81170EA6DE824C4AB1337815 /* Saira_Expanded-LightItalic.ttf */; };
 		213F29FAC1C4456A9E2418ED /* GoogleSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B16305EDB7C54AFABDA62C69 /* GoogleSans-Bold.ttf */; };
+		21FC5244AD9C46ADB963ED6B /* Saira_ExtraCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB46F169BDDC4F6EABF24BB4 /* Saira_ExtraCondensed-BlackItalic.ttf */; };
+		22C3F751CD6C46F2B970CB0D /* Saira_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F0ADEB86FD41B493502FDC /* Saira_SemiCondensed-Italic.ttf */; };
+		22FC4FCEE265446E8093704C /* Saira_Expanded-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CF5FE5829484A4E9937463B /* Saira_Expanded-BlackItalic.ttf */; };
+		24F96B37F9A4450291795D6D /* Saira_ExtraCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BDC083FE4714FBFB3C05EA5 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */; };
+		257C5B5DA9B4485E88B26C59 /* Saira_Condensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5E0C17186334126B132294D /* Saira_Condensed-Black.ttf */; };
+		27949FAB756545239CC84E12 /* Saira_ExtraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 954D26AC1E6241B5A5041F72 /* Saira_ExtraCondensed-Bold.ttf */; };
+		313708F5F1CF4E149A4DDF7A /* Saira_SemiExpanded-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB0B84DEB4B74C019641CBF4 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */; };
+		319D499A79964093997A41C0 /* Saira_Condensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D00E0BC8DAF3486C83BAA315 /* Saira_Condensed-ExtraBoldItalic.ttf */; };
+		31A82922D6E74E0190537A07 /* Saira_SemiExpanded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12715A9AB9154C3984868C14 /* Saira_SemiExpanded-MediumItalic.ttf */; };
+		31C860F48275449AAFBFAA68 /* Saira_Condensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CEC04956C6248B895B7E3FE /* Saira_Condensed-ThinItalic.ttf */; };
+		32B29CF81CE4418E9C65CA42 /* Saira_SemiExpanded-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB21167A7308454F8B9EF962 /* Saira_SemiExpanded-BoldItalic.ttf */; };
+		350A7F6920794F0A81C1D079 /* Saira_UltraCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9933A92EB6F24EC1BA382893 /* Saira_UltraCondensed-BlackItalic.ttf */; };
 		37DF1B9B9E334454849BE764 /* GoogleSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA03DE2D8547508A37ACCB /* GoogleSans-BoldItalic.ttf */; };
-		416446FB2C7B52E60002FBB4 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
+		397C4376200247A6B73E10AE /* Saira_SemiCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEDCAE7126A848DF9D03A6D9 /* Saira_SemiCondensed-ExtraLightItalic.ttf */; };
+		3CF8BA8E37B349D488B2AD98 /* Saira_ExtraCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFD226B89CCA48319CB2BB48 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */; };
+		3D5809B8062E4A5A8000DA60 /* Saira_Expanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50ECC883F38E43BD939480D6 /* Saira_Expanded-Bold.ttf */; };
+		3EC91779E717465AB13E1D15 /* Saira_Condensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294E1C6A7CED45309372B4C1 /* Saira_Condensed-MediumItalic.ttf */; };
 		416ABE462C7B3FB600509D3F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 416ABE452C7B3FB600509D3F /* assets */; };
+		416EC4592D0A9E820078172F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		41977EEE2D09F5EB00C4600F /* Px-Grotesk-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41977EED2D09F5EB00C4600F /* Px-Grotesk-Bold-Italic.ttf */; };
 		41977EFA2D09F66300C4600F /* Px-Grotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41977EF92D09F66300C4600F /* Px-Grotesk-Bold.ttf */; };
 		41977F022D09F68F00C4600F /* Px-Grotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41977F012D09F68F00C4600F /* Px-Grotesk-Light.ttf */; };
 		41977F042D09F6A000C4600F /* Px-Grotesk-Regular-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41977F032D09F6A000C4600F /* Px-Grotesk-Regular-Italic.ttf */; };
 		41977F062D09F6AF00C4600F /* Px-Grotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41977F052D09F6AF00C4600F /* Px-Grotesk-Regular.ttf */; };
+		43840B8A803C4F1DA51363D8 /* Saira_SemiExpanded-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E622CED85A034A3491F34548 /* Saira_SemiExpanded-Black.ttf */; };
+		4396D330B80A4E3A8D19B936 /* Saira_SemiCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A74F88E4DA342CA9BF56C2D /* Saira_SemiCondensed-ThinItalic.ttf */; };
+		44FFFDAB4631415CA0277051 /* Saira_Expanded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CC1CEF9D4754D8BA142B637 /* Saira_Expanded-MediumItalic.ttf */; };
+		46225B9C497D4F22B95092CA /* Saira_SemiExpanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 745211713D3F427DBC6782D4 /* Saira_SemiExpanded-Medium.ttf */; };
+		466C5B9BF1EA4A9FB6B80411 /* Saira_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE94429DFA4490EA4576177 /* Saira_SemiCondensed-Bold.ttf */; };
+		484352A471E54DEA8E31F4DB /* Saira-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BEB583ECE914EC799574069 /* Saira-Bold.ttf */; };
+		49CF7AA8D4C34ECE98E01DA8 /* Saira_UltraCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CBF3C55B20E4D1982F3AC3D /* Saira_UltraCondensed-LightItalic.ttf */; };
 		4C196D68E9374736A50463EA /* GoogleSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28BC5E6A5DCA4363A2524294 /* GoogleSans-MediumItalic.ttf */; };
+		4D2B7E7B27724B688AFAD56D /* Saira_ExtraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAD02DD6154803A1FBA597 /* Saira_ExtraCondensed-ExtraLight.ttf */; };
+		4FCA23D78AE14937B92E6F30 /* Saira_Expanded-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12718FF756B04B8EAF747E34 /* Saira_Expanded-ExtraLight.ttf */; };
+		50CC179B08DA4848AEC3F437 /* Saira-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081AA9B5F380450AB9BF5258 /* Saira-Thin.ttf */; };
+		52E5CC98E26E401C86503FB7 /* Saira_ExtraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D59BFB4FB914F39AA0A496C /* Saira_ExtraCondensed-SemiBold.ttf */; };
+		5356B66FC5BF496D8AADEE89 /* Saira_Expanded-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F443BC111649E3B16A5EEF /* Saira_Expanded-Thin.ttf */; };
+		54A9E4A07F78438BAC9081D9 /* Saira_SemiCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD0571E28EA4EE093530153 /* Saira_SemiCondensed-BlackItalic.ttf */; };
+		54C9A384CB5C47A88D2794F1 /* Saira_Expanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9B10CE97E6A444BA910D3B7 /* Saira_Expanded-Light.ttf */; };
+		54D5CAE5BD794F2E9D8066D7 /* Saira_Condensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A2F071AA8314B0C9248B148 /* Saira_Condensed-ExtraLight.ttf */; };
+		55D3D902AAD94037849FE003 /* Saira_Expanded-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 564C0A85D30948F3BD9269CF /* Saira_Expanded-Black.ttf */; };
+		5731F81351334FF0ACFF25FF /* Saira_Condensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96E258200D504F38880A7AEA /* Saira_Condensed-BoldItalic.ttf */; };
+		57E9B255436F47CA82FC1AAC /* Saira-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA96F4F296422EB52B03F5 /* Saira-ExtraBold.ttf */; };
+		5AA49B581C764115B36B233C /* Saira-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6943C58654974314855712F4 /* Saira-ExtraLight.ttf */; };
+		5C04113BCC2F4875B977A333 /* Saira_Expanded-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE4DEE2786D4364A576D33F /* Saira_Expanded-ExtraLightItalic.ttf */; };
+		5DA4FC4ACE9E4DE69A8C4170 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3263DAB774DC4F7C9FCE65B1 /* Saira_SemiExpanded-SemiBoldItalic.ttf */; };
+		6628C36B4BD5410D951A7A0C /* Saira-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E418233E064C36B0FA1629 /* Saira-BlackItalic.ttf */; };
+		681919B5F8FA4DA48AF14701 /* Saira_UltraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEC71F565B264979B7956F4B /* Saira_UltraCondensed-Regular.ttf */; };
+		6AFA018791664AE484EB8707 /* Saira_UltraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82B49E8021A246F9AFC12F3A /* Saira_UltraCondensed-Medium.ttf */; };
+		6C93A7CEB40143C5ACA1C24E /* Saira_Expanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C06E1CC70F1141508A04FAC1 /* Saira_Expanded-SemiBold.ttf */; };
+		6F4668A82E0442F080F5EBF6 /* Saira_Condensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA423A9307C44A8A8C76534 /* Saira_Condensed-BlackItalic.ttf */; };
+		7191FDCA803F4B2C8A362D51 /* Saira_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D1525BEC1294F5FB50C1DB9 /* Saira_SemiCondensed-Regular.ttf */; };
+		73B72E5CDA7E43B18D642E94 /* Saira_UltraCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 562C08E4B1824EA5AAD6F37D /* Saira_UltraCondensed-ExtraLightItalic.ttf */; };
+		73E458CC80E54E20B0DB819C /* Saira_Expanded-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A8C8C123024024B9542E25 /* Saira_Expanded-SemiBoldItalic.ttf */; };
+		7458D86A166A46B5BBE64BB6 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39AE64241072407FAE2E2258 /* Saira-Medium.ttf */; };
+		77828D2059A34F5588E8B54E /* Saira_SemiCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6CB3C1E43544C41BCCA5285 /* Saira_SemiCondensed-BoldItalic.ttf */; };
 		780FEEA8261EE2120051B4EB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FEEA7261EE2120051B4EB /* File.swift */; };
 		781D00B5261A0F6D00B4DF55 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 781D00B4261A0F6C00B4DF55 /* AppCenter-Config.plist */; };
 		783BEA1F2B512A7100CAD6C4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783BEA1E2B512A7000CAD6C4 /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -28,21 +89,86 @@
 		78A725462618D7BE00D61E1B /* CBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A725452618D7BE00D61E1B /* CBLocation.m */; };
 		78BD4B7D28D468D2005A4005 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78BD4B7C28D468D2005A4005 /* AppDelegate.mm */; };
 		78C0CABA270B5D00008BB01A /* CBDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0CAB9270B5D00008BB01A /* CBDetector.m */; };
+		78D6C7C1E5D44F868B8755DE /* Saira_SemiExpanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC0D5C63663E4ABD9DB99FD4 /* Saira_SemiExpanded-Regular.ttf */; };
 		78D6CC3C261829F2004130DE /* CBNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC2F261829F2004130DE /* CBNative.m */; };
 		78D6CC3F261829F2004130DE /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC37261829F2004130DE /* DeviceUtil.m */; };
 		78D6CC40261829F2004130DE /* NSUserDefaults+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */; };
 		78E37F5A261D5CBB000ADF21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78E37F59261D5CBA000ADF21 /* GoogleService-Info.plist */; };
 		7ACC90E222EEDA4F61720B85 /* libPods-CodeBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 497CE09E2C0FA7EE8A1393D5 /* libPods-CodeBase.a */; };
+		7D4ABFACD6B745F590F7B6E5 /* Saira_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46A07CA473B64382A1966C66 /* Saira_Condensed-SemiBoldItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		83AE89FC8B9045AE98A8F2E7 /* Saira_Condensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF90F625F12B4536A182F2F7 /* Saira_Condensed-Thin.ttf */; };
+		847F24BD79B445228355A2EC /* Saira_SemiCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3FA87E27B0C4EE2BAB781C3 /* Saira_SemiCondensed-Black.ttf */; };
 		84BA164DC3024EDA9BD34AE8 /* GoogleSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D343CECC174C3DBFF7E6BF /* GoogleSans-Italic.ttf */; };
+		8587E279571A438BAFDD12DA /* Saira_ExtraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E67C1610CE854C01A3298F1F /* Saira_ExtraCondensed-Black.ttf */; };
+		863209A8B50A48DD8F4382CB /* Saira_SemiExpanded-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3B09AA5C4B34E97830AC6A2 /* Saira_SemiExpanded-BlackItalic.ttf */; };
+		8670D9934DDA4664B3A80EAA /* Saira_SemiExpanded-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE72AEBC21A84C879AB16421 /* Saira_SemiExpanded-LightItalic.ttf */; };
+		8B2D84B1D86B4F0592B0776D /* Saira_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84A70387DD6F4EC0B285C138 /* Saira_SemiCondensed-SemiBoldItalic.ttf */; };
+		8CACF66413204A8D9C38BBD7 /* Saira-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0A8F6BF4AB149689114A131 /* Saira-LightItalic.ttf */; };
+		8CCA9F92AF9F434198F057FE /* Saira_UltraCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB00A32D53D9414E827B0571 /* Saira_UltraCondensed-SemiBoldItalic.ttf */; };
+		9182836DF9184DA393F320E9 /* Saira_UltraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6C3A742D97F40ADB2BD95B2 /* Saira_UltraCondensed-ExtraLight.ttf */; };
+		9298821CF61D43EA8D2B72E0 /* Saira_Expanded-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3008A6EBA7C1480197553C55 /* Saira_Expanded-Italic.ttf */; };
+		94AA8A9833CA4F1FA2CC7D06 /* Saira_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31AE2ED613144F1A8AB3A57 /* Saira_Condensed-Bold.ttf */; };
+		962E5E2B88D243EAADD37872 /* Saira_UltraCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B309227B4AD46A18009E4A4 /* Saira_UltraCondensed-BoldItalic.ttf */; };
+		9A0BC59BE9CC4B6CA4EBA7DA /* Saira-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1C13BD9637A40AA8B7CF5EE /* Saira-SemiBoldItalic.ttf */; };
+		9B34D86D464D4CB08871BE1D /* Saira-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60D1C5C886FF405A913F67F1 /* Saira-ThinItalic.ttf */; };
 		9B6457EB75A24125861FC74C /* GoogleSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D8DBBA6A40425A88C8B025 /* GoogleSans-LightItalic.ttf */; };
+		9B981DE74EFB4FE79F4F02A9 /* Saira_ExtraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD370CC7D544303A87433E5 /* Saira_ExtraCondensed-Light.ttf */; };
+		9C0B8939527D466EA470B09B /* Saira_Condensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82928AD94C44960B0355996 /* Saira_Condensed-ExtraLightItalic.ttf */; };
+		9E978E53DD4F4E358E390BA3 /* Saira_UltraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3797A0CB77E64A659EF5670A /* Saira_UltraCondensed-SemiBold.ttf */; };
+		9F0B1A193B2C428E90EAA6D0 /* Saira_SemiExpanded-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB1AD31B34145B2A7A1F8C9 /* Saira_SemiExpanded-ExtraBold.ttf */; };
+		9F33AA52634A489D948D2F42 /* Saira_Expanded-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 316D878DAB7D4CD2AE9E7822 /* Saira_Expanded-ThinItalic.ttf */; };
+		9FF07D91B23B4237920D0F28 /* Saira-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC371396D6BC4A6693183662 /* Saira-Black.ttf */; };
+		A03446913A82428EBA75BB5F /* Saira_SemiExpanded-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60A2C3D98A114395AC024154 /* Saira_SemiExpanded-Italic.ttf */; };
+		A6F3D57174EE49609AA4701A /* Saira_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5085025FA1A476281A27C9C /* Saira_Condensed-Light.ttf */; };
+		A890DE3A8AA745E19ABA66C6 /* Saira_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA457411672B453DB1510305 /* Saira_Condensed-ExtraBold.ttf */; };
+		AA0226374E7547FCBB947A1B /* Saira_ExtraCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47FE8D6954C48959127B236 /* Saira_ExtraCondensed-Italic.ttf */; };
+		AFD2BBEE05AE4C83BFAEEEAE /* Saira_Expanded-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF9953515AE042A2A414BB32 /* Saira_Expanded-ExtraBoldItalic.ttf */; };
+		B1A421B2D117462582E5F16A /* Saira_Expanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35121FEE3F28461F99109102 /* Saira_Expanded-Regular.ttf */; };
+		B55F51FF2EEE4798BE599DD6 /* Saira_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF88351E6FA438FB7A682E3 /* Saira_Condensed-SemiBold.ttf */; };
 		B6C6ABBE4AEC450AABDA7E10 /* GoogleSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D898E497B5934628B42D5083 /* GoogleSans-Light.ttf */; };
+		B84F52CC2A3F4FA8BD353752 /* Saira_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8DAFD3BFF34ED99A6491E9 /* Saira_SemiCondensed-Medium.ttf */; };
+		B8B7784258454AAEB01AB28E /* Saira_UltraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 128FFD155E564DDAB78F57CF /* Saira_UltraCondensed-Thin.ttf */; };
+		B912DAAA2D9442DFA4492802 /* Saira-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4737B560E7B40F68959F6A7 /* Saira-ExtraBoldItalic.ttf */; };
+		BBAC5218E9404689B84A43E1 /* Saira_UltraCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52BEDF1170E84AC49E8E1C3D /* Saira_UltraCondensed-ThinItalic.ttf */; };
+		BCDC054C88B14738B85BE302 /* Saira-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E9240A2381A42C5AAAD326B /* Saira-ExtraLightItalic.ttf */; };
+		BCE5A18C57BB4D9EBEA8012D /* Saira_Expanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65ED34C83F6F4A1FA145E955 /* Saira_Expanded-Medium.ttf */; };
+		BD4BA8ACB7F541F4A247ED6F /* Saira_UltraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4B92489F765462CA79F51DC /* Saira_UltraCondensed-Black.ttf */; };
+		BD7A1A36787E47D4A1377558 /* Saira_SemiCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1E80B64FC46129F9A8FAB /* Saira_SemiCondensed-ExtraLight.ttf */; };
+		BE0DD2B9AA994B0AB22F47C9 /* Saira_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA25BFC5768F49BCA77B5E65 /* Saira_Condensed-Regular.ttf */; };
+		BE1ACB3915BF46D4A854B121 /* Saira_Condensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C042EE5AA1FF4B9E80E281FD /* Saira_Condensed-Italic.ttf */; };
+		C433202245B54D48A15B4BE6 /* Saira_UltraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F10E08E3593B486FB3C26DEA /* Saira_UltraCondensed-Light.ttf */; };
+		CA8DD80F50964AC78BD63295 /* Saira_UltraCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86B423B2AF7D4F12B3605D90 /* Saira_UltraCondensed-Italic.ttf */; };
+		CEE2D04EEFE249FE9A52E88A /* Saira_Expanded-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E26976795E349F8A26B2F57 /* Saira_Expanded-BoldItalic.ttf */; };
+		D06E7E7DAF7F425C88525FB2 /* Saira_SemiExpanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2575B4F50B8D4C5AA798E597 /* Saira_SemiExpanded-Light.ttf */; };
 		D0F3091B0E0D4720B3FDB506 /* GoogleSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3268456444C13AB6795EE /* GoogleSans-Medium.ttf */; };
 		D1180C357DCBAD48D1C9A4DE /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76431BFD0B0B57FB2EDC8A20 /* libPods-OneSignalNotificationServiceExtension.a */; };
+		D5E8CFAF0ADD4670956B9473 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FF2EA9C74FE4F98A669E3C5 /* Saira_SemiExpanded-ExtraLightItalic.ttf */; };
+		D6339A9FFCF24D94BD372D32 /* Saira_ExtraCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0941B93D27941E88AC01AD2 /* Saira_ExtraCondensed-BoldItalic.ttf */; };
+		D86952FA70474AD8918CFA8D /* Saira_SemiExpanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D471A7E3C30C47E4A7E4860F /* Saira_SemiExpanded-Bold.ttf */; };
+		DC1A8444AC70478194E1C3D7 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CDF91AB1AFF4426ACB79A77 /* Saira_SemiExpanded-ThinItalic.ttf */; };
+		DCB6A206E6784CF297CED6F1 /* Saira_SemiCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB817BA0977345709F22F6C6 /* Saira_SemiCondensed-Thin.ttf */; };
+		DE31EA4A355049DCB88105E9 /* Saira-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2FB584C05F64CB994D850E8 /* Saira-BoldItalic.ttf */; };
+		E085F673D82348119BB749E6 /* Saira_UltraCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E33B3C238F4844A6F14D9A /* Saira_UltraCondensed-MediumItalic.ttf */; };
+		E2A4E8651CC343BF9C110623 /* Saira_Condensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23CE2B5178C84543B489A5E1 /* Saira_Condensed-LightItalic.ttf */; };
 		E3F0ACAF012F47C4A7BB1249 /* GoogleSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F79E6314CDF84BC19F140E98 /* GoogleSans-ThinItalic.ttf */; };
+		E62287DA715946089ED52B80 /* Saira_SemiExpanded-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D366BF070F0E441097EEDDA3 /* Saira_SemiExpanded-ExtraLight.ttf */; };
+		E688E26A864241579FC567A8 /* Saira_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D746DFE900104F0BB3E3104D /* Saira_SemiCondensed-ExtraBold.ttf */; };
+		E7AFA8F24F8E4A8198DAB1FB /* Saira_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0E1F0C55045279034ED1C /* Saira_SemiCondensed-Light.ttf */; };
 		EAE8478E3B6C49D1A2A3F237 /* GoogleSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6109D6F832846A4A7EB8C30 /* GoogleSans-Thin.ttf */; };
+		EC4B35B7BBE141F286F1CDBC /* Saira_UltraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47BDBA93275441B8FC00115 /* Saira_UltraCondensed-ExtraBold.ttf */; };
 		EC754665D3724E3D8B61C7DB /* GoogleSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB846D9819FF4EEDB7D230C9 /* GoogleSans-Black.ttf */; };
+		EC99AC269A534FC09CC07F6F /* Saira-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02BE6EE1EFBB433AB4F330BE /* Saira-MediumItalic.ttf */; };
+		ECA68D8A4103419B9057C6E8 /* Saira_ExtraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DD4233AF03744F890746D0B /* Saira_ExtraCondensed-Medium.ttf */; };
+		ED8CE996AA544487BB75A6D6 /* Saira-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52D1539415AD41008018FFE7 /* Saira-Italic.ttf */; };
 		F05C262C3A0E41B59802B0A1 /* GoogleSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FACA243FA4744E64AB41B818 /* GoogleSans-BlackItalic.ttf */; };
+		F1470DCDC97C468595467004 /* Saira_Expanded-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30098DC515B1427E8F002288 /* Saira_Expanded-ExtraBold.ttf */; };
+		F2BD4DA658BB42B186C749B7 /* Saira_UltraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3688251C56994820A728B8C9 /* Saira_UltraCondensed-Bold.ttf */; };
+		F5A18DEA2D9A430B81FA7B3C /* Saira_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5378247EC664341BB5668A7 /* Saira_SemiCondensed-SemiBold.ttf */; };
+		F60374DB779547A69A0BF159 /* Saira_UltraCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C761A1D6DAE442EB98D8417 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */; };
+		FAFDAFE893C84B1280B1BF61 /* Saira_ExtraCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB83685E144D4E54B5E6FB0C /* Saira_ExtraCondensed-MediumItalic.ttf */; };
+		FB73D15EDE0B4D22B97E7A8A /* Saira_ExtraCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796F931F151142DA9883EE25 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */; };
+		FF09502AD6C746EB868410F3 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9FD05D63834FD082ABC9F3 /* Saira-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,24 +199,86 @@
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CodeBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeBaseTests.m; sourceTree = "<group>"; };
+		02BE6EE1EFBB433AB4F330BE /* Saira-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-MediumItalic.ttf"; path = "../app/assets/fonts/Saira-MediumItalic.ttf"; sourceTree = "<group>"; };
+		081AA9B5F380450AB9BF5258 /* Saira-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Thin.ttf"; path = "../app/assets/fonts/Saira-Thin.ttf"; sourceTree = "<group>"; };
+		0BEB583ECE914EC799574069 /* Saira-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Bold.ttf"; path = "../app/assets/fonts/Saira-Bold.ttf"; sourceTree = "<group>"; };
+		0CB1AD31B34145B2A7A1F8C9 /* Saira_SemiExpanded-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-ExtraBold.ttf"; sourceTree = "<group>"; };
 		0D5650DDDB73ED996665A2FF /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		0D9B1473510E4DB7AB2F6F33 /* GoogleSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Regular.ttf"; path = "../app/assets/fonts/GoogleSans-Regular.ttf"; sourceTree = "<group>"; };
+		0DD4233AF03744F890746D0B /* Saira_ExtraCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Medium.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Medium.ttf"; sourceTree = "<group>"; };
 		0DFA03DE2D8547508A37ACCB /* GoogleSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-BoldItalic.ttf"; path = "../app/assets/fonts/GoogleSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0E04921E46CA4715A2C21076 /* Saira_ExtraCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-LightItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		0FF2EA9C74FE4F98A669E3C5 /* Saira_SemiExpanded-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		12715A9AB9154C3984868C14 /* Saira_SemiExpanded-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-MediumItalic.ttf"; sourceTree = "<group>"; };
+		12718FF756B04B8EAF747E34 /* Saira_Expanded-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_Expanded-ExtraLight.ttf"; sourceTree = "<group>"; };
+		128FFD155E564DDAB78F57CF /* Saira_UltraCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Thin.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CodeBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CodeBase/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CodeBase/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CodeBase/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CodeBase/main.m; sourceTree = "<group>"; };
+		16880600EA6E4E368A497375 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		1B309227B4AD46A18009E4A4 /* Saira_UltraCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1BD370CC7D544303A87433E5 /* Saira_ExtraCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Light.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Light.ttf"; sourceTree = "<group>"; };
+		1BDC083FE4714FBFB3C05EA5 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		1D59BFB4FB914F39AA0A496C /* Saira_ExtraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-SemiBold.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		1FE94429DFA4490EA4576177 /* Saira_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Bold.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		23CE2B5178C84543B489A5E1 /* Saira_Condensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-LightItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		2575B4F50B8D4C5AA798E597 /* Saira_SemiExpanded-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Light.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Light.ttf"; sourceTree = "<group>"; };
+		26F0ADEB86FD41B493502FDC /* Saira_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Italic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		28BC5E6A5DCA4363A2524294 /* GoogleSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-MediumItalic.ttf"; path = "../app/assets/fonts/GoogleSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		294E1C6A7CED45309372B4C1 /* Saira_Condensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2E7EB42C9F834963B5468BE1 /* Saira_ExtraCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3008A6EBA7C1480197553C55 /* Saira_Expanded-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Italic.ttf"; path = "../app/assets/fonts/Saira_Expanded-Italic.ttf"; sourceTree = "<group>"; };
+		30098DC515B1427E8F002288 /* Saira_Expanded-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_Expanded-ExtraBold.ttf"; sourceTree = "<group>"; };
+		316D878DAB7D4CD2AE9E7822 /* Saira_Expanded-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3263DAB774DC4F7C9FCE65B1 /* Saira_SemiExpanded-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		32DD3EEB9BAFC83562002538 /* Pods-CodeBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.debug.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.debug.xcconfig"; sourceTree = "<group>"; };
+		35121FEE3F28461F99109102 /* Saira_Expanded-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Regular.ttf"; path = "../app/assets/fonts/Saira_Expanded-Regular.ttf"; sourceTree = "<group>"; };
+		35E418233E064C36B0FA1629 /* Saira-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-BlackItalic.ttf"; path = "../app/assets/fonts/Saira-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3688251C56994820A728B8C9 /* Saira_UltraCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Bold.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		3797A0CB77E64A659EF5670A /* Saira_UltraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-SemiBold.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		37D343CECC174C3DBFF7E6BF /* GoogleSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Italic.ttf"; path = "../app/assets/fonts/GoogleSans-Italic.ttf"; sourceTree = "<group>"; };
+		383BCD71454A4D00863D4B66 /* Saira_SemiExpanded-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Thin.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Thin.ttf"; sourceTree = "<group>"; };
+		39AE64241072407FAE2E2258 /* Saira-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Medium.ttf"; path = "../app/assets/fonts/Saira-Medium.ttf"; sourceTree = "<group>"; };
+		3A74F88E4DA342CA9BF56C2D /* Saira_SemiCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
 		416ABE452C7B3FB600509D3F /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		41977EED2D09F5EB00C4600F /* Px-Grotesk-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Px-Grotesk-Bold-Italic.ttf"; path = "../app/assets/fonts/Px-Grotesk-Bold-Italic.ttf"; sourceTree = "<group>"; };
 		41977EF92D09F66300C4600F /* Px-Grotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Px-Grotesk-Bold.ttf"; path = "../app/assets/fonts/Px-Grotesk-Bold.ttf"; sourceTree = "<group>"; };
 		41977F012D09F68F00C4600F /* Px-Grotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Px-Grotesk-Light.ttf"; path = "../app/assets/fonts/Px-Grotesk-Light.ttf"; sourceTree = "<group>"; };
 		41977F032D09F6A000C4600F /* Px-Grotesk-Regular-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Px-Grotesk-Regular-Italic.ttf"; path = "../app/assets/fonts/Px-Grotesk-Regular-Italic.ttf"; sourceTree = "<group>"; };
 		41977F052D09F6AF00C4600F /* Px-Grotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Px-Grotesk-Regular.ttf"; path = "../app/assets/fonts/Px-Grotesk-Regular.ttf"; sourceTree = "<group>"; };
+		46225826EF4449A5A8DB93D6 /* Saira_SemiCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-LightItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		46A07CA473B64382A1966C66 /* Saira_Condensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		497CE09E2C0FA7EE8A1393D5 /* libPods-CodeBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C761A1D6DAE442EB98D8417 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4CDF91AB1AFF4426ACB79A77 /* Saira_SemiExpanded-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4CEC04956C6248B895B7E3FE /* Saira_Condensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4D1525BEC1294F5FB50C1DB9 /* Saira_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Regular.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		4E9240A2381A42C5AAAD326B /* Saira-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		50ECC883F38E43BD939480D6 /* Saira_Expanded-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Bold.ttf"; path = "../app/assets/fonts/Saira_Expanded-Bold.ttf"; sourceTree = "<group>"; };
+		52BEDF1170E84AC49E8E1C3D /* Saira_UltraCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-ThinItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		52D1539415AD41008018FFE7 /* Saira-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Italic.ttf"; path = "../app/assets/fonts/Saira-Italic.ttf"; sourceTree = "<group>"; };
+		562C08E4B1824EA5AAD6F37D /* Saira_UltraCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		564C0A85D30948F3BD9269CF /* Saira_Expanded-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Black.ttf"; path = "../app/assets/fonts/Saira_Expanded-Black.ttf"; sourceTree = "<group>"; };
+		5A2F071AA8314B0C9248B148 /* Saira_Condensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_Condensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5B5D3E1C2E00423280481894 /* Saira-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-SemiBold.ttf"; path = "../app/assets/fonts/Saira-SemiBold.ttf"; sourceTree = "<group>"; };
+		5CF5FE5829484A4E9937463B /* Saira_Expanded-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5F163D6DE05446E8A998F2EF /* Saira_Condensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Medium.ttf"; path = "../app/assets/fonts/Saira_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		60A2C3D98A114395AC024154 /* Saira_SemiExpanded-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Italic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Italic.ttf"; sourceTree = "<group>"; };
+		60D1C5C886FF405A913F67F1 /* Saira-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-ThinItalic.ttf"; path = "../app/assets/fonts/Saira-ThinItalic.ttf"; sourceTree = "<group>"; };
+		65ED34C83F6F4A1FA145E955 /* Saira_Expanded-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Medium.ttf"; path = "../app/assets/fonts/Saira_Expanded-Medium.ttf"; sourceTree = "<group>"; };
+		6943C58654974314855712F4 /* Saira-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-ExtraLight.ttf"; path = "../app/assets/fonts/Saira-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6CBF3C55B20E4D1982F3AC3D /* Saira_UltraCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-LightItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		6CC1CEF9D4754D8BA142B637 /* Saira_Expanded-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6DE4DEE2786D4364A576D33F /* Saira_Expanded-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		6E26976795E349F8A26B2F57 /* Saira_Expanded-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6EAAD02DD6154803A1FBA597 /* Saira_ExtraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6FC0E1F0C55045279034ED1C /* Saira_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Light.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
+		6FF1E80B64FC46129F9A8FAB /* Saira_SemiCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		72F623B0D6EF44D381940898 /* Saira_ExtraCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Thin.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		745211713D3F427DBC6782D4 /* Saira_SemiExpanded-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Medium.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Medium.ttf"; sourceTree = "<group>"; };
+		756862E3FFB04EC4A079AFD1 /* Saira_SemiCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
 		76431BFD0B0B57FB2EDC8A20 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		780FEEA6261EE2110051B4EB /* CodeBase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeBase-Bridging-Header.h"; sourceTree = "<group>"; };
 		780FEEA7261EE2120051B4EB /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = CodeBase/File.swift; sourceTree = "<group>"; };
@@ -114,19 +302,83 @@
 		78D6CC39261829F2004130DE /* NSUserDefaults+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Helper.h"; sourceTree = "<group>"; };
 		78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helper.m"; sourceTree = "<group>"; };
 		78E37F59261D5CBA000ADF21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		796F931F151142DA9883EE25 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		81170EA6DE824C4AB1337815 /* Saira_Expanded-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-LightItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-LightItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CodeBase/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82B49E8021A246F9AFC12F3A /* Saira_UltraCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Medium.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		830CE348AC9B41C9AD6CD06F /* Saira_SemiExpanded-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-SemiBold.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-SemiBold.ttf"; sourceTree = "<group>"; };
+		84A70387DD6F4EC0B285C138 /* Saira_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		85C3AA3ECEAA44AAB55B4857 /* Saira_ExtraCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Regular.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		86B423B2AF7D4F12B3605D90 /* Saira_UltraCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Italic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		8A8DAFD3BFF34ED99A6491E9 /* Saira_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Medium.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		954D26AC1E6241B5A5041F72 /* Saira_ExtraCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Bold.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		96A8C8C123024024B9542E25 /* Saira_Expanded-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		96E258200D504F38880A7AEA /* Saira_Condensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		988CCD3CE64244CAAF418E24 /* Saira_ExtraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9933A92EB6F24EC1BA382893 /* Saira_UltraCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9DA423A9307C44A8A8C76534 /* Saira_Condensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9E9FD05D63834FD082ABC9F3 /* Saira-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Regular.ttf"; path = "../app/assets/fonts/Saira-Regular.ttf"; sourceTree = "<group>"; };
+		A4B92489F765462CA79F51DC /* Saira_UltraCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Black.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Black.ttf"; sourceTree = "<group>"; };
+		A5378247EC664341BB5668A7 /* Saira_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-SemiBold.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		A8F443BC111649E3B16A5EEF /* Saira_Expanded-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Thin.ttf"; path = "../app/assets/fonts/Saira_Expanded-Thin.ttf"; sourceTree = "<group>"; };
+		A9B10CE97E6A444BA910D3B7 /* Saira_Expanded-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-Light.ttf"; path = "../app/assets/fonts/Saira_Expanded-Light.ttf"; sourceTree = "<group>"; };
+		AA457411672B453DB1510305 /* Saira_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
 		AB846D9819FF4EEDB7D230C9 /* GoogleSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Black.ttf"; path = "../app/assets/fonts/GoogleSans-Black.ttf"; sourceTree = "<group>"; };
+		AF90F625F12B4536A182F2F7 /* Saira_Condensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Thin.ttf"; path = "../app/assets/fonts/Saira_Condensed-Thin.ttf"; sourceTree = "<group>"; };
+		AFD0571E28EA4EE093530153 /* Saira_SemiCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
 		B16305EDB7C54AFABDA62C69 /* GoogleSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Bold.ttf"; path = "../app/assets/fonts/GoogleSans-Bold.ttf"; sourceTree = "<group>"; };
+		B1C13BD9637A40AA8B7CF5EE /* Saira-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B3B09AA5C4B34E97830AC6A2 /* Saira_SemiExpanded-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-BlackItalic.ttf"; sourceTree = "<group>"; };
+		B4737B560E7B40F68959F6A7 /* Saira-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		B5D8DBBA6A40425A88C8B025 /* GoogleSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-LightItalic.ttf"; path = "../app/assets/fonts/GoogleSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		B9BB37DE105309B6759AA596 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0D5C63663E4ABD9DB99FD4 /* Saira_SemiExpanded-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Regular.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Regular.ttf"; sourceTree = "<group>"; };
+		C042EE5AA1FF4B9E80E281FD /* Saira_Condensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Italic.ttf"; path = "../app/assets/fonts/Saira_Condensed-Italic.ttf"; sourceTree = "<group>"; };
+		C06E1CC70F1141508A04FAC1 /* Saira_Expanded-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-SemiBold.ttf"; path = "../app/assets/fonts/Saira_Expanded-SemiBold.ttf"; sourceTree = "<group>"; };
+		C31AE2ED613144F1A8AB3A57 /* Saira_Condensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Bold.ttf"; path = "../app/assets/fonts/Saira_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		C47FE8D6954C48959127B236 /* Saira_ExtraCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Italic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		C6109D6F832846A4A7EB8C30 /* GoogleSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Thin.ttf"; path = "../app/assets/fonts/GoogleSans-Thin.ttf"; sourceTree = "<group>"; };
+		C792FCAD0DF64F49AE7F3751 /* Saira-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Light.ttf"; path = "../app/assets/fonts/Saira-Light.ttf"; sourceTree = "<group>"; };
+		CB83685E144D4E54B5E6FB0C /* Saira_ExtraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CFD226B89CCA48319CB2BB48 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		D00E0BC8DAF3486C83BAA315 /* Saira_Condensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D0A8F6BF4AB149689114A131 /* Saira-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-LightItalic.ttf"; path = "../app/assets/fonts/Saira-LightItalic.ttf"; sourceTree = "<group>"; };
+		D2FB584C05F64CB994D850E8 /* Saira-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-BoldItalic.ttf"; path = "../app/assets/fonts/Saira-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D366BF070F0E441097EEDDA3 /* Saira_SemiExpanded-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D471A7E3C30C47E4A7E4860F /* Saira_SemiExpanded-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Bold.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Bold.ttf"; sourceTree = "<group>"; };
+		D47BDBA93275441B8FC00115 /* Saira_UltraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D5085025FA1A476281A27C9C /* Saira_Condensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Light.ttf"; path = "../app/assets/fonts/Saira_Condensed-Light.ttf"; sourceTree = "<group>"; };
+		D746DFE900104F0BB3E3104D /* Saira_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-ExtraBold.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
 		D898E497B5934628B42D5083 /* GoogleSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Light.ttf"; path = "../app/assets/fonts/GoogleSans-Light.ttf"; sourceTree = "<group>"; };
+		DA25BFC5768F49BCA77B5E65 /* Saira_Condensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Regular.ttf"; path = "../app/assets/fonts/Saira_Condensed-Regular.ttf"; sourceTree = "<group>"; };
+		DB21167A7308454F8B9EF962 /* Saira_SemiExpanded-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DB817BA0977345709F22F6C6 /* Saira_SemiCondensed-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Thin.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		DC371396D6BC4A6693183662 /* Saira-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-Black.ttf"; path = "../app/assets/fonts/Saira-Black.ttf"; sourceTree = "<group>"; };
+		DE72AEBC21A84C879AB16421 /* Saira_SemiExpanded-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-LightItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-LightItalic.ttf"; sourceTree = "<group>"; };
+		DEC71F565B264979B7956F4B /* Saira_UltraCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Regular.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		DF9953515AE042A2A414BB32 /* Saira_Expanded-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Expanded-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_Expanded-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		E2DF999379960E5B980FF0F9 /* Pods-CodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.release.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.release.xcconfig"; sourceTree = "<group>"; };
+		E3FA87E27B0C4EE2BAB781C3 /* Saira_SemiCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-Black.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-Black.ttf"; sourceTree = "<group>"; };
+		E622CED85A034A3491F34548 /* Saira_SemiExpanded-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-Black.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-Black.ttf"; sourceTree = "<group>"; };
+		E67C1610CE854C01A3298F1F /* Saira_ExtraCondensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-Black.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-Black.ttf"; sourceTree = "<group>"; };
+		E6CB3C1E43544C41BCCA5285 /* Saira_SemiCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E82928AD94C44960B0355996 /* Saira_Condensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_Condensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		E9D3268456444C13AB6795EE /* GoogleSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Medium.ttf"; path = "../app/assets/fonts/GoogleSans-Medium.ttf"; sourceTree = "<group>"; };
+		EB0B84DEB4B74C019641CBF4 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiExpanded-ExtraBoldItalic.ttf"; path = "../app/assets/fonts/Saira_SemiExpanded-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EEEA96F4F296422EB52B03F5 /* Saira-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira-ExtraBold.ttf"; path = "../app/assets/fonts/Saira-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F0941B93D27941E88AC01AD2 /* Saira_ExtraCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-BoldItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F10E08E3593B486FB3C26DEA /* Saira_UltraCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-Light.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-Light.ttf"; sourceTree = "<group>"; };
+		F5E0C17186334126B132294D /* Saira_Condensed-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-Black.ttf"; path = "../app/assets/fonts/Saira_Condensed-Black.ttf"; sourceTree = "<group>"; };
+		F6C3A742D97F40ADB2BD95B2 /* Saira_UltraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-ExtraLight.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F6E33B3C238F4844A6F14D9A /* Saira_UltraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-MediumItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
 		F79E6314CDF84BC19F140E98 /* GoogleSans-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-ThinItalic.ttf"; path = "../app/assets/fonts/GoogleSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		FACA243FA4744E64AB41B818 /* GoogleSans-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-BlackItalic.ttf"; path = "../app/assets/fonts/GoogleSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FAF88351E6FA438FB7A682E3 /* Saira_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_Condensed-SemiBold.ttf"; path = "../app/assets/fonts/Saira_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		FB00A32D53D9414E827B0571 /* Saira_UltraCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_UltraCondensed-SemiBoldItalic.ttf"; path = "../app/assets/fonts/Saira_UltraCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FB46F169BDDC4F6EABF24BB4 /* Saira_ExtraCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_ExtraCondensed-BlackItalic.ttf"; path = "../app/assets/fonts/Saira_ExtraCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FEDCAE7126A848DF9D03A6D9 /* Saira_SemiCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Saira_SemiCondensed-ExtraLightItalic.ttf"; path = "../app/assets/fonts/Saira_SemiCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +471,132 @@
 				41977F012D09F68F00C4600F /* Px-Grotesk-Light.ttf */,
 				41977F032D09F6A000C4600F /* Px-Grotesk-Regular-Italic.ttf */,
 				41977F052D09F6AF00C4600F /* Px-Grotesk-Regular.ttf */,
+				DC371396D6BC4A6693183662 /* Saira-Black.ttf */,
+				35E418233E064C36B0FA1629 /* Saira-BlackItalic.ttf */,
+				0BEB583ECE914EC799574069 /* Saira-Bold.ttf */,
+				D2FB584C05F64CB994D850E8 /* Saira-BoldItalic.ttf */,
+				EEEA96F4F296422EB52B03F5 /* Saira-ExtraBold.ttf */,
+				B4737B560E7B40F68959F6A7 /* Saira-ExtraBoldItalic.ttf */,
+				6943C58654974314855712F4 /* Saira-ExtraLight.ttf */,
+				4E9240A2381A42C5AAAD326B /* Saira-ExtraLightItalic.ttf */,
+				52D1539415AD41008018FFE7 /* Saira-Italic.ttf */,
+				C792FCAD0DF64F49AE7F3751 /* Saira-Light.ttf */,
+				D0A8F6BF4AB149689114A131 /* Saira-LightItalic.ttf */,
+				39AE64241072407FAE2E2258 /* Saira-Medium.ttf */,
+				02BE6EE1EFBB433AB4F330BE /* Saira-MediumItalic.ttf */,
+				9E9FD05D63834FD082ABC9F3 /* Saira-Regular.ttf */,
+				5B5D3E1C2E00423280481894 /* Saira-SemiBold.ttf */,
+				B1C13BD9637A40AA8B7CF5EE /* Saira-SemiBoldItalic.ttf */,
+				081AA9B5F380450AB9BF5258 /* Saira-Thin.ttf */,
+				60D1C5C886FF405A913F67F1 /* Saira-ThinItalic.ttf */,
+				F5E0C17186334126B132294D /* Saira_Condensed-Black.ttf */,
+				9DA423A9307C44A8A8C76534 /* Saira_Condensed-BlackItalic.ttf */,
+				C31AE2ED613144F1A8AB3A57 /* Saira_Condensed-Bold.ttf */,
+				96E258200D504F38880A7AEA /* Saira_Condensed-BoldItalic.ttf */,
+				AA457411672B453DB1510305 /* Saira_Condensed-ExtraBold.ttf */,
+				D00E0BC8DAF3486C83BAA315 /* Saira_Condensed-ExtraBoldItalic.ttf */,
+				5A2F071AA8314B0C9248B148 /* Saira_Condensed-ExtraLight.ttf */,
+				E82928AD94C44960B0355996 /* Saira_Condensed-ExtraLightItalic.ttf */,
+				C042EE5AA1FF4B9E80E281FD /* Saira_Condensed-Italic.ttf */,
+				D5085025FA1A476281A27C9C /* Saira_Condensed-Light.ttf */,
+				23CE2B5178C84543B489A5E1 /* Saira_Condensed-LightItalic.ttf */,
+				5F163D6DE05446E8A998F2EF /* Saira_Condensed-Medium.ttf */,
+				294E1C6A7CED45309372B4C1 /* Saira_Condensed-MediumItalic.ttf */,
+				DA25BFC5768F49BCA77B5E65 /* Saira_Condensed-Regular.ttf */,
+				FAF88351E6FA438FB7A682E3 /* Saira_Condensed-SemiBold.ttf */,
+				46A07CA473B64382A1966C66 /* Saira_Condensed-SemiBoldItalic.ttf */,
+				AF90F625F12B4536A182F2F7 /* Saira_Condensed-Thin.ttf */,
+				4CEC04956C6248B895B7E3FE /* Saira_Condensed-ThinItalic.ttf */,
+				564C0A85D30948F3BD9269CF /* Saira_Expanded-Black.ttf */,
+				5CF5FE5829484A4E9937463B /* Saira_Expanded-BlackItalic.ttf */,
+				50ECC883F38E43BD939480D6 /* Saira_Expanded-Bold.ttf */,
+				6E26976795E349F8A26B2F57 /* Saira_Expanded-BoldItalic.ttf */,
+				30098DC515B1427E8F002288 /* Saira_Expanded-ExtraBold.ttf */,
+				DF9953515AE042A2A414BB32 /* Saira_Expanded-ExtraBoldItalic.ttf */,
+				12718FF756B04B8EAF747E34 /* Saira_Expanded-ExtraLight.ttf */,
+				6DE4DEE2786D4364A576D33F /* Saira_Expanded-ExtraLightItalic.ttf */,
+				3008A6EBA7C1480197553C55 /* Saira_Expanded-Italic.ttf */,
+				A9B10CE97E6A444BA910D3B7 /* Saira_Expanded-Light.ttf */,
+				81170EA6DE824C4AB1337815 /* Saira_Expanded-LightItalic.ttf */,
+				65ED34C83F6F4A1FA145E955 /* Saira_Expanded-Medium.ttf */,
+				6CC1CEF9D4754D8BA142B637 /* Saira_Expanded-MediumItalic.ttf */,
+				35121FEE3F28461F99109102 /* Saira_Expanded-Regular.ttf */,
+				C06E1CC70F1141508A04FAC1 /* Saira_Expanded-SemiBold.ttf */,
+				96A8C8C123024024B9542E25 /* Saira_Expanded-SemiBoldItalic.ttf */,
+				A8F443BC111649E3B16A5EEF /* Saira_Expanded-Thin.ttf */,
+				316D878DAB7D4CD2AE9E7822 /* Saira_Expanded-ThinItalic.ttf */,
+				E67C1610CE854C01A3298F1F /* Saira_ExtraCondensed-Black.ttf */,
+				FB46F169BDDC4F6EABF24BB4 /* Saira_ExtraCondensed-BlackItalic.ttf */,
+				954D26AC1E6241B5A5041F72 /* Saira_ExtraCondensed-Bold.ttf */,
+				F0941B93D27941E88AC01AD2 /* Saira_ExtraCondensed-BoldItalic.ttf */,
+				988CCD3CE64244CAAF418E24 /* Saira_ExtraCondensed-ExtraBold.ttf */,
+				1BDC083FE4714FBFB3C05EA5 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */,
+				6EAAD02DD6154803A1FBA597 /* Saira_ExtraCondensed-ExtraLight.ttf */,
+				CFD226B89CCA48319CB2BB48 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */,
+				C47FE8D6954C48959127B236 /* Saira_ExtraCondensed-Italic.ttf */,
+				1BD370CC7D544303A87433E5 /* Saira_ExtraCondensed-Light.ttf */,
+				0E04921E46CA4715A2C21076 /* Saira_ExtraCondensed-LightItalic.ttf */,
+				0DD4233AF03744F890746D0B /* Saira_ExtraCondensed-Medium.ttf */,
+				CB83685E144D4E54B5E6FB0C /* Saira_ExtraCondensed-MediumItalic.ttf */,
+				85C3AA3ECEAA44AAB55B4857 /* Saira_ExtraCondensed-Regular.ttf */,
+				1D59BFB4FB914F39AA0A496C /* Saira_ExtraCondensed-SemiBold.ttf */,
+				796F931F151142DA9883EE25 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */,
+				72F623B0D6EF44D381940898 /* Saira_ExtraCondensed-Thin.ttf */,
+				2E7EB42C9F834963B5468BE1 /* Saira_ExtraCondensed-ThinItalic.ttf */,
+				E3FA87E27B0C4EE2BAB781C3 /* Saira_SemiCondensed-Black.ttf */,
+				AFD0571E28EA4EE093530153 /* Saira_SemiCondensed-BlackItalic.ttf */,
+				1FE94429DFA4490EA4576177 /* Saira_SemiCondensed-Bold.ttf */,
+				E6CB3C1E43544C41BCCA5285 /* Saira_SemiCondensed-BoldItalic.ttf */,
+				D746DFE900104F0BB3E3104D /* Saira_SemiCondensed-ExtraBold.ttf */,
+				16880600EA6E4E368A497375 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */,
+				6FF1E80B64FC46129F9A8FAB /* Saira_SemiCondensed-ExtraLight.ttf */,
+				FEDCAE7126A848DF9D03A6D9 /* Saira_SemiCondensed-ExtraLightItalic.ttf */,
+				26F0ADEB86FD41B493502FDC /* Saira_SemiCondensed-Italic.ttf */,
+				6FC0E1F0C55045279034ED1C /* Saira_SemiCondensed-Light.ttf */,
+				46225826EF4449A5A8DB93D6 /* Saira_SemiCondensed-LightItalic.ttf */,
+				8A8DAFD3BFF34ED99A6491E9 /* Saira_SemiCondensed-Medium.ttf */,
+				756862E3FFB04EC4A079AFD1 /* Saira_SemiCondensed-MediumItalic.ttf */,
+				4D1525BEC1294F5FB50C1DB9 /* Saira_SemiCondensed-Regular.ttf */,
+				A5378247EC664341BB5668A7 /* Saira_SemiCondensed-SemiBold.ttf */,
+				84A70387DD6F4EC0B285C138 /* Saira_SemiCondensed-SemiBoldItalic.ttf */,
+				DB817BA0977345709F22F6C6 /* Saira_SemiCondensed-Thin.ttf */,
+				3A74F88E4DA342CA9BF56C2D /* Saira_SemiCondensed-ThinItalic.ttf */,
+				E622CED85A034A3491F34548 /* Saira_SemiExpanded-Black.ttf */,
+				B3B09AA5C4B34E97830AC6A2 /* Saira_SemiExpanded-BlackItalic.ttf */,
+				D471A7E3C30C47E4A7E4860F /* Saira_SemiExpanded-Bold.ttf */,
+				DB21167A7308454F8B9EF962 /* Saira_SemiExpanded-BoldItalic.ttf */,
+				0CB1AD31B34145B2A7A1F8C9 /* Saira_SemiExpanded-ExtraBold.ttf */,
+				EB0B84DEB4B74C019641CBF4 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */,
+				D366BF070F0E441097EEDDA3 /* Saira_SemiExpanded-ExtraLight.ttf */,
+				0FF2EA9C74FE4F98A669E3C5 /* Saira_SemiExpanded-ExtraLightItalic.ttf */,
+				60A2C3D98A114395AC024154 /* Saira_SemiExpanded-Italic.ttf */,
+				2575B4F50B8D4C5AA798E597 /* Saira_SemiExpanded-Light.ttf */,
+				DE72AEBC21A84C879AB16421 /* Saira_SemiExpanded-LightItalic.ttf */,
+				745211713D3F427DBC6782D4 /* Saira_SemiExpanded-Medium.ttf */,
+				12715A9AB9154C3984868C14 /* Saira_SemiExpanded-MediumItalic.ttf */,
+				BC0D5C63663E4ABD9DB99FD4 /* Saira_SemiExpanded-Regular.ttf */,
+				830CE348AC9B41C9AD6CD06F /* Saira_SemiExpanded-SemiBold.ttf */,
+				3263DAB774DC4F7C9FCE65B1 /* Saira_SemiExpanded-SemiBoldItalic.ttf */,
+				383BCD71454A4D00863D4B66 /* Saira_SemiExpanded-Thin.ttf */,
+				4CDF91AB1AFF4426ACB79A77 /* Saira_SemiExpanded-ThinItalic.ttf */,
+				A4B92489F765462CA79F51DC /* Saira_UltraCondensed-Black.ttf */,
+				9933A92EB6F24EC1BA382893 /* Saira_UltraCondensed-BlackItalic.ttf */,
+				3688251C56994820A728B8C9 /* Saira_UltraCondensed-Bold.ttf */,
+				1B309227B4AD46A18009E4A4 /* Saira_UltraCondensed-BoldItalic.ttf */,
+				D47BDBA93275441B8FC00115 /* Saira_UltraCondensed-ExtraBold.ttf */,
+				4C761A1D6DAE442EB98D8417 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */,
+				F6C3A742D97F40ADB2BD95B2 /* Saira_UltraCondensed-ExtraLight.ttf */,
+				562C08E4B1824EA5AAD6F37D /* Saira_UltraCondensed-ExtraLightItalic.ttf */,
+				86B423B2AF7D4F12B3605D90 /* Saira_UltraCondensed-Italic.ttf */,
+				F10E08E3593B486FB3C26DEA /* Saira_UltraCondensed-Light.ttf */,
+				6CBF3C55B20E4D1982F3AC3D /* Saira_UltraCondensed-LightItalic.ttf */,
+				82B49E8021A246F9AFC12F3A /* Saira_UltraCondensed-Medium.ttf */,
+				F6E33B3C238F4844A6F14D9A /* Saira_UltraCondensed-MediumItalic.ttf */,
+				DEC71F565B264979B7956F4B /* Saira_UltraCondensed-Regular.ttf */,
+				3797A0CB77E64A659EF5670A /* Saira_UltraCondensed-SemiBold.ttf */,
+				FB00A32D53D9414E827B0571 /* Saira_UltraCondensed-SemiBoldItalic.ttf */,
+				128FFD155E564DDAB78F57CF /* Saira_UltraCondensed-Thin.ttf */,
+				52BEDF1170E84AC49E8E1C3D /* Saira_UltraCondensed-ThinItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -402,12 +780,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416EC4592D0A9E820078172F /* main.jsbundle in Resources */,
 				41977F062D09F6AF00C4600F /* Px-Grotesk-Regular.ttf in Resources */,
 				41977F042D09F6A000C4600F /* Px-Grotesk-Regular-Italic.ttf in Resources */,
 				41977F022D09F68F00C4600F /* Px-Grotesk-Light.ttf in Resources */,
 				41977EFA2D09F66300C4600F /* Px-Grotesk-Bold.ttf in Resources */,
 				41977EEE2D09F5EB00C4600F /* Px-Grotesk-Bold-Italic.ttf in Resources */,
-				416446FB2C7B52E60002FBB4 /* main.jsbundle in Resources */,
 				416ABE462C7B3FB600509D3F /* assets in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				78E37F5A261D5CBB000ADF21 /* GoogleService-Info.plist in Resources */,
@@ -425,6 +803,132 @@
 				17720E23BF7247A89D99395C /* GoogleSans-Regular.ttf in Resources */,
 				EAE8478E3B6C49D1A2A3F237 /* GoogleSans-Thin.ttf in Resources */,
 				E3F0ACAF012F47C4A7BB1249 /* GoogleSans-ThinItalic.ttf in Resources */,
+				9FF07D91B23B4237920D0F28 /* Saira-Black.ttf in Resources */,
+				6628C36B4BD5410D951A7A0C /* Saira-BlackItalic.ttf in Resources */,
+				484352A471E54DEA8E31F4DB /* Saira-Bold.ttf in Resources */,
+				DE31EA4A355049DCB88105E9 /* Saira-BoldItalic.ttf in Resources */,
+				57E9B255436F47CA82FC1AAC /* Saira-ExtraBold.ttf in Resources */,
+				B912DAAA2D9442DFA4492802 /* Saira-ExtraBoldItalic.ttf in Resources */,
+				5AA49B581C764115B36B233C /* Saira-ExtraLight.ttf in Resources */,
+				BCDC054C88B14738B85BE302 /* Saira-ExtraLightItalic.ttf in Resources */,
+				ED8CE996AA544487BB75A6D6 /* Saira-Italic.ttf in Resources */,
+				1953975738DE40ACA6282905 /* Saira-Light.ttf in Resources */,
+				8CACF66413204A8D9C38BBD7 /* Saira-LightItalic.ttf in Resources */,
+				7458D86A166A46B5BBE64BB6 /* Saira-Medium.ttf in Resources */,
+				EC99AC269A534FC09CC07F6F /* Saira-MediumItalic.ttf in Resources */,
+				FF09502AD6C746EB868410F3 /* Saira-Regular.ttf in Resources */,
+				16787EE943D44EB5BD268632 /* Saira-SemiBold.ttf in Resources */,
+				9A0BC59BE9CC4B6CA4EBA7DA /* Saira-SemiBoldItalic.ttf in Resources */,
+				50CC179B08DA4848AEC3F437 /* Saira-Thin.ttf in Resources */,
+				9B34D86D464D4CB08871BE1D /* Saira-ThinItalic.ttf in Resources */,
+				257C5B5DA9B4485E88B26C59 /* Saira_Condensed-Black.ttf in Resources */,
+				6F4668A82E0442F080F5EBF6 /* Saira_Condensed-BlackItalic.ttf in Resources */,
+				94AA8A9833CA4F1FA2CC7D06 /* Saira_Condensed-Bold.ttf in Resources */,
+				5731F81351334FF0ACFF25FF /* Saira_Condensed-BoldItalic.ttf in Resources */,
+				A890DE3A8AA745E19ABA66C6 /* Saira_Condensed-ExtraBold.ttf in Resources */,
+				319D499A79964093997A41C0 /* Saira_Condensed-ExtraBoldItalic.ttf in Resources */,
+				54D5CAE5BD794F2E9D8066D7 /* Saira_Condensed-ExtraLight.ttf in Resources */,
+				9C0B8939527D466EA470B09B /* Saira_Condensed-ExtraLightItalic.ttf in Resources */,
+				BE1ACB3915BF46D4A854B121 /* Saira_Condensed-Italic.ttf in Resources */,
+				A6F3D57174EE49609AA4701A /* Saira_Condensed-Light.ttf in Resources */,
+				E2A4E8651CC343BF9C110623 /* Saira_Condensed-LightItalic.ttf in Resources */,
+				0A74C16423634BA6B81C4857 /* Saira_Condensed-Medium.ttf in Resources */,
+				3EC91779E717465AB13E1D15 /* Saira_Condensed-MediumItalic.ttf in Resources */,
+				BE0DD2B9AA994B0AB22F47C9 /* Saira_Condensed-Regular.ttf in Resources */,
+				B55F51FF2EEE4798BE599DD6 /* Saira_Condensed-SemiBold.ttf in Resources */,
+				7D4ABFACD6B745F590F7B6E5 /* Saira_Condensed-SemiBoldItalic.ttf in Resources */,
+				83AE89FC8B9045AE98A8F2E7 /* Saira_Condensed-Thin.ttf in Resources */,
+				31C860F48275449AAFBFAA68 /* Saira_Condensed-ThinItalic.ttf in Resources */,
+				55D3D902AAD94037849FE003 /* Saira_Expanded-Black.ttf in Resources */,
+				22FC4FCEE265446E8093704C /* Saira_Expanded-BlackItalic.ttf in Resources */,
+				3D5809B8062E4A5A8000DA60 /* Saira_Expanded-Bold.ttf in Resources */,
+				CEE2D04EEFE249FE9A52E88A /* Saira_Expanded-BoldItalic.ttf in Resources */,
+				F1470DCDC97C468595467004 /* Saira_Expanded-ExtraBold.ttf in Resources */,
+				AFD2BBEE05AE4C83BFAEEEAE /* Saira_Expanded-ExtraBoldItalic.ttf in Resources */,
+				4FCA23D78AE14937B92E6F30 /* Saira_Expanded-ExtraLight.ttf in Resources */,
+				5C04113BCC2F4875B977A333 /* Saira_Expanded-ExtraLightItalic.ttf in Resources */,
+				9298821CF61D43EA8D2B72E0 /* Saira_Expanded-Italic.ttf in Resources */,
+				54C9A384CB5C47A88D2794F1 /* Saira_Expanded-Light.ttf in Resources */,
+				20F98CAC1D7148548D1204BF /* Saira_Expanded-LightItalic.ttf in Resources */,
+				BCE5A18C57BB4D9EBEA8012D /* Saira_Expanded-Medium.ttf in Resources */,
+				44FFFDAB4631415CA0277051 /* Saira_Expanded-MediumItalic.ttf in Resources */,
+				B1A421B2D117462582E5F16A /* Saira_Expanded-Regular.ttf in Resources */,
+				6C93A7CEB40143C5ACA1C24E /* Saira_Expanded-SemiBold.ttf in Resources */,
+				73E458CC80E54E20B0DB819C /* Saira_Expanded-SemiBoldItalic.ttf in Resources */,
+				5356B66FC5BF496D8AADEE89 /* Saira_Expanded-Thin.ttf in Resources */,
+				9F33AA52634A489D948D2F42 /* Saira_Expanded-ThinItalic.ttf in Resources */,
+				8587E279571A438BAFDD12DA /* Saira_ExtraCondensed-Black.ttf in Resources */,
+				21FC5244AD9C46ADB963ED6B /* Saira_ExtraCondensed-BlackItalic.ttf in Resources */,
+				27949FAB756545239CC84E12 /* Saira_ExtraCondensed-Bold.ttf in Resources */,
+				D6339A9FFCF24D94BD372D32 /* Saira_ExtraCondensed-BoldItalic.ttf in Resources */,
+				0CC60BD3F0134B39B721B76D /* Saira_ExtraCondensed-ExtraBold.ttf in Resources */,
+				24F96B37F9A4450291795D6D /* Saira_ExtraCondensed-ExtraBoldItalic.ttf in Resources */,
+				4D2B7E7B27724B688AFAD56D /* Saira_ExtraCondensed-ExtraLight.ttf in Resources */,
+				3CF8BA8E37B349D488B2AD98 /* Saira_ExtraCondensed-ExtraLightItalic.ttf in Resources */,
+				AA0226374E7547FCBB947A1B /* Saira_ExtraCondensed-Italic.ttf in Resources */,
+				9B981DE74EFB4FE79F4F02A9 /* Saira_ExtraCondensed-Light.ttf in Resources */,
+				16D8B24BB9B642589B337FB7 /* Saira_ExtraCondensed-LightItalic.ttf in Resources */,
+				ECA68D8A4103419B9057C6E8 /* Saira_ExtraCondensed-Medium.ttf in Resources */,
+				FAFDAFE893C84B1280B1BF61 /* Saira_ExtraCondensed-MediumItalic.ttf in Resources */,
+				0B03D75F55544A3C9B140983 /* Saira_ExtraCondensed-Regular.ttf in Resources */,
+				52E5CC98E26E401C86503FB7 /* Saira_ExtraCondensed-SemiBold.ttf in Resources */,
+				FB73D15EDE0B4D22B97E7A8A /* Saira_ExtraCondensed-SemiBoldItalic.ttf in Resources */,
+				1DB4FDD62B3D49DFBBA961F1 /* Saira_ExtraCondensed-Thin.ttf in Resources */,
+				0B242A340A01494196B46FED /* Saira_ExtraCondensed-ThinItalic.ttf in Resources */,
+				847F24BD79B445228355A2EC /* Saira_SemiCondensed-Black.ttf in Resources */,
+				54A9E4A07F78438BAC9081D9 /* Saira_SemiCondensed-BlackItalic.ttf in Resources */,
+				466C5B9BF1EA4A9FB6B80411 /* Saira_SemiCondensed-Bold.ttf in Resources */,
+				77828D2059A34F5588E8B54E /* Saira_SemiCondensed-BoldItalic.ttf in Resources */,
+				E688E26A864241579FC567A8 /* Saira_SemiCondensed-ExtraBold.ttf in Resources */,
+				08C045B67C2242B1844E5EC0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
+				BD7A1A36787E47D4A1377558 /* Saira_SemiCondensed-ExtraLight.ttf in Resources */,
+				397C4376200247A6B73E10AE /* Saira_SemiCondensed-ExtraLightItalic.ttf in Resources */,
+				22C3F751CD6C46F2B970CB0D /* Saira_SemiCondensed-Italic.ttf in Resources */,
+				E7AFA8F24F8E4A8198DAB1FB /* Saira_SemiCondensed-Light.ttf in Resources */,
+				0B7EADE115734B37AE672524 /* Saira_SemiCondensed-LightItalic.ttf in Resources */,
+				B84F52CC2A3F4FA8BD353752 /* Saira_SemiCondensed-Medium.ttf in Resources */,
+				004B617931F148719B80AB64 /* Saira_SemiCondensed-MediumItalic.ttf in Resources */,
+				7191FDCA803F4B2C8A362D51 /* Saira_SemiCondensed-Regular.ttf in Resources */,
+				F5A18DEA2D9A430B81FA7B3C /* Saira_SemiCondensed-SemiBold.ttf in Resources */,
+				8B2D84B1D86B4F0592B0776D /* Saira_SemiCondensed-SemiBoldItalic.ttf in Resources */,
+				DCB6A206E6784CF297CED6F1 /* Saira_SemiCondensed-Thin.ttf in Resources */,
+				4396D330B80A4E3A8D19B936 /* Saira_SemiCondensed-ThinItalic.ttf in Resources */,
+				43840B8A803C4F1DA51363D8 /* Saira_SemiExpanded-Black.ttf in Resources */,
+				863209A8B50A48DD8F4382CB /* Saira_SemiExpanded-BlackItalic.ttf in Resources */,
+				D86952FA70474AD8918CFA8D /* Saira_SemiExpanded-Bold.ttf in Resources */,
+				32B29CF81CE4418E9C65CA42 /* Saira_SemiExpanded-BoldItalic.ttf in Resources */,
+				9F0B1A193B2C428E90EAA6D0 /* Saira_SemiExpanded-ExtraBold.ttf in Resources */,
+				313708F5F1CF4E149A4DDF7A /* Saira_SemiExpanded-ExtraBoldItalic.ttf in Resources */,
+				E62287DA715946089ED52B80 /* Saira_SemiExpanded-ExtraLight.ttf in Resources */,
+				D5E8CFAF0ADD4670956B9473 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */,
+				A03446913A82428EBA75BB5F /* Saira_SemiExpanded-Italic.ttf in Resources */,
+				D06E7E7DAF7F425C88525FB2 /* Saira_SemiExpanded-Light.ttf in Resources */,
+				8670D9934DDA4664B3A80EAA /* Saira_SemiExpanded-LightItalic.ttf in Resources */,
+				46225B9C497D4F22B95092CA /* Saira_SemiExpanded-Medium.ttf in Resources */,
+				31A82922D6E74E0190537A07 /* Saira_SemiExpanded-MediumItalic.ttf in Resources */,
+				78D6C7C1E5D44F868B8755DE /* Saira_SemiExpanded-Regular.ttf in Resources */,
+				1ECC3976DFF444279E73B0D3 /* Saira_SemiExpanded-SemiBold.ttf in Resources */,
+				5DA4FC4ACE9E4DE69A8C4170 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */,
+				156106BD6D934A60B3B95FD1 /* Saira_SemiExpanded-Thin.ttf in Resources */,
+				DC1A8444AC70478194E1C3D7 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */,
+				BD4BA8ACB7F541F4A247ED6F /* Saira_UltraCondensed-Black.ttf in Resources */,
+				350A7F6920794F0A81C1D079 /* Saira_UltraCondensed-BlackItalic.ttf in Resources */,
+				F2BD4DA658BB42B186C749B7 /* Saira_UltraCondensed-Bold.ttf in Resources */,
+				962E5E2B88D243EAADD37872 /* Saira_UltraCondensed-BoldItalic.ttf in Resources */,
+				EC4B35B7BBE141F286F1CDBC /* Saira_UltraCondensed-ExtraBold.ttf in Resources */,
+				F60374DB779547A69A0BF159 /* Saira_UltraCondensed-ExtraBoldItalic.ttf in Resources */,
+				9182836DF9184DA393F320E9 /* Saira_UltraCondensed-ExtraLight.ttf in Resources */,
+				73B72E5CDA7E43B18D642E94 /* Saira_UltraCondensed-ExtraLightItalic.ttf in Resources */,
+				CA8DD80F50964AC78BD63295 /* Saira_UltraCondensed-Italic.ttf in Resources */,
+				C433202245B54D48A15B4BE6 /* Saira_UltraCondensed-Light.ttf in Resources */,
+				49CF7AA8D4C34ECE98E01DA8 /* Saira_UltraCondensed-LightItalic.ttf in Resources */,
+				6AFA018791664AE484EB8707 /* Saira_UltraCondensed-Medium.ttf in Resources */,
+				E085F673D82348119BB749E6 /* Saira_UltraCondensed-MediumItalic.ttf in Resources */,
+				681919B5F8FA4DA48AF14701 /* Saira_UltraCondensed-Regular.ttf in Resources */,
+				9E978E53DD4F4E358E390BA3 /* Saira_UltraCondensed-SemiBold.ttf in Resources */,
+				8CCA9F92AF9F434198F057FE /* Saira_UltraCondensed-SemiBoldItalic.ttf in Resources */,
+				B8B7784258454AAEB01AB28E /* Saira_UltraCondensed-Thin.ttf in Resources */,
+				BBAC5218E9404689B84A43E1 /* Saira_UltraCondensed-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

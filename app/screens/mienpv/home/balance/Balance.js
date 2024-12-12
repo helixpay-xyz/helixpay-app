@@ -29,6 +29,6 @@ export default class Balance extends Base {
     }
 
     render() {
-        return <BalanceContent/>;
+        return <BalanceContent defaultParam={this.defaultParam}/>;
     }
 }
