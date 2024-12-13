@@ -200,6 +200,7 @@ const BalanceContent = observer(({defaultParam, onRefresh}) => {
     }
 
     const renderTransactionItem = (item, index) => {
+        //test again
         const isPlus = item.type === 'deposit' || item.type === 'receive';
         return (
             <CBView key={index} style={[appStyles.row, {backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 15, padding: 15, marginBottom: 8}]}>
