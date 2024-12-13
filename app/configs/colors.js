@@ -71,6 +71,7 @@ export default {
     purpleDark: '#4D0099',
 
     greenContent: '#00CD88',
+    redContent: '#FF6464',
 
     white: '#FFFFFF',
     black: '#000000'

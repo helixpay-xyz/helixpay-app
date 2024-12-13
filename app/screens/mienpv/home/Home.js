@@ -48,12 +48,12 @@ const Home = () => {
                     position: 'absolute',
                     bottom: dimens.bottomSpace,
                     height: 70,
-                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.9)',
                     marginHorizontal: 15,
                     paddingHorizontal: 15,
                     borderRadius: 30,
                     borderWidth: 1,
-                    borderColor: 'rgba(255, 255, 255, 0.07)',
+                    borderColor: 'rgba(0, 0, 0, 0.8 )',
                 }]
             }}>
             <Tab.Screen name={'Balance'} component={Balance} options={{headerShown: false, tabBarIcon: renderTabBarIcon('home-outline', strings('screen_home'))}}/>

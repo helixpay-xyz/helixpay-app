@@ -28,7 +28,10 @@ export default class Balance extends Base {
         // RootNavigation.navigate('LoginOrRegister');
     }
 
+    onRefresh = () => {
+    }
+
     render() {
-        return <BalanceContent defaultParam={this.defaultParam}/>;
+        return <BalanceContent defaultParam={this.defaultParam} onRefresh={this.onRefresh}/>;
     }
 }
