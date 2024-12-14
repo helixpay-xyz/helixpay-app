@@ -6,9 +6,9 @@ import {appStyles} from 'configs/styles';
 import {helpers} from 'configs/themes';
 import dimens from 'configs/dimens';
 
-import Balance from 'screens/mienpv/home/balance/Balance';
-import MainEvent from 'screens/mienpv/home/MainEvent';
-import Menu from 'screens/mienpv/home/Menu';
+import Balance from 'screens/helixpay/home/balance/Balance';
+import MainEvent from 'screens/helixpay/home/MainEvent';
+import Menu from 'screens/helixpay/home/Menu';
 import ImageUtil from "utils/ImageUtil";
 import {strings} from "controls/i18n";
 

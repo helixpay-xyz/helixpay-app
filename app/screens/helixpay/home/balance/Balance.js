@@ -1,11 +1,13 @@
 import React from 'react';
-import {CBContainer, CBText} from 'components';
-import {appStyles} from 'configs/styles';
 import RootNavigation from 'screens/RootNavigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import BalanceContent from 'screens/mienpv/home/balance/content/BalanceContent';
+import BalanceContent from 'screens/helixpay/home/balance/content/BalanceContent';
 
 import Base from 'screens/Base';
+import CBHelper from "helpers/CBHelper";
+import CBSyncHandler from "handlers/CBSyncHandler";
+import CBRunHandler from "handlers/CBRunHandler";
 
 export default class Balance extends Base {
 
@@ -26,6 +28,18 @@ export default class Balance extends Base {
         //CASE2 IF data sdt luu o local k null, vao main event
         //check data sdt co ton tai khong, neu co thi set name, k co thi mo cai modal len
         // RootNavigation.navigate('LoginOrRegister');
+        CBHelper.reactionApplication();
+        CBHelper.refreshApplication(() => {
+            CBSyncHandler.sync();
+            CBRunHandler.run();
+        });
+        this.setState({
+            refreshing: false,
+        }, async () => {
+            // const value = await AsyncStorage.getItem('@app_introduction');
+            // if (value !== 'true') RootNavigation.navigate('Introduction');
+            RootNavigation.navigate('Introduction');
+        });
     }
 
     onRefresh = () => {

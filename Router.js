@@ -3,8 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import AppStore from 'stores/AppStore';
 import {observer} from 'mobx-react';
 
-import AuthLoading from 'screens/mienpv/AuthLoading';
-import {UserStack} from 'screens/mienpv/UserNavigator';
+import AuthLoading from 'screens/helixpay/AuthLoading';
+import {UserStack} from 'screens/helixpay/UserNavigator';
 
 const Stack = createStackNavigator();
 export const RootStack = observer(() => {
