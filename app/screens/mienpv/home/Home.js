@@ -26,7 +26,7 @@ const Home = () => {
                     <CBIcon type={'ionicon'} name={name} color={focused ? primaryColor : iconColor} size={22}/>
                     <CBText style={[appStyles.text, {fontSize: 12, color: focused ? primaryColor : iconColor, marginTop: 2}]} define={'none'} allowFontScaling={false}>{title}</CBText>
                 </CBView>
-                {/*{name === 'notifications-outline' && count > 0 ? <CBBadge containerStyle={{position: 'absolute', top: 10, right: 10}} value={count > 99 ? '99+' : count} status={'error'}/> : null}*/}
+                {name === 'notifications-outline' && count > 0 ? <CBBadge containerStyle={{position: 'absolute', top: 10, right: 10}} value={count > 99 ? '99+' : count} status={'error'}/> : null}
             </>
         );
     };
