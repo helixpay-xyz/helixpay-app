@@ -20,11 +20,14 @@
   "button_start": "Start",
   "button_verify": "Verify",
   "button_restart": "Restart",
+  "button_wallet": "Create new wallet",
+  "button_already_have_wallet": "Already have a wallet",
 
   "error_valid_phone_number": "Phone number is incorrect format",
   "error_empty_phone_number": "Please enter phone number",
   "error_valid_code": "Code is incorrect format",
   "error_empty_code": "Please enter code",
+  "error_valid_password": "Password is incorrect format",
 
   "input_phone_number": "Phone number",
 
@@ -50,6 +53,8 @@
   "text_not_receive_code": "I haven't received my security code?",
   "text_resend_code": "Request a new code in {0} seconds",
   "text_processing_biometric": "Biometric confirmation",
+  "text_create_password": "Create Password",
+  "text_subtitle_password": "This password will unlock your HelixPay Wallet only on this device.",
 
   "screen_empty": "Code Base",
   "screen_web": "",

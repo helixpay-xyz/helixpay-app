@@ -9,6 +9,7 @@ import dimens from 'configs/dimens';
 
 import Home from 'screens/helixpay/home/Home';
 import LoginOrRegister from "screens/helixpay/auth/LoginOrRegister";
+import CreateWallet from "screens/helixpay/auth/CreatWallet";
 import Web from 'screens/Web';
 import Empty from 'screens/Empty';
 import Introduction from 'screens/helixpay/auth/Introduction';
@@ -46,6 +47,7 @@ export const UserStack = () => {
             }}>
             <Stack.Screen name={'Home'} component={Home} options={{headerShown: false}}/>
             <Stack.Screen name={'LoginOrRegister'} component={LoginOrRegister} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
+            <Stack.Screen name={'CreateWallet'} component={CreateWallet} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
             <Stack.Screen name={'Web'} component={Web} options={{title: strings('screen_web')}}/>
             <Stack.Screen name={'Empty'} component={Empty} options={{title: strings('screen_empty')}}/>
             <Stack.Screen name={'Introduction'} component={Introduction} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>

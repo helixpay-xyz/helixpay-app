@@ -1,6 +1,7 @@
 [
   "Introduction",
   "LoginOrRegister",
+  "CreateWallet",
   "MainEvent",
   "Balance",
   "Menu",

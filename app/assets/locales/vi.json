@@ -20,11 +20,14 @@
   "button_start": "Bắt đầu",
   "button_verify": "Xác thực",
   "button_restart": "Khởi động lại",
+  "button_wallet": "Create new wallet",
+  "button_already_have_wallet": "Already have a wallet",
 
   "error_valid_phone_number": "Số điện thoại không đúng định dạng",
   "error_empty_phone_number": "Vui lòng nhập số điện thoại",
   "error_valid_code": "Mã bảo mật không đúng định dạng",
   "error_empty_code": "Vui lòng nhập mã bảo mật",
+  "error_valid_password": "Password is incorrect format",
 
   "input_phone_number": "Số điện thoại",
 
@@ -50,6 +53,8 @@
   "text_not_receive_code": "Tôi chưa nhận được mã bảo mật?",
   "text_resend_code": "Yêu cầu mã mới trong {0} giây",
   "text_processing_biometric": "Xác nhận sinh trắc học",
+  "text_create_password": "Create Password",
+  "text_subtitle_password": "This password will unlock your HelixPay Wallet only on this device.",
 
   "screen_empty": "Code Base",
   "screen_web": "",
