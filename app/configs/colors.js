@@ -26,6 +26,7 @@ export default {
     brandingColor950: '#7b601a',
 
     backgroundColor: '#050606',
+    bottomModalColor: '#202121',
 
     hintColor: '#ECF6FF',
     hintDarkColor: '#3E4057',

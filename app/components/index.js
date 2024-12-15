@@ -4,6 +4,7 @@ import CBAvatar from 'components/CBAvatar';
 import CBBadge from 'components/CBBadge';
 import CBBottomInput from 'components/CBBottomInput';
 import CBBottomSheet from 'components/CBBottomSheet';
+import CBBottomPassword from 'components/CBBottomPassword';
 import CBButton from 'components/CBButton';
 import CBButtonGroup from 'components/CBButtonGroup';
 import CBCan from 'components/CBCan';
@@ -57,6 +58,7 @@ export {
     CBBadge,
     CBBottomInput,
     CBBottomSheet,
+    CBBottomPassword,
     CBButton,
     CBButtonGroup,
     CBCan,

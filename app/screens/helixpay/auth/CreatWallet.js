@@ -1,28 +1,13 @@
 import React from 'react';
-import {Keyboard, Platform} from 'react-native';
+import {Keyboard} from 'react-native';
 import RootNavigation from 'screens/RootNavigation';
-import auth from '@react-native-firebase/auth';
-import {
-    CBAction,
-    CBButton,
-    CBIcon, CBImageBackground,
-    CBInput,
-    CBText,
-    CBTouchableOpacity,
-    CBTouchableWithoutFeedback,
-    CBView,
-} from 'components';
-import CBConstant from 'constants/CBConstant';
-import CBGlobal from 'globals/CBGlobal';
-import PhoneNumberUtil from 'utils/PhoneNumberUtil';
+import {CBAction, CBBottomPassword, CBButton, CBIcon, CBImageBackground, CBInput, CBText, CBTouchableOpacity, CBTouchableWithoutFeedback, CBView,} from 'components';
 import JsonUtil from 'utils/JsonUtil';
-import {getHash} from 'react-native-otp-verify';
-import I18n from 'react-native-i18n';
 import {appStyles} from 'configs/styles';
 import colors from 'configs/colors';
 import {strings} from 'controls/i18n';
 import dimens from 'configs/dimens';
-import { getDatabase, ref, set } from "firebase/database";
+import {ref, set } from "firebase/database";
 import {db} from 'app/firebase/config';
 
 import {Formik} from 'formik';
@@ -45,6 +30,8 @@ export default class CreateWallet extends Base {
             showConfirmPassword: false,
             strongType: 1
         };
+
+        this.cbBottomPassword = React.createRef();
     }
 
     componentDidMount() {
@@ -132,44 +119,19 @@ export default class CreateWallet extends Base {
         await set(ref(db, 'phoneNumber/' + values?.phoneNumber), {
             phoneNumber: values?.phoneNumber,
         });
-        // const confirmation = await auth().signInWithPhoneNumber(values.phoneNumber);
-        // console.log(`mienpv :: ${JSON.stringify(confirmation)}`);
-        // const {template, isCompany, isAutoFill} = this.state;
-        // const hash = await getHash();
-        // const pattern = template ? template[I18n.locale] : CBConstant.OTP_PATTERN[I18n.locale];
-        // this.submit({
-        //     template: isAutoFill ? Platform.select({android: `${pattern} ${hash}`, ios: `${pattern} Code: $OTP`}) : pattern,
-        //     lang: CBConstant.LANGUAGES[I18n.locale],
-        //     ...isCompany ? {
-        //         from: CBGlobal.companyId
-        //     } : null,
-        //     phone: PhoneNumberUtil.insertCountryCode(values.countryCode, values.phoneNumber)
-        // });
-        // firebase
-        //     .auth()
-        //     .signInWithPhoneNumber(values.phoneNumber)
-        //     .then((response) => {
-        //         const uid = response.user.uid
-        //         const data = {
-        //             id: uid,
-        //             phoneNumber: values.phoneNumber
-        //         };
-        //         const usersRef = firebase.firestore().collection('users')
-        //         usersRef
-        //             .doc(uid)
-        //             .set(data)
-        //             .then(() => {
-        //                 RootNavigation.navigate('Home', {user: data})
-        //             })
-        //             .catch((error) => {
-        //                 alert(error)
-        //             });
-        //     })
-        //     .catch((error) => {
-        //         alert(error)
-        //     });
         EventTracker.logEvent('screen_login', {action: 'click_next'});
     };
+
+    onCreateWallet = () => {
+        this.cbBottomPassword.current.show({
+            title: 'Secure Your Wallet',
+            message: 'Secret Recovery Phrase make your account safety. make sure you keep it safe too',
+            onConfirm: () => {
+                RootNavigation.navigate('CreateWallet');
+                EventTracker.logEvent('screen_login', {action: 'click_create_wallet'});
+            }
+        });
+    }
 
     onTermsAndConditions = () => {
         RootNavigation.navigate('Web', {
@@ -183,6 +145,7 @@ export default class CreateWallet extends Base {
 
     render() {
         const {theme} = this.context;
+        //12345678A@f
         const {uri, strongType, showPassword, showConfirmPassword} = this.state;
         return (
             <CBImageBackground style={[{width: dimens.widthScreen, height: dimens.heightScreen, justifyContent: 'flex-start'}]} imageStyle={{width: dimens.widthScreen, height: dimens.heightScreen}} source={ImageUtil.getImage('background_1')}>
@@ -202,7 +165,7 @@ export default class CreateWallet extends Base {
                             }}
                             validateOnChange={true}
                             validateOnBlur={false}
-                            onSubmit={this.onNext}>
+                            onSubmit={this.onCreateWallet}>
                             {
                                 ({setFieldValue, setFieldError, handleChange, handleSubmit, values, errors}) => (
                                     <>
@@ -272,6 +235,7 @@ export default class CreateWallet extends Base {
                         </CBTouchableOpacity>
                     </CBView>
                 </CBTouchableWithoutFeedback>
+                <CBBottomPassword ref={this.cbBottomPassword}/>
             </CBImageBackground>
         );
     }
