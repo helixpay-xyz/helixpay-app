@@ -22,6 +22,7 @@
   "button_restart": "Khởi động lại",
   "button_wallet": "Create new wallet",
   "button_already_have_wallet": "Already have a wallet",
+  "button_password": "Create password",
 
   "error_valid_phone_number": "Số điện thoại không đúng định dạng",
   "error_empty_phone_number": "Vui lòng nhập số điện thoại",
@@ -32,6 +33,7 @@
   "input_phone_number": "Số điện thoại",
 
   "placeholder_phone_number": "Nhập số điện thoại",
+  "placeholder_password": "Enter password",
 
   "toast_copied": "Sao chép thành công!",
   "toast_resend": "Gửi lại thành công!",

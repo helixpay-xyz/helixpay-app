@@ -22,6 +22,7 @@
   "button_restart": "Restart",
   "button_wallet": "Create new wallet",
   "button_already_have_wallet": "Already have a wallet",
+  "button_password": "Create password",
 
   "error_valid_phone_number": "Phone number is incorrect format",
   "error_empty_phone_number": "Please enter phone number",
@@ -32,6 +33,7 @@
   "input_phone_number": "Phone number",
 
   "placeholder_phone_number": "Enter phone number",
+  "placeholder_password": "Enter password",
 
   "toast_copied": "Copy successful!",
   "toast_resend": "Resend successful!",

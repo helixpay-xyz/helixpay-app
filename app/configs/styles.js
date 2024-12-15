@@ -48,37 +48,37 @@ export const appStyles = StyleSheet.create({
     heading: {
         fontSize: dimens.xxxLargeText,
         color: colors.primaryTextColor,
-        fontFamily: 'Saira-Bold'
+        fontFamily: 'SpaceGrotesk-Bold'
     },
     title: {
         fontSize: dimens.largeText,
         color: colors.primaryTextColor,
-        fontFamily: 'Saira-Bold'
+        fontFamily: 'SpaceGrotesk-Bold'
     },
     label: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
-        fontFamily: 'Saira-Bold'
+        fontFamily: 'SpaceGrotesk-Bold'
     },
     text: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
-        fontFamily: 'Saira-Regular'
+        fontFamily: 'SpaceGrotesk-Regular'
     },
     subtext: {
         fontSize: dimens.normalText,
         color: colors.secondaryTextColor,
-        fontFamily: 'Saira-Regular'
+        fontFamily: 'SpaceGrotesk-Regular'
     },
     caption: {
         fontSize: dimens.smallText,
         color: colors.tertiaryTextColor,
-        fontFamily: 'Saira-Light'
+        fontFamily: 'SpaceGrotesk-Light'
     },
     error: {
         fontSize: dimens.smallText,
         color: colors.errorTextColor,
-        fontFamily: 'Saira-Regular'
+        fontFamily: 'SpaceGrotesk-Regular'
     },
     enfold: {
         width: dimens.widthScreen,
@@ -95,13 +95,13 @@ export const appStyles = StyleSheet.create({
     negative: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
-        fontFamily: 'Saira-Regular',
+        fontFamily: 'SpaceGrotesk-Regular',
         padding: 2
     },
     positive: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
-        fontFamily: 'Saira-Regular',
+        fontFamily: 'SpaceGrotesk-Regular',
         padding: 2
     },
     row: {
@@ -199,7 +199,7 @@ export const appStyles = StyleSheet.create({
         paddingHorizontal: 15,
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
-        fontFamily: 'Saira-Regular',
+        fontFamily: 'SpaceGrotesk-Regular',
         textAlign: 'center',
         borderWidth: 1,
         borderColor: colors.lineColor,
