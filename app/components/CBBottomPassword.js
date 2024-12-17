@@ -8,6 +8,8 @@ import Modal from 'react-native-modal';
 import {appStyles} from 'configs/styles';
 import colors from 'configs/colors';
 import dimens from "configs/dimens";
+import {CBButton, CBText, CBView} from "app/components/index";
+import {strings} from "controls/i18n";
 
 const CBBottomPassword = ({style, onAction}, ref) => {
     useImperativeHandle(ref, () => ({
@@ -18,7 +20,7 @@ const CBBottomPassword = ({style, onAction}, ref) => {
     const [data, setData] = useState({});
     const [visible, setVisible] = useStateWithCallbackLazy(false);
     const [value, setValue] = useState('');
-    const {title = '', message = '', buttons = [], options = {}} = data;
+    const {title = '', message = '', strongType, onConfirm, buttons = [], options = {}} = data;
     const swipeDirection = options && (options.cancelable === true || options.cancelable === undefined) ? ['down'] : null;
     const show = (data) => {
         Keyboard.dismiss();
@@ -51,27 +53,10 @@ const CBBottomPassword = ({style, onAction}, ref) => {
     const onSwipeOut = () => {
         hide();
     };
-    const onChangeText = text => setValue(text);
-    const onClearText = () => onChangeText('');
-    const onPress = (index) => () => {
-        const button = buttons[index];
-        if (button && button.onPress && typeof button.onPress === 'function') {
-            hide(button.onPress(value));
-        } else if (button && button.refId) {
-            hide(() => CBControl.navigateWith(button.refId, button.defaultParam, button.injection));
-        } else if (button && button.name) {
-            if (onAction && typeof onAction === 'function') {
-                hide(onAction(button.name));
-            } else {
-                hide();
-            }
-        } else {
-            hide();
-        }
-        if (button && button.tracking) {
-            EventTracker.logEvent('cb_bottom_input', {action: `click_button_${button.tracking}`});
-        }
-    };
+
+    const onConfirmButton = () => {
+        hide(onConfirm);
+    }
 
     const {theme} = useTheme();
     return (
@@ -92,6 +77,18 @@ const CBBottomPassword = ({style, onAction}, ref) => {
                 {title ? <Text style={[appStyles.title, {fontSize: dimens.xxLargeText, marginTop: 30}]} numberOfLines={1} ellipsizeMode={'tail'}>{title}</Text> : null}
                 {message ? <Text style={[appStyles.text, {fontSize: dimens.normalText, marginTop: 10}]}>{message}</Text> : null}
                 <Text style={[appStyles.text, {fontSize: dimens.smallText, marginTop: 10, color: colors.brandingColor200}]}>{'Learn more'}</Text>
+
+                <Text style={[appStyles.text, {fontSize: dimens.normalText, marginTop: 25}]}>{'Security Level:'}</Text>
+                <View style={[appStyles.row, {justifyContent: 'space-between', marginTop: 5}]} define={'none'}>
+                    <View style={[appStyles.row]}>
+                        <View style={{width: (dimens.widthScreen - 45) / 6, height: 3, borderRadius: 2, backgroundColor: strongType >= 1 ? theme.colors.primary : 'rgba(255, 255, 255, 0.2)', marginRight: 5}} define={'none'}/>
+                        <View style={{width: (dimens.widthScreen - 45) / 6, height: 3, borderRadius: 2, backgroundColor: strongType >= 2 ? theme.colors.primary : 'rgba(255, 255, 255, 0.2)', marginRight: 5}} define={'none'}/>
+                        <View style={{width: (dimens.widthScreen - 45) / 6, height: 3, borderRadius: 2, backgroundColor: strongType >= 3 ? theme.colors.primary : 'rgba(255, 255, 255, 0.2)', marginRight: 5}} define={'none'}/>
+                        <View style={{width: (dimens.widthScreen - 45) / 6, height: 3, borderRadius: 2, backgroundColor: strongType >= 4 ? theme.colors.primary : 'rgba(255, 255, 255, 0.2)', marginRight: 5}} define={'none'}/>
+                    </View>
+                    <Text style={[appStyles.text, {color: theme.colors.primary, fontSize: dimens.normalText, fontFamily: 'SpaceGrotesk-Medium'}]}>{strongType > 2 ? 'Strong' : 'Week'}</Text>
+                </View>
+                <CBButton containerStyle={{ marginTop: 15 }} buttonStyle={appStyles.button} title={strings('button_understand')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onConfirmButton}/>
             </View>
         </Modal>
     );

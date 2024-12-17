@@ -123,12 +123,13 @@ export default class CreateWallet extends Base {
     };
 
     onCreateWallet = () => {
+        const {strongType} = this.state;
         this.cbBottomPassword.current.show({
             title: 'Secure Your Wallet',
             message: 'Secret Recovery Phrase make your account safety. make sure you keep it safe too',
+            strongType: strongType,
             onConfirm: () => {
-                RootNavigation.navigate('CreateWallet');
-                EventTracker.logEvent('screen_login', {action: 'click_create_wallet'});
+                RootNavigation.navigate('SeedPhrase');
             }
         });
     }
