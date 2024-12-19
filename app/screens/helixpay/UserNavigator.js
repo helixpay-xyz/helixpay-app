@@ -48,8 +48,8 @@ export const UserStack = () => {
             }}>
             <Stack.Screen name={'Home'} component={Home} options={{headerShown: false}}/>
             <Stack.Screen name={'LoginOrRegister'} component={LoginOrRegister} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
-            <Stack.Screen name={'CreateWallet'} component={CreateWallet} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
-            <Stack.Screen name={'SeedPhrase'} component={SeedPhrase} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
+            <Stack.Screen name={'CreateWallet'} component={CreateWallet} options={{headerShown: false, gestureEnabled: false}}/>
+            <Stack.Screen name={'SeedPhrase'} component={SeedPhrase} options={{headerShown: false, gestureEnabled: false}}/>
             <Stack.Screen name={'Web'} component={Web} options={{title: strings('screen_web')}}/>
             <Stack.Screen name={'Empty'} component={Empty} options={{title: strings('screen_empty')}}/>
             <Stack.Screen name={'Introduction'} component={Introduction} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>

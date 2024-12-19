@@ -9,6 +9,8 @@ import {strings} from 'controls/i18n';
 import dimens from 'configs/dimens';
 import {ref, set } from "firebase/database";
 import {db} from 'app/firebase/config';
+import { generateMnemonic, validateMnemonic } from '@scure/bip39';
+import { wordlist } from '@scure/bip39/wordlists/english';
 
 import {Formik} from 'formik';
 import * as yup from 'yup';
@@ -16,6 +18,7 @@ import * as yup from 'yup';
 import Base from 'screens/Base';
 import EventTracker from 'controls/EventTracker';
 import ImageUtil from "utils/ImageUtil";
+import Toast from "react-native-simple-toast";
 
 export default class SeedPhrase extends Base {
 
@@ -28,7 +31,8 @@ export default class SeedPhrase extends Base {
             isAutoFill: false,
             showPassword: false,
             showConfirmPassword: false,
-            strongType: 1
+            mnemonic: '',
+            isValid: null
         };
 
         this.cbBottomPassword = React.createRef();
@@ -48,71 +52,52 @@ export default class SeedPhrase extends Base {
         });
     }
 
-    validatePassword = (password) => {
-        if (!password) {
-            this.setState({ strongType: '' });
-            return 'Password is required';
-        }
-        let strongType = 1;
-        if (password.length >= 8) {
-            this.setState({ strongType: 2 })
-        }
-        if (
-            /[A-Z]/.test(password) &&
-            /[a-z]/.test(password) &&
-            /\d/.test(password) &&
-            /[@$!%*?&]/.test(password)
-        ) {
-            this.setState({ strongType: 3 })
-        }
+    handleGenerateMnemonic = () => {
+        const generatedMnemonic = generateMnemonic(wordlist);
+        this.setState({
+            mnemonic: generatedMnemonic,
+            isValid: null
+        })
 
-        if (password.length < 8) {
-            return 'Password must be at least 8 characters long';
-        }
-        if (!/[A-Z]/.test(password)) {
-            return 'Password must include at least one uppercase letter';
-        }
-        if (!/[a-z]/.test(password)) {
-            return 'Password must include at least one lowercase letter';
-        }
-        if (!/\d/.test(password)) {
-            return 'Password must include at least one number';
-        }
-        if (!/[@$!%*?&]/.test(password)) {
-            return 'Password must include at least one special character (e.g., @, $, !, etc.)';
-        }
-        return '';
     };
 
-    validateConfirmPassword = (confirmPassword, password) => {
-        if (!confirmPassword) {
-            return 'Confirm Password is required';
+    handleValidateMnemonic = () => {
+        const {mnemonic} = this.state;
+        if (!mnemonic) {
+            this.alert('No Mnemonic to Validate');
+            return;
         }
-        if (confirmPassword !== password) {
-            return 'Passwords do not match';
+        const validationStatus = validateMnemonic(mnemonic, wordlist);
+        this.setState({
+            isValid: validationStatus
+        })
+        this.alert(validationStatus ? 'Mnemonic is Valid' : 'Mnemonic is Invalid');
+    };
+
+    handleCopyToClipboard = () => {
+        const {mnemonic} = this.state
+        if (!mnemonic) {
+            Toast.show({
+                type: 'error',
+                text1: 'No Mnemonic to Copy',
+            });
+            return;
         }
-        return '';
+
+        Clipboard.setString(mnemonic);
+        Toast.show({
+            type: 'success',
+            text1: 'Mnemonic Copied to Clipboard',
+        });
     };
 
     onBlur = () => {
         Keyboard.dismiss();
     };
 
-    togglePasswordVisibility = () => {
-        this.setState((prevState) => ({ showPassword: !prevState.showPassword }));
-    };
-
-    toggleConfirmPasswordVisibility = () => {
-        this.setState((prevState) => ({ showConfirmPassword: !prevState.showConfirmPassword }));
-    };
-
     onClose = () => {
         RootNavigation.goBack();
         EventTracker.logEvent('screen_login', {action: 'click_button_back'});
-    };
-
-    onToggleError = (setFieldError, name) => () => {
-        setFieldError(name, '');
     };
 
     onNext = async (values) => {
@@ -122,39 +107,30 @@ export default class SeedPhrase extends Base {
         EventTracker.logEvent('screen_login', {action: 'click_next'});
     };
 
-    onCreateWallet = () => {
-        const {strongType} = this.state;
-        this.cbBottomPassword.current.show({
-            title: 'Secure Your Wallet',
-            message: 'Secret Recovery Phrase make your account safety. make sure you keep it safe too',
-            strongType: strongType,
-            onConfirm: () => {
-                RootNavigation.navigate('CreateWallet');
-                EventTracker.logEvent('screen_login', {action: 'click_create_wallet'});
-            }
-        });
-    }
-
-    onTermsAndConditions = () => {
-        RootNavigation.navigate('Web', {
-            title: strings('screen_terms_and_conditions'),
-            defaultParam: JsonUtil.buildDefaultParam({
-                uri: this.defaultParam?.uri || ''
-            })
-        });
-        EventTracker.logEvent('screen_login', {action: 'click_terms'});
-    };
-
     render() {
         const {theme} = this.context;
+        const {mnemonic, isValid} = this.state;
         //12345678A@f
-        const {uri, strongType, showPassword, showConfirmPassword} = this.state;
         return (
             <CBImageBackground style={[{width: dimens.widthScreen, height: dimens.heightScreen, justifyContent: 'flex-start'}]} imageStyle={{width: dimens.widthScreen, height: dimens.heightScreen}} source={ImageUtil.getImage('background_1')}>
                 <CBTouchableWithoutFeedback style={{flex: 1}} define={'none'} onPress={this.onBlur}>
-                    <CBView style={[{flex: 1, paddingVertical: 15, paddingHorizontal: 30}, {borderTopLeftRadius: 30, borderTopRightRadius: 30, marginTop: dimens.statusBar}]}>
-                        <CBText style={[appStyles.heading, {marginTop: 60}]} define={'heading'}>{strings('text_create_password')}</CBText>
-                        <CBText style={[appStyles.subtext, {marginTop: 5}]} define={'subtext'}>{strings('text_subtitle_password')}</CBText>
+                    <CBView style={[{flex: 1, paddingVertical: 15, paddingHorizontal: 15}, {borderTopLeftRadius: 30, borderTopRightRadius: 30, marginTop: dimens.statusBar}]}>
+                        <CBText style={[appStyles.heading, {marginTop: 60}]} define={'heading'}>{strings('text_secret_recovery_word')}</CBText>
+                        <CBText style={[appStyles.subtext, {marginTop: 5}]} define={'subtext'}>{strings('text_subtitle_srw')}</CBText>
+                        <CBView style={[appStyles.row, {marginTop: 20}]} define={'none'}>
+                            <CBTouchableOpacity style={[appStyles.action, {backgroundColor: colors.backgroundColor, borderRadius: 5, padding: 5}]} define={'none'} onPress={this.handleGenerateMnemonic}>
+                                <CBText style={[appStyles.text, {color: colors.primaryColor}]} define={'text'}>{strings('button_generate')}</CBText>
+                            </CBTouchableOpacity>
+                            <CBTouchableOpacity style={[appStyles.action, {backgroundColor: colors.backgroundColor, borderRadius: 5, padding: 5, marginLeft: 10}]} define={'none'} onPress={this.handleValidateMnemonic}>
+                                <CBText style={[appStyles.text, {color: colors.primaryColor}]} define={'text'}>{strings('button_validate')}</CBText>
+                            </CBTouchableOpacity>
+                        </CBView>
+                        <CBView>
+                            <CBText>{mnemonic}</CBText>
+                        </CBView>
+                        <CBTouchableOpacity style={[appStyles.action, {position: 'absolute', top: 10, left: 10}]} define={'none'} onPress={this.onClose}>
+                            <CBIcon define={'icon'} type={'ionicon'} name={'close-outline'} size={30}/>
+                        </CBTouchableOpacity>
                     </CBView>
                 </CBTouchableWithoutFeedback>
             </CBImageBackground>

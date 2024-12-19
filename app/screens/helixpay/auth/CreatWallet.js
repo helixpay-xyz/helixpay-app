@@ -215,7 +215,7 @@ export default class CreateWallet extends Base {
                                             returnKeyType={'go'}
                                             secureTextEntry={!showConfirmPassword}
                                             autoCapitalize={'none'}
-                                            maxLength={16}
+                                            maxLength={64}
                                             value={values.confirmPassword}
                                             // errorMessage={errors.confirmPassword}
                                             onChangeText={handleChange('confirmPassword')}
