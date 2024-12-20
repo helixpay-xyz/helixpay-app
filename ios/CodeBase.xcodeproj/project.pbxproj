@@ -15,7 +15,7 @@
 		36137CD1EA604D02B408A645 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFFC7C6AA7934651A23A296B /* SpaceGrotesk-Regular.ttf */; };
 		37DF1B9B9E334454849BE764 /* GoogleSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DFA03DE2D8547508A37ACCB /* GoogleSans-BoldItalic.ttf */; };
 		416ABE462C7B3FB600509D3F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 416ABE452C7B3FB600509D3F /* assets */; };
-		416EC4592D0A9E820078172F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
+		418FA6ED2D152B7C00D3EC33 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
 		4C196D68E9374736A50463EA /* GoogleSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28BC5E6A5DCA4363A2524294 /* GoogleSans-MediumItalic.ttf */; };
 		5B8F4AB1917849928C5ECAD3 /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E83AC96DF60A4DD7AA68FE9E /* SpaceGrotesk-Light.ttf */; };
 		780FEEA8261EE2120051B4EB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FEEA7261EE2120051B4EB /* File.swift */; };
@@ -109,19 +109,19 @@
 		78D6CC39261829F2004130DE /* NSUserDefaults+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Helper.h"; sourceTree = "<group>"; };
 		78D6CC3A261829F2004130DE /* NSUserDefaults+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helper.m"; sourceTree = "<group>"; };
 		78E37F59261D5CBA000ADF21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7BCB3B41C7434365B5A42937 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Medium.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
+		7BCB3B41C7434365B5A42937 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Medium.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CodeBase/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB846D9819FF4EEDB7D230C9 /* GoogleSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Black.ttf"; path = "../app/assets/fonts/GoogleSans-Black.ttf"; sourceTree = "<group>"; };
-		AFFC7C6AA7934651A23A296B /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Regular.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
+		AFFC7C6AA7934651A23A296B /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Regular.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
 		B16305EDB7C54AFABDA62C69 /* GoogleSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Bold.ttf"; path = "../app/assets/fonts/GoogleSans-Bold.ttf"; sourceTree = "<group>"; };
-		B237DD23A6354C9B905DA98A /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Bold.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
+		B237DD23A6354C9B905DA98A /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Bold.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
 		B5D8DBBA6A40425A88C8B025 /* GoogleSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-LightItalic.ttf"; path = "../app/assets/fonts/GoogleSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		B9BB37DE105309B6759AA596 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		C6109D6F832846A4A7EB8C30 /* GoogleSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Thin.ttf"; path = "../app/assets/fonts/GoogleSans-Thin.ttf"; sourceTree = "<group>"; };
 		D898E497B5934628B42D5083 /* GoogleSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Light.ttf"; path = "../app/assets/fonts/GoogleSans-Light.ttf"; sourceTree = "<group>"; };
-		D9A9424AB56443EA84F4A59A /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-SemiBold.ttf"; path = "../app/assets/fonts/SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
+		D9A9424AB56443EA84F4A59A /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-SemiBold.ttf"; path = "../app/assets/fonts/SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
 		E2DF999379960E5B980FF0F9 /* Pods-CodeBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeBase.release.xcconfig"; path = "Target Support Files/Pods-CodeBase/Pods-CodeBase.release.xcconfig"; sourceTree = "<group>"; };
-		E83AC96DF60A4DD7AA68FE9E /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Light.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
+		E83AC96DF60A4DD7AA68FE9E /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Light.ttf"; path = "../app/assets/fonts/SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
 		E9D3268456444C13AB6795EE /* GoogleSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Medium.ttf"; path = "../app/assets/fonts/GoogleSans-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -402,7 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				416EC4592D0A9E820078172F /* main.jsbundle in Resources */,
+				418FA6ED2D152B7C00D3EC33 /* main.jsbundle in Resources */,
 				416ABE462C7B3FB600509D3F /* assets in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				78E37F5A261D5CBB000ADF21 /* GoogleService-Info.plist in Resources */,
