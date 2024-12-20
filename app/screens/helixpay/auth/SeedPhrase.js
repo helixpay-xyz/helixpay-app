@@ -2,6 +2,8 @@ import React from 'react';
 import {Keyboard} from 'react-native';
 import RootNavigation from 'screens/RootNavigation';
 import {CBImageBackground, CBInput, CBText, CBTouchableWithoutFeedback, CBView} from 'components';
+import { generateMnemonic, validateMnemonic } from '@scure/bip39';
+import { wordlist } from '@scure/bip39/wordlists/english';
 import {appStyles} from 'configs/styles';
 import {strings} from 'controls/i18n';
 import dimens from 'configs/dimens';
@@ -27,6 +29,15 @@ export default class SeedPhrase extends Base {
 
     componentDidMount() {
         super.componentDidMount();
+        this.load();
+    }
+
+    componentWillUnmount() {
+        super.componentWillUnmount();
+    }
+
+    load() {
+        const generatedMnemonic = generateMnemonic(wordlist);
     }
 
     onBlur = () => {

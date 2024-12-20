@@ -54,9 +54,9 @@ const CBBottomPassword = ({style, onAction}, ref) => {
         hide();
     };
 
-    // const onConfirmButton = () => {
-    //     hide(onConfirm);
-    // }
+    const onConfirmButton = () => {
+        hide(onConfirm);
+    }
 
     const {theme} = useTheme();
     return (
@@ -88,7 +88,7 @@ const CBBottomPassword = ({style, onAction}, ref) => {
                     </View>
                     <Text style={[appStyles.text, {color: theme.colors.primary, fontSize: dimens.normalText, fontFamily: 'SpaceGrotesk-Medium'}]}>{strongType > 2 ? 'Strong' : 'Week'}</Text>
                 </View>
-                {/*<CBButton containerStyle={{ marginTop: 15 }} buttonStyle={appStyles.button} title={strings('button_understand')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onConfirmButton}/>*/}
+                <CBButton containerStyle={{ marginTop: 15 }} buttonStyle={appStyles.button} title={strings('button_understand')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onConfirmButton}/>
             </View>
         </Modal>
     );

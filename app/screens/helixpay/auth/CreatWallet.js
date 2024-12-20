@@ -127,9 +127,14 @@ export default class CreateWallet extends Base {
         this.cbBottomPassword.current.show({
             title: 'Secure Your Wallet',
             message: 'Secret Recovery Phrase make your account safety. make sure you keep it safe too',
-            strongType: strongType
+            strongType: strongType,
+            onConfirm: this.onConfirmWallet
         });
     }
+
+    onConfirmWallet = () => {
+        RootNavigation.navigate('SeedPhrase');
+    };
 
     onTermsAndConditions = () => {
         RootNavigation.navigate('Web', {
