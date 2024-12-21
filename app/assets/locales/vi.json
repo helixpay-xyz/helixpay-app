@@ -60,6 +60,8 @@
   "text_subtitle_password": "This password will unlock your HelixPay Wallet only on this device.",
   "text_secret_recovery_word": "Secret Recovery Words",
   "text_subtitle_srw": "This is the only way you will be able to recover your account. Please store it somewhere safe!",
+  "text_copy_to_clipboard": "Copy to clipboard",
+  "text_copied_to_clipboard": "Copied",
 
   "screen_empty": "Code Base",
   "screen_web": "",
