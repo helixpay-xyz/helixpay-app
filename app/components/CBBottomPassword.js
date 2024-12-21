@@ -1,8 +1,6 @@
 import React, {forwardRef, useImperativeHandle, useState} from 'react';
 import {useStateWithCallbackLazy} from 'hooks';
 import {Keyboard, Text, TouchableOpacity, View} from 'react-native';
-import EventTracker from 'controls/EventTracker';
-import CBControl from 'controls/CBControl';
 import {Button, Icon, Input, useTheme} from 'react-native-elements';
 import Modal from 'react-native-modal';
 import {appStyles} from 'configs/styles';

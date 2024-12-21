@@ -24,6 +24,7 @@
   "button_already_have_wallet": "Already have a wallet",
   "button_password": "Create password",
   "button_understand": "Ok, Got It",
+  "button_confirm": "Confirm",
 
   "error_valid_phone_number": "Phone number is incorrect format",
   "error_empty_phone_number": "Please enter phone number",

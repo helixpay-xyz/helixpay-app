@@ -21,17 +21,25 @@ import { FlashList } from '@shopify/flash-list';
 import colors from 'configs/colors';
 import Toast from "react-native-simple-toast";
 import RootNavigation from "screens/RootNavigation";
+import DraggableFlatList from 'react-native-draggable-flatlist';
 import EventTracker from "controls/EventTracker";
+import {Formik} from "formik";
+import * as yup from 'yup';
 
 const SeedPhrase = () => {
 
     const [index, setIndex] = useState(0);
+    const [isMatch, setIsMatch] = useState(false);
 
     const seedPhraseArray = useMemo(() => {
         const generatedMnemonic = generateMnemonic(wordlist);
         return generatedMnemonic.split(' ');
     }, []);
 
+    const validationSchema = yup.object({
+        seedPhrase: yup.string().trim()
+            .matches(seedPhraseArray.join(' '), 'Not match')
+    });
 
     const onBlur = () => {
         Keyboard.dismiss();
@@ -48,6 +56,28 @@ const SeedPhrase = () => {
 
     const onClose = () => {
         RootNavigation.goBack();
+    };
+
+    const onConfirm = (values) => {
+        const seedPhrase = seedPhraseArray.join(' ');
+        if (values?.seedPhrase !== seedPhrase) {
+            Toast.show('Not match', Toast.LONG);
+        } else {
+            Toast.show('Match', Toast.LONG);
+        }
+    }
+
+    const onCheck = (values) => {
+        const seedPhrase = seedPhraseArray.join(' ');
+        if (values.seedPhrase === seedPhrase) {
+            setIsMatch(true);
+        } else {
+            setIsMatch(false);
+        }
+    };
+
+    const onToggleError = (setFieldError, name) => () => {
+        setFieldError(name, '');
     };
 
     const renderItem = ({ item, index }) => (
@@ -68,7 +98,7 @@ const SeedPhrase = () => {
                 </CBView>
             );
         });
-    }
+    };
 
     const renderSeparator = () => {
         return <CBView style={{height: 15}} define={'none'}/>;
@@ -93,7 +123,7 @@ const SeedPhrase = () => {
                     keyboardDismissMode={'on-drag'}
                     keyboardShouldPersistTaps={'always'}>
                 <CBView style={{paddingVertical: 15, paddingHorizontal: 15, borderTopLeftRadius: 30, borderTopRightRadius: 30}}>
-                    <FlashList
+                    {index === 0 ? <FlashList
                         contentContainerStyle={{paddingTop: 30}}
                         showsVerticalScrollIndicator={false}
                         keyboardDismissMode={'on-drag'}
@@ -103,10 +133,45 @@ const SeedPhrase = () => {
                         numColumns={2}
                         renderItem={renderItem}
                         ItemSeparatorComponent={renderSeparator}
-                    />
-                    {index === 1 ? <CBView style={[appStyles.row, {flexWrap: 'wrap', justifyContent: 'flex-start', marginRight: 15}]}>
-                        {renderListSeedPhrase()}
-                    </CBView> : null}
+                    />  : null}
+                    {/*{index === 1 ? <CBView style={[appStyles.row, {flexWrap: 'wrap', justifyContent: 'flex-start', marginRight: 15}]}>*/}
+                    {/*    /!*{renderListSeedPhrase()}*!/*/}
+                    {/*    <DraggableFlatList*/}
+                    {/*        data={data}*/}
+                    {/*        onDragEnd={({ data }) => setData(data)}*/}
+                    {/*        keyExtractor={(item) => item.key}*/}
+                    {/*        renderItem={renderDragItem}*/}
+                    {/*        contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap',}}*/}
+                    {/*    />*/}
+                    {/*</CBView> : null}*/}
+                    {index === 1 ? <Formik
+                        initialValues={{seedPhrase: ''}}
+                        validationSchema={validationSchema}
+                        validateOnChange={true}
+                        validateOnBlur={false}
+                        onSubmit={onConfirm}>
+                        {
+                            ({setFieldValue, setFieldError, handleChange, handleSubmit, values, errors}) => (
+                                <>
+                                    <CBInput
+                                        containerStyle={{marginTop: 30, marginBottom: 0}}
+                                        inputContainerStyle={{borderColor: !!values.seedPhrase ? colors.primaryColor : colors.grayColor}}
+                                        placeholder={strings('placeholder_password')}
+                                        returnKeyType={'go'}
+                                        autoCapitalize={'none'}
+                                        maxLength={300}
+                                        value={values.seedPhrase}
+                                        errorMessage={errors.seedPhrase}
+                                        onChangeText={handleChange('seedPhrase')}
+                                        onFocus={onToggleError(setFieldError, 'seedPhrase')}
+                                        onSubmitEditing={handleSubmit}
+                                    />
+                                    <CBButton disabled={!values?.seedPhrase} containerStyle={{ marginTop: 15, }} buttonStyle={appStyles.button} title={strings('button_confirm')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={handleSubmit}/>
+                                    {/*{!!values?.seedPhrase ? <CBText style={[appStyles.caption, {marginTop: 5, color: isMatch ? colors.greenContent : colors.errorTextColor}]}>{isMatch ? 'Matching' : 'Not match'}</CBText> : null}*/}
+                                </>
+                            )
+                        }
+                    </Formik> : null}
                 </CBView>
             </CBScrollView>
             </CBTouchableWithoutFeedback>
@@ -115,7 +180,7 @@ const SeedPhrase = () => {
                     {strings('text_copy_to_clipboard')}
                 </CBText>
             </CBTouchableOpacity> : null}
-            <CBButton containerStyle={{ marginTop: 15, marginBottom: 45, marginHorizontal: 15 }} buttonStyle={appStyles.button} title={strings('text_confirm_copy')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onIndexChange(1)}/>
+            {index === 0 ?<CBButton containerStyle={{ marginTop: 15, marginBottom: 45, marginHorizontal: 15 }} buttonStyle={appStyles.button} title={strings('text_confirm_copy')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onIndexChange(1)}/> : null}
         </CBImageBackground>
     );
 };
