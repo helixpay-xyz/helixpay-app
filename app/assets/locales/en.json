@@ -62,6 +62,9 @@
   "text_subtitle_srw": "This is the only way you will be able to recover your account. Please store it somewhere safe!",
   "text_copy_to_clipboard": "Copy to clipboard",
   "text_copied_to_clipboard": "Copied",
+  "text_confirm_copy": "OK, I saved",
+  "text_confirm_recovery_word": "Confirm Secret Recovery Word",
+  "text_subtitle_confirm_recovery_word": "Drag each word in the order it was presented to you.",
 
   "screen_empty": "Code Base",
   "screen_web": "",
