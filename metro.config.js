@@ -16,5 +16,18 @@ const config = {};
 //     };
 //     return defaultConfig;
 // })();
+//
+// module.exports = (async () => {
+//     const defaultConfig = await getDefaultConfig();
+//     return {
+//         ...defaultConfig,
+//         resolver: {
+//             ...defaultConfig.resolver,
+//             extraNodeModules: {
+//                 stream: require.resolve("stream-browserify"),
+//             },
+//         },
+//     };
+// })();
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);

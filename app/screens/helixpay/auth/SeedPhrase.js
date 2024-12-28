@@ -1,15 +1,6 @@
 import React, {useState, useEffect, useRef, useContext, useMemo} from 'react';
 import { Keyboard } from 'react-native';
-import {
-    CBButton,
-    CBDivider, CBIcon,
-    CBImageBackground,
-    CBInput, CBRefreshControl,
-    CBText, CBTouchableOpacity,
-    CBTouchableWithoutFeedback,
-    CBView,
-    CBScrollView,
-} from 'components';
+import {CBButton,CBIcon, CBImageBackground, CBInput, CBText, CBTouchableOpacity, CBTouchableWithoutFeedback, CBView, CBScrollView,} from 'components';
 import Clipboard from '@react-native-clipboard/clipboard';
 import { generateMnemonic } from '@scure/bip39';
 import { wordlist } from '@scure/bip39/wordlists/english';
@@ -20,11 +11,13 @@ import ImageUtil from 'utils/ImageUtil';
 import { FlashList } from '@shopify/flash-list';
 import colors from 'configs/colors';
 import Toast from "react-native-simple-toast";
-import RootNavigation from "screens/RootNavigation";
-import DraggableFlatList from 'react-native-draggable-flatlist';
-import EventTracker from "controls/EventTracker";
-import {Formik} from "formik";
+import RootNavigation from 'screens/RootNavigation';
+import AesGcmCrypto from 'react-native-aes-gcm-crypto';
+import {Formik} from 'formik';
 import * as yup from 'yup';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Buffer } from 'buffer';
+import { randomBytes } from 'react-native-randombytes';
 
 const SeedPhrase = () => {
 
@@ -33,8 +26,39 @@ const SeedPhrase = () => {
 
     const seedPhraseArray = useMemo(() => {
         const generatedMnemonic = generateMnemonic(wordlist);
+        // const testEncrypt = AesGcmCrypto.encrypt(generatedMnemonic, 'password');
         return generatedMnemonic.split(' ');
     }, []);
+
+    const generateBase64Key = (password, randomBytes) => {
+        const passwordBytes = [...password].map((char) => char.charCodeAt(0));
+
+        const combinedBytes = passwordBytes.concat(randomBytes);
+
+        if (combinedBytes.length > 32) {
+            combinedBytes.length = 32;
+        } else {
+            while (combinedBytes.length < 32) {
+                combinedBytes.push(0);
+            }
+        }
+        const base64Key = Buffer.from(combinedBytes).toString('base64');
+
+        return base64Key;
+    }
+
+    const encryptMnemonic = async () => {
+        try {
+            const password = '12345678A@f';
+            const plaintext = seedPhraseArray.join(' ');
+            const key = generateBase64Key(password, randomBytes(16));
+            const encryptedSeedPhrase = await AesGcmCrypto.encrypt(plaintext, false, key);
+            await AsyncStorage.setItem('encryptSeedPhrase', encryptedSeedPhrase);
+
+        } catch (error) {
+            console.error('Encryption failed:', error);
+        }
+    };
 
     const validationSchema = yup.object({
         seedPhrase: yup.string().trim()
@@ -45,7 +69,10 @@ const SeedPhrase = () => {
         Keyboard.dismiss();
     };
 
-    const onIndexChange = (index) => () => {
+    const onIndexChange = () => (index) => {
+        if (index === 1) {
+            encryptMnemonic();
+        }
         setIndex(index);
     }
 
@@ -180,6 +207,11 @@ const SeedPhrase = () => {
                     {strings('text_copy_to_clipboard')}
                 </CBText>
             </CBTouchableOpacity> : null}
+            {/*{index === 0 ? <CBTouchableOpacity style={{padding: 15}} onPress={encryptMnemonic}>*/}
+            {/*    <CBText style={[appStyles.text, {textAlign: 'center', fontFamily: 'SpaceGrotesk-Bold', color: colors.white,}]} define={'text'}>*/}
+            {/*        {'encrypt'}*/}
+            {/*    </CBText>*/}
+            {/*</CBTouchableOpacity> : null}*/}
             {index === 0 ?<CBButton containerStyle={{ marginTop: 15, marginBottom: 45, marginHorizontal: 15 }} buttonStyle={appStyles.button} title={strings('text_confirm_copy')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={onIndexChange(1)}/> : null}
         </CBImageBackground>
     );
