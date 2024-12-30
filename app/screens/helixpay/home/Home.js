@@ -57,8 +57,8 @@ const Home = () => {
                 }]
             }}>
             <Tab.Screen name={'Balance'} component={Balance} options={{headerShown: false, tabBarIcon: renderTabBarIcon('home-outline', strings('screen_home'))}}/>
-            <Tab.Screen name={'MainEvent'} component={MainEvent} options={{headerShown: false, tabBarIcon: renderTabBarIcon('home-outline', strings('screen_home'))}}/>
-            <Tab.Screen name={'Menu'} component={Menu} options={{headerShown: false, tabBarIcon: renderTabBarIcon('home-outline', strings('screen_home'))}}/>
+            <Tab.Screen name={'MainEvent'} component={MainEvent} options={{headerShown: false, tabBarIcon: renderTabBarIcon('cellular-outline', strings('screen_market'))}}/>
+            <Tab.Screen name={'Menu'} component={Menu} options={{headerShown: false, tabBarIcon: renderTabBarIcon('person-outline', strings('screen_profile'))}}/>
         </Tab.Navigator>
     );
 };

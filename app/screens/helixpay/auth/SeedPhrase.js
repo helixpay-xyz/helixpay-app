@@ -49,15 +49,17 @@ const SeedPhrase = () => {
 
     const encryptMnemonic = async () => {
         try {
-            const password = '12345678A@f';
+            const password = await AsyncStorage.getItem('@password');
             const plaintext = seedPhraseArray.join(' ');
             const key = generateBase64Key(password, randomBytes(16));
             const encryptedSeedPhrase = await AesGcmCrypto.encrypt(plaintext, false, key);
-            await AsyncStorage.setItem('encryptSeedPhrase', encryptedSeedPhrase);
-
+            await AsyncStorage.setItem('@encrypt_iv', encryptedSeedPhrase.iv);
+            await AsyncStorage.setItem('@encrypt_tag', encryptedSeedPhrase.tag);
+            await AsyncStorage.setItem('@encrypt_content', encryptedSeedPhrase.content);
         } catch (error) {
-            console.error('Encryption failed:', error);
+            console.log(`mienpv :: ${error}`);
         }
+
     };
 
     const validationSchema = yup.object({
@@ -69,7 +71,7 @@ const SeedPhrase = () => {
         Keyboard.dismiss();
     };
 
-    const onIndexChange = () => (index) => {
+    const onIndexChange = (index) => () => {
         if (index === 1) {
             encryptMnemonic();
         }
@@ -91,6 +93,7 @@ const SeedPhrase = () => {
             Toast.show('Not match', Toast.LONG);
         } else {
             Toast.show('Match', Toast.LONG);
+            RootNavigation.navigate('Home');
         }
     }
 

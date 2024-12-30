@@ -16,6 +16,7 @@ import * as yup from 'yup';
 import Base from 'screens/Base';
 import EventTracker from 'controls/EventTracker';
 import ImageUtil from "utils/ImageUtil";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default class CreateWallet extends Base {
 
@@ -122,17 +123,18 @@ export default class CreateWallet extends Base {
         EventTracker.logEvent('screen_login', {action: 'click_next'});
     };
 
-    onCreateWallet = () => {
+    onCreateWallet = (values) => {
         const {strongType} = this.state;
         this.cbBottomPassword.current.show({
             title: 'Secure Your Wallet',
             message: 'Secret Recovery Phrase make your account safety. make sure you keep it safe too',
             strongType: strongType,
-            onConfirm: this.onConfirmWallet
+            onConfirm: this.onConfirmWallet(values)
         });
     }
 
-    onConfirmWallet = () => {
+    onConfirmWallet = (values) => () => {
+        AsyncStorage.setItem('@password', values.password);
         RootNavigation.navigate('SeedPhrase');
     };
 

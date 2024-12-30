@@ -71,6 +71,8 @@
   "screen_web": "",
   "screen_home": "Home",
   "screen_terms_and_conditions": "Terms & Conditions",
+  "screen_profile": "Profile",
+  "screen_market": "Market",
 
   "title_alert_sign_out": "Sign out",
   "message_alert_sign_out": "Do you want to sign out?",
