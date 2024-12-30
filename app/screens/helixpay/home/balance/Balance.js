@@ -42,10 +42,14 @@ export default class Balance extends Base {
         });
     }
 
+    onSend = () => {
+        RootNavigation.navigate('Send');
+    }
+
     onRefresh = () => {
     }
 
     render() {
-        return <BalanceContent defaultParam={this.defaultParam} onRefresh={this.onRefresh}/>;
+        return <BalanceContent defaultParam={this.defaultParam} onRefresh={this.onRefresh} onSend={this.onSend}/>;
     }
 }

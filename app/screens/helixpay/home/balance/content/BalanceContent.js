@@ -110,7 +110,7 @@ const transactionData = [
     }
 ]
 
-const BalanceContent = observer(({defaultParam, onRefresh}) => {
+const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
 
     const renderLeftHeader = () => {
         return (
@@ -150,7 +150,7 @@ const BalanceContent = observer(({defaultParam, onRefresh}) => {
                     </CBView>
                 </CBView>
                 <CBView style={[appStyles.row, {marginTop: 15, marginBottom: 5, marginHorizontal: 15, justifyContent: 'space-between'}]}>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}}>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}} onPress={onSend}>
                         <CBIcon type={'feather'} name={'arrow-up-right'} color={colors.primaryColor} size={28}/>
                         <CBText style={[appStyles.text, {marginTop: 3, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Send'}</CBText>
                     </CBTouchableOpacity>
