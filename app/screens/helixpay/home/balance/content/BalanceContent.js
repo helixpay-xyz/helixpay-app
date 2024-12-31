@@ -115,9 +115,7 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
     const renderLeftHeader = () => {
         return (
             <CBView style={[appStyles.row, {width: dimens.widthScreen / 2}]}>
-                <CBView style={{marginLeft: 5}}>
-                    <CBText style={[appStyles.heading, {color: colors.backgroundColor, fontFamily: 'GoogleSans-Bold'}]} numberOfLines={1} define={'none'}>{'HelixPay.'}</CBText>
-                </CBView>
+                <CBImage containerStyle={{marginLeft: 5, borderRadius: 30}} style={{width: 42, height: 42}} source={ImageUtil.getImage('avatar')}/>
             </CBView>
         )
     }
@@ -138,33 +136,40 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
 
     const renderBalance = () => {
         return (
-            <CBView style={{backgroundColor: colors.backgroundColor, borderRadius: 20, marginHorizontal: 15, padding: 15, marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
-                <CBText style={[appStyles.text]}>{'Your balance'}</CBText>
-                <CBView style={[appStyles.row]}>
-                    <CBText style={[appStyles.heading, {fontFamily: 'Saira-SemiBold', fontSize: dimens.teraLargeText}]}>{'$32,128.80'}</CBText>
-                    <CBView style={[appStyles.row, {backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 15}]}>
-                        <CBView style={{borderWidth: 1, borderColor: colors.greenContent, borderRadius: 12, padding: 2}}>
-                            <CBIcon type={'ionicon'} name={'arrow-up-outline'} color={colors.greenContent} size={12}/>
-                        </CBView>
-                        <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.greenContent, fontFamily: 'Saira-Medium', marginLeft: 3}]}>{'23.00%'}</CBText>
+            <CBView style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 20, marginHorizontal: 15, padding: 15, marginTop: 30}}>
+                <CBView style={appStyles.row}>
+                    <CBText style={[appStyles.text, {marginRight: 8, marginTop: 5}]}>{'Total balance'}</CBText>
+                    <CBView style={[appStyles.row, {backgroundColor: colors.greenContent, paddingHorizontal: 5, paddingVertical: 4, borderRadius: 12}]}>
+                        <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.primaryTextDarkColor, marginLeft: 3}]}>{'23.00%'}</CBText>
                     </CBView>
                 </CBView>
-                <CBView style={[appStyles.row, {marginTop: 15, marginBottom: 5, marginHorizontal: 15, justifyContent: 'space-between'}]}>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}} onPress={onSend}>
-                        <CBIcon type={'feather'} name={'arrow-up-right'} color={colors.primaryColor} size={28}/>
-                        <CBText style={[appStyles.text, {marginTop: 3, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Send'}</CBText>
+                <CBView style={[appStyles.row, {marginTop: 15}]}>
+                    <CBText style={[appStyles.heading, {fontSize: dimens.yottaLargeText}]}>{'$32,128.80'}</CBText>
+                </CBView>
+                <CBView style={[appStyles.row, {marginTop: 30, marginBottom: 5, marginHorizontal: 15, justifyContent: 'center'}]}>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}} onPress={onSend}>
+                        <CBView style={{backgroundColor: colors.brandingColor200, padding: 15, borderRadius: 30}}>
+                            <CBIcon type={'ionicon'} name={'arrow-up-outline'} color={colors.backgroundColor} size={26}/>
+                        </CBView>
+                        <CBText style={[appStyles.text, {marginTop: 5, fontSize: dimens.normalText, fontFamily: 'GoogleSans-Medium'}]}>{'Send'}</CBText>
                     </CBTouchableOpacity>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}}>
-                        <CBIcon type={'feather'} name={'arrow-down-right'} color={colors.primaryColor} size={28}/>
-                        <CBText style={[appStyles.text, {marginTop: 3, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Receive'}</CBText>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}}>
+                        <CBView style={{backgroundColor: colors.brandingColor200, padding: 15, borderRadius: 30}}>
+                            <CBIcon type={'ionicon'} name={'arrow-down-outline'} color={colors.backgroundColor} size={26}/>
+                        </CBView>
+                        <CBText style={[appStyles.text, {marginTop: 5, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Receive'}</CBText>
                     </CBTouchableOpacity>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}}>
-                        <CBIcon type={'ionicon'} name={'bar-chart-outline'} color={colors.primaryColor} size={26}/>
-                        <CBText style={[appStyles.text, {marginTop: 3, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Stocks'}</CBText>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}}>
+                        <CBView style={{backgroundColor: colors.brandingColor200, padding: 15, borderRadius: 30}}>
+                            <CBIcon type={'ionicon'} name={'swap-horizontal-outline'} color={colors.backgroundColor} size={26}/>
+                        </CBView>
+                        <CBText style={[appStyles.text, {marginTop: 5, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'Stocks'}</CBText>
                     </CBTouchableOpacity>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', paddingVertical: 8, paddingHorizontal: 10, borderRadius: 15}}>
-                        <CBIcon type={'ionicon'} name={'grid-outline'} color={colors.primaryColor} size={26}/>
-                        <CBText style={[appStyles.text, {marginTop: 3, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'More'}</CBText>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}}>
+                        <CBView style={{backgroundColor: colors.brandingColor200, padding: 15, borderRadius: 30}}>
+                            <CBIcon type={'ionicon'} name={'grid-outline'} color={colors.backgroundColor} size={26}/>
+                        </CBView>
+                        <CBText style={[appStyles.text, {marginTop: 5, fontSize: dimens.normalText, color: colors.primaryTextColor, fontFamily: 'GoogleSans-Medium'}]}>{'More'}</CBText>
                     </CBTouchableOpacity>
                 </CBView>
             </CBView>
@@ -173,19 +178,14 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
 
     const renderTransaction = () => {
         return (
-            <CBView style={{height: dimens.heightScreen / 1.5, backgroundColor: colors.backgroundColor, borderTopLeftRadius: 24, borderTopRightRadius: 24,  marginTop: 30, justifyContent: 'flex-start'}}>
+            <CBView style={{ marginTop: 15}}>
                 <CBView style={[appStyles.row, {paddingHorizontal: 20, marginTop: 20, justifyContent: 'space-between'}]}>
-                    <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'Saira-Medium'}]}>{'Last Transaction'}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.largeText}]}>{'Last Transaction'}</CBText>
                     <CBTouchableOpacity>
                         <CBText style={[appStyles.text, {color: colors.brandingColor400}]}>{'See all'}</CBText>
                     </CBTouchableOpacity>
                 </CBView>
-                <CBScrollView
-                    refreshControl={<CBRefreshControl refreshing={true} onRefresh={onRefresh}/>}
-                    showsVerticalScrollIndicator={false}
-                    keyboardDismissMode={'on-drag'}
-                    keyboardShouldPersistTaps={'always'}>
-                    <CBView style={{paddingHorizontal: 20, marginTop: 20}}>
+                    <CBView style={{marginTop: 15, paddingHorizontal: 20, justifyContent: 'flex-start'}}>
                         <CBFlatList
                             data={transactionData}
                             renderItem={({item, index}) => renderTransactionItem(item, index)}
@@ -194,7 +194,6 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
                             keyboardShouldPersistTaps={'always'}
                         />
                     </CBView>
-                </CBScrollView>
             </CBView>
         )
     }
@@ -203,7 +202,7 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
         //test again
         const isPlus = item.type === 'deposit' || item.type === 'receive';
         return (
-            <CBView key={index} style={[appStyles.row, {backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 15, padding: 15, marginBottom: 8}]}>
+            <CBView key={index} style={[appStyles.row, {backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 15, padding: 15, marginBottom: 10}]}>
                 <CBView style={[appStyles.row, {flex: 1}]}>
                     <CBImage containerStyle={{borderTopLeftRadius: 15, borderTopRightRadius: 15}} style={{width: 32, height: 32}} source={ImageUtil.getImage(item.icon)}/>
                     <CBView style={{marginLeft: 10}}>
@@ -223,7 +222,7 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
     }
 
     return (
-        <CBImageBackground style={[{width: dimens.widthScreen, height: dimens.heightScreen, justifyContent: 'flex-start'}]} imageStyle={{width: dimens.widthScreen, height: dimens.heightScreen}} source={ImageUtil.getImage('background_2')}>
+        <CBImageBackground style={[{width: dimens.widthScreen, height: dimens.heightScreen, justifyContent: 'flex-start'}]} imageStyle={{width: dimens.widthScreen, height: dimens.heightScreen}} source={ImageUtil.getImage('background_4')}>
             <CBHeader containerStyle={{backgroundColor: 'transparent', borderBottomWidth: 0}} leftComponent={renderLeftHeader()} rightComponent={renderRightHeader()}/>
             {renderBalance()}
             {renderTransaction()}

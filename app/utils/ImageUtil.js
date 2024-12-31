@@ -1,6 +1,7 @@
 export default class ImageUtil {
 
     static images = {
+        avatar: require('assets/images/avatar.jpg'),
         bg_not_found: require('assets/images/bg_not_found.png'),
         ic_bell: require('assets/images/ic_bell.png'),
         ic_check_circle: require('assets/images/ic_check_circle.png'),
@@ -22,6 +23,7 @@ export default class ImageUtil {
         background_1: require('assets/images/background_1.png'),
         background_2: require('assets/images/background_2.png'),
         background_3: require('assets/images/background_3.png'),
+        background_4: require('assets/images/background_4.png'),
         eth: require('assets/images/eth.png'),
         bitcoin: require('assets/images/bitcoin.png'),
         solana: require('assets/images/solana.png')

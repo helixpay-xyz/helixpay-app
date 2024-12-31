@@ -48,37 +48,37 @@ export const appStyles = StyleSheet.create({
     heading: {
         fontSize: dimens.xxxLargeText,
         color: colors.primaryTextColor,
-        fontFamily: 'SpaceGrotesk-Bold'
+        fontFamily: 'NeueHaasDisplay-Mediu'
     },
     title: {
         fontSize: dimens.largeText,
         color: colors.primaryTextColor,
-        fontFamily: 'SpaceGrotesk-Bold'
+        fontFamily: 'NeueHaasDisplay-Bold'
     },
     label: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
-        fontFamily: 'SpaceGrotesk-Bold'
+        fontFamily: 'NeueHaasDisplay-Bold'
     },
     text: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
-        fontFamily: 'SpaceGrotesk-Regular'
+        fontFamily: 'NeueHaasDisplay-Roman'
     },
     subtext: {
         fontSize: dimens.normalText,
         color: colors.secondaryTextColor,
-        fontFamily: 'SpaceGrotesk-Regular'
+        fontFamily: 'NeueHaasDisplay-Regular'
     },
     caption: {
         fontSize: dimens.smallText,
         color: colors.tertiaryTextColor,
-        fontFamily: 'SpaceGrotesk-Light'
+        fontFamily: 'NeueHaasDisplay-Light'
     },
     error: {
         fontSize: dimens.smallText,
         color: colors.errorTextColor,
-        fontFamily: 'SpaceGrotesk-Regular'
+        fontFamily: 'NeueHaasDisplay-Regular'
     },
     enfold: {
         width: dimens.widthScreen,
@@ -95,13 +95,13 @@ export const appStyles = StyleSheet.create({
     negative: {
         fontSize: dimens.mediumText,
         color: colors.primaryTextColor,
-        fontFamily: 'SpaceGrotesk-Regular',
+        fontFamily: 'NeueHaasDisplay-Regular',
         padding: 2
     },
     positive: {
         fontSize: dimens.mediumText,
         color: colors.primaryColor,
-        fontFamily: 'SpaceGrotesk-Regular',
+        fontFamily: 'NeueHaasDisplay-Regular',
         padding: 2
     },
     row: {

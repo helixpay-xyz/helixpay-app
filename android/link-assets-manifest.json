@@ -50,6 +50,110 @@
       "sha1": "59097b852af23143edc33b9da9f02a7f4faae884"
     },
     {
+      "path": "app/assets/fonts/NeueHaas-Black.ttf",
+      "sha1": "ce1c33901f1aedc28fc1907e0cfb3da4939d54d6"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-BlackItalic.ttf",
+      "sha1": "eff2c51f5d406eb0646605669a73be6c8c2e0e52"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-Bold.ttf",
+      "sha1": "dfc55dea096dd7603444a1bde9fd57726b3bc7e4"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-BoldItalic.ttf",
+      "sha1": "2a9050fcc5f34cd8dff2dd46e6fbfeab73782e61"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-Light.ttf",
+      "sha1": "d7e7959bf8400eb010e6f6ec20b64ceb4f4a0606"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-LightItalic.ttf",
+      "sha1": "5544a0a9e84c41fb5fd2fa10aa52b1c32d804e3c"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-Medium.ttf",
+      "sha1": "008646aff87cde793e72f5cc5ebe626a9ec6bd01"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-MediumItalic.ttf",
+      "sha1": "b6bd29a8aa43d3444582918dce44cc77973a7321"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-Regular.ttf",
+      "sha1": "92baa30548df304b049ea65225470f94277b9ffa"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-RegularItalic.ttf",
+      "sha1": "cb9da0f2c099fbab79a862c8ac10c2daf2796c3a"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-Thin.ttf",
+      "sha1": "af09fbd8d70d7fa57c14e437457083c0a2adabd4"
+    },
+    {
+      "path": "app/assets/fonts/NeueHaas-ThinItalic.ttf",
+      "sha1": "f0aad839f01f2c8c05ba7b5b07d14fb356335570"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Black.ttf",
+      "sha1": "1d564ff40c2506b66fbae8983674fcc6f50332cf"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-BlackItalic.ttf",
+      "sha1": "033e3229f6548d4b9241406f8613217811d1c484"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Bold.ttf",
+      "sha1": "0b3d2153576f8ec576af1c89e4793a3dcf0ebb0c"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-BoldItalic.ttf",
+      "sha1": "6e13f686165a725698733d40cdc08beaefc60860"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-ExtraBold.ttf",
+      "sha1": "1647fe9245b610f1b5ac101a3234cc3d8f6051b9"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-ExtraBoldItalic.ttf",
+      "sha1": "82b102196902ef73a92db1aa1da90b16c953841a"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Italic.ttf",
+      "sha1": "ddba45e218ec4a1bdff496fcfef9932fa30c82c0"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Light.ttf",
+      "sha1": "2bc14068c355425f472f6a97b69c5c468bc863a3"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-LightItalic.ttf",
+      "sha1": "a3c49755eadf8edf5b479591720d234feb9caaf0"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Medium.ttf",
+      "sha1": "7b93e52dc59bc6eb3b374b860c203cbe726c3c31"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-MediumItalic.ttf",
+      "sha1": "1eb6e92dea262c4509cbfb66b8638be630dc639f"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-Regular.ttf",
+      "sha1": "9d7091d63f35c9d28518b06566442a02b306980a"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-SemiBold.ttf",
+      "sha1": "01a4b4fee8dbf9802ccb6256fdf53b3a86f2fcec"
+    },
+    {
+      "path": "app/assets/fonts/Rubik-SemiBoldItalic.ttf",
+      "sha1": "d5b3099c28cf63567f3d9eac452fd02fb3721f02"
+    },
+    {
       "path": "app/assets/fonts/SpaceGrotesk-Bold.ttf",
       "sha1": "b2aa14fa837cf3ed5e647c87906e88238d88c548"
     },

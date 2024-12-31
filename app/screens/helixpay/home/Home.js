@@ -11,6 +11,7 @@ import MainEvent from 'screens/helixpay/home/MainEvent';
 import Menu from 'screens/helixpay/home/Menu';
 import ImageUtil from "utils/ImageUtil";
 import {strings} from "controls/i18n";
+import colors from "configs/colors";
 
 const Tab = createBottomTabNavigator();
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
     const shadowStyle = helpers('shadow', scheme);
     const backgroundColor = helpers('background', scheme);
     const primaryColor = helpers('primary', scheme);
-    const iconColor = helpers('icon', scheme);
+    const iconColor = colors.tertiaryTextDarkColor;
     const renderTabBarIcon = (name, title) => ({focused}) => {
         return (
             <>
