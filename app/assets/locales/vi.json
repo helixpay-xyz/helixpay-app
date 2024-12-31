@@ -25,6 +25,7 @@
   "button_password": "Create password",
   "button_understand": "Ok, Got It",
   "button_confirm": "Xác nhận",
+  "button_send": "Send",
 
   "error_valid_phone_number": "Số điện thoại không đúng định dạng",
   "error_empty_phone_number": "Vui lòng nhập số điện thoại",
@@ -36,6 +37,7 @@
 
   "placeholder_phone_number": "Nhập số điện thoại",
   "placeholder_password": "Enter password",
+  "placeholder_address": "Enter address",
 
   "toast_copied": "Sao chép thành công!",
   "toast_resend": "Gửi lại thành công!",

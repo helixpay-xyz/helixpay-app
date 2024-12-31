@@ -25,6 +25,7 @@
   "button_password": "Create password",
   "button_understand": "Ok, Got It",
   "button_confirm": "Confirm",
+  "button_send": "Send",
 
   "error_valid_phone_number": "Phone number is incorrect format",
   "error_empty_phone_number": "Please enter phone number",
@@ -36,6 +37,7 @@
 
   "placeholder_phone_number": "Enter phone number",
   "placeholder_password": "Enter password",
+  "placeholder_address": "Enter address",
 
   "toast_copied": "Copy successful!",
   "toast_resend": "Resend successful!",

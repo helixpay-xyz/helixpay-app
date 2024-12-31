@@ -47,9 +47,9 @@ const Home = () => {
                 tabBarShowLabel: false,
                 tabBarStyle: [appStyles.shadow, shadowStyle, {
                     position: 'absolute',
-                    bottom: dimens.bottomSpace,
+                    bottom: dimens.bottomSpace - 15,
                     height: 70,
-                    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
                     marginHorizontal: 15,
                     paddingHorizontal: 15,
                     borderRadius: 30,

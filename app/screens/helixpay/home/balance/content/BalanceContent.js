@@ -180,7 +180,7 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
         return (
             <CBView style={{ marginTop: 15}}>
                 <CBView style={[appStyles.row, {paddingHorizontal: 20, marginTop: 20, justifyContent: 'space-between'}]}>
-                    <CBText style={[appStyles.text, {fontSize: dimens.largeText}]}>{'Last Transaction'}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'NeueHaasDisplay-Mediu'}]}>{'Last Transaction'}</CBText>
                     <CBTouchableOpacity>
                         <CBText style={[appStyles.text, {color: colors.brandingColor400}]}>{'See all'}</CBText>
                     </CBTouchableOpacity>

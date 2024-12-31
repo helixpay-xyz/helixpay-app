@@ -10,10 +10,14 @@ export default class Send extends Base {
 
     }
 
+    onSend = () => {
+        console.log(`mienpv :: ${JSON.stringify('aa')}`);
+    }
+
     onBack = () => {
         RootNavigation.goBack();
     }
     render() {
-        return <SendContent defaultParam={this.defaultParam} onRefresh={this.onRefresh} onBack={this.onBack}/>;
+        return <SendContent defaultParam={this.defaultParam} onRefresh={this.onRefresh} onSend={this.onSend} onBack={this.onBack}/>;
     }
 }
