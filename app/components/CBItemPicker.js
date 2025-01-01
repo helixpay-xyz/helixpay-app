@@ -8,6 +8,8 @@ import {appStyles} from 'configs/styles';
 import {helpers} from 'configs/themes';
 import {strings} from 'controls/i18n';
 import dimens from 'configs/dimens';
+import CBImage from "components/CBImage";
+import ImageUtil from "utils/ImageUtil";
 
 const CBItemPicker = ({style, value, onPicked}, ref) => {
     useImperativeHandle(ref, () => ({
@@ -156,12 +158,14 @@ const CBItemPicker = ({style, value, onPicked}, ref) => {
     };
     const renderItem = ({item, index}) => {
         return (
-            <TouchableOpacity key={index} style={appStyles.item} onPress={onPress(item)}>
-                <View style={{flex: 1, marginRight: 10}}>
-                    {getText(item)}
-                    {getSubtext(item)}
-                </View>
-                {getValue(item)}
+            <TouchableOpacity key={index} style={[appStyles.item, appStyles.row]} onPress={onPress(item)}>
+                {/*<View style={{flex: 1, marginRight: 10}}>*/}
+                {/*    {getText(item)}*/}
+                {/*    {getSubtext(item)}*/}
+                {/*</View>*/}
+                {/*{getValue(item)}*/}
+                <CBImage style={{width: 32, height: 32, marginRight: 10}} source={ImageUtil.getImage(item?.icon)} resizeMode={'contain'}/>
+                <Text style={[appStyles.text, {fontFamily: 'NeueHaasDisplay-Mediu', fontSize: 19}]}>{item?.currency}</Text>
             </TouchableOpacity>
         );
     };
@@ -182,31 +186,8 @@ const CBItemPicker = ({style, value, onPicked}, ref) => {
             {options && (options.cancelable === true || options.cancelable === undefined) ? <TouchableOpacity style={[appStyles.action, {backgroundColor: backgroundColor, borderRadius: 20, margin: 10}]} onPress={onClose}>
                 <Icon type={'ionicon'} name={'close-outline'} color={iconColor} size={25}/>
             </TouchableOpacity> : null}
-            <View style={[appStyles.sheet, {height: height}, style, sheetStyle]}>
-                <Text style={[appStyles.label, {textAlign: 'center', margin: 15}, labelStyle]} numberOfLines={1} ellipsizeMode={'tail'}>{title}</Text>
-                <View style={{marginTop: 0, marginBottom: 10, marginHorizontal: 15}}>
-                    <Input
-                        containerStyle={{height: 40}}
-                        leftIcon={
-                            <View style={appStyles.action} define={'none'}>
-                                <Icon define={'icon'} type={'ionicon'} color={iconColor} name={'search-outline'} size={20}/>
-                            </View>
-                        }
-                        rightIcon={
-                            !!keyword ? <TouchableOpacity style={appStyles.action} define={'none'} onPress={onClearKeyword}>
-                                <Icon define={'icon'} type={'material-community'} color={iconColor} name={'close'} size={20}/>
-                            </TouchableOpacity> : null
-                        }
-                        inputContainerStyle={{height: 40}}
-                        inputStyle={{height: 40, paddingLeft: 0}}
-                        errorStyle={{height: 0}}
-                        placeholder={placeholder || strings('placeholder_keyword')}
-                        returnKeyType={'search'}
-                        autoCapitalize={'none'}
-                        maxLength={256}
-                        value={keyword}
-                        onChangeText={onChangeKeyword}/>
-                </View>
+            <View style={[appStyles.sheet, {height: height - 50}, style, sheetStyle]}>
+                <Text style={[appStyles.heading, {fontSize: dimens.xLargeText, textAlign: 'center', margin: 15}, labelStyle]} numberOfLines={1} ellipsizeMode={'tail'}>{title}</Text>
                 <FlatList
                     style={{flex: 1}}
                     showsVerticalScrollIndicator={false}

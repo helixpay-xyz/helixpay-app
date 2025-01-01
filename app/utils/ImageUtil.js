@@ -26,7 +26,9 @@ export default class ImageUtil {
         background_4: require('assets/images/background_4.png'),
         eth: require('assets/images/eth.png'),
         bitcoin: require('assets/images/bitcoin.png'),
-        solana: require('assets/images/solana.png')
+        solana: require('assets/images/solana.png'),
+        usdt: require('assets/images/usdt.png'),
+        viction: require('assets/images/viction.png'),
     };
 
     static getImage(imageUrl) {

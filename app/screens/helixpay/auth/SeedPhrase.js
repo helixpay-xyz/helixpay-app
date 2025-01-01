@@ -2,7 +2,8 @@ import React, {useState, useEffect, useRef, useContext, useMemo} from 'react';
 import { Keyboard } from 'react-native';
 import {CBButton,CBIcon, CBImageBackground, CBInput, CBText, CBTouchableOpacity, CBTouchableWithoutFeedback, CBView, CBScrollView,} from 'components';
 import Clipboard from '@react-native-clipboard/clipboard';
-import { generateMnemonic } from '@scure/bip39';
+// import { generateMnemonic } from '@scure/bip39';
+import { english, generateMnemonic, mnemonicToAccount } from 'viem/accounts';
 import { wordlist } from '@scure/bip39/wordlists/english';
 import { appStyles } from 'configs/styles';
 import { strings } from 'controls/i18n';
@@ -24,10 +25,20 @@ const SeedPhrase = () => {
     const [index, setIndex] = useState(0);
     const [isMatch, setIsMatch] = useState(false);
 
-    const seedPhraseArray = useMemo(() => {
-        const generatedMnemonic = generateMnemonic(wordlist);
-        // const testEncrypt = AesGcmCrypto.encrypt(generatedMnemonic, 'password');
-        return generatedMnemonic.split(' ');
+    // const seedPhraseArray = useMemo(() => {
+    //     const generatedMnemonic = generateMnemonic();
+    //     // const testEncrypt = AesGcmCrypto.encrypt(generatedMnemonic, 'password');
+    //     return generatedMnemonic.split(' ');
+    // }, []);
+
+    const { mnemonic, address } = useMemo(() => {
+        const generatedMnemonic = generateMnemonic(english);
+        const account = mnemonicToAccount(generatedMnemonic);
+
+        return {
+            mnemonic: generatedMnemonic,
+            address: account.address,
+        };
     }, []);
 
     const generateBase64Key = (password, randomBytes) => {
@@ -50,9 +61,10 @@ const SeedPhrase = () => {
     const encryptMnemonic = async () => {
         try {
             const password = await AsyncStorage.getItem('@password');
-            const plaintext = seedPhraseArray.join(' ');
+            const plaintext = mnemonic;
             const key = generateBase64Key(password, randomBytes(16));
             const encryptedSeedPhrase = await AesGcmCrypto.encrypt(plaintext, false, key);
+            await AsyncStorage.setItem('@address', address);
             await AsyncStorage.setItem('@encrypt_iv', encryptedSeedPhrase.iv);
             await AsyncStorage.setItem('@encrypt_tag', encryptedSeedPhrase.tag);
             await AsyncStorage.setItem('@encrypt_content', encryptedSeedPhrase.content);
@@ -64,7 +76,7 @@ const SeedPhrase = () => {
 
     const validationSchema = yup.object({
         seedPhrase: yup.string().trim()
-            .matches(seedPhraseArray.join(' '), 'Not match')
+            .matches(mnemonic, 'Not match')
     });
 
     const onBlur = () => {
@@ -79,7 +91,7 @@ const SeedPhrase = () => {
     }
 
     const copyToClipboard = () => {
-        Clipboard.setString(seedPhraseArray.join(' '));
+        Clipboard.setString(mnemonic);
         Toast.show(strings('text_copied_to_clipboard'), Toast.LONG);
     };
 
@@ -88,7 +100,7 @@ const SeedPhrase = () => {
     };
 
     const onConfirm = (values) => {
-        const seedPhrase = seedPhraseArray.join(' ');
+        const seedPhrase = mnemonic;
         if (values?.seedPhrase !== seedPhrase) {
             Toast.show('Not match', Toast.LONG);
         } else {
@@ -98,7 +110,7 @@ const SeedPhrase = () => {
     }
 
     const onCheck = (values) => {
-        const seedPhrase = seedPhraseArray.join(' ');
+        const seedPhrase = mnemonic;
         if (values.seedPhrase === seedPhrase) {
             setIsMatch(true);
         } else {
@@ -119,7 +131,7 @@ const SeedPhrase = () => {
     );
 
     const renderListSeedPhrase = () => {
-        return seedPhraseArray.map((item, index) => {
+        return mnemonic.split(' ').map((item, index) => {
             return (
                 <CBView key={index} style={{paddingHorizontal: 10, paddingVertical: 10, margin: 5, backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 20, flexShrink: 1, height: 45}}>
                     <CBText style={[appStyles.text, {textAlign: 'center', color: colors.white, flex: 1 }]} define={'text'}>
@@ -159,7 +171,7 @@ const SeedPhrase = () => {
                         keyboardDismissMode={'on-drag'}
                         keyboardShouldPersistTaps={'always'}
                         estimatedItemSize={12}
-                        data={seedPhraseArray}
+                        data={mnemonic.split(' ')}
                         numColumns={2}
                         renderItem={renderItem}
                         ItemSeparatorComponent={renderSeparator}

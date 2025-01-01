@@ -16,101 +16,24 @@ import ImageUtil from 'utils/ImageUtil';
 import {observer} from 'mobx-react';
 import colors from 'configs/colors';
 
-const transactionData = [
-    {
-        id: 1,
-        title: 'Withdrawal',
-        date: 'Dec 12, 24',
-        totalValue: 0.022,
-        status: 'completed',
-        currency: 'Bitcoin',
-        alias: 'BTC',
-        icon: 'bitcoin',
-        type: 'withdrawal',
-        from: 'MetaMask',
-        to: '0x5a...3541'
-    },
-    {
-        id: 2,
-        title: 'Deposit',
-        date: 'Dec 10, 24',
-        totalValue: 0.0234,
-        status: 'completed',
-        currency: 'Ethereum',
-        alias: 'ETH',
-        icon: 'eth',
-        type: 'deposit',
-        from: 'MetaMask',
-        to: '0x5a...3541'
-    },
-    {
-        id: 3,
-        title: 'Send',
-        date: 'Nov 31, 24',
-        totalValue: 0.02431,
-        status: 'completed',
-        currency: 'Bitcoin',
-        alias: 'BTC',
-        icon: 'bitcoin',
-        type: 'send',
-        from: '0x4a...4355',
-        to: '0x5a...3541'
-    },
-    {
-        id: 4,
-        title: 'Receive',
-        date: 'Nov 20, 24',
-        totalValue: 23,
-        status: 'completed',
-        currency: 'Solana',
-        alias: 'SOL',
-        icon: 'solana',
-        type: 'receive',
-        from: '0x7a...a355',
-        to: '0x5a...3541'
-    },
-    {
-        id: 5,
-        title: 'Withdrawal',
-        date: 'Nov 01, 24',
-        totalValue: 0.35,
-        status: 'completed',
-        currency: 'Ethereum',
-        alias: 'ETH',
-        icon: 'eth',
-        type: 'withdrawal',
-        from: 'MetaMask',
-        to: '0x5a...3541'
-    },
-    {
-        id: 6,
-        title: 'Deposit',
-        date: 'Oct 31, 24',
-        totalValue: 120,
-        status: 'completed',
-        currency: 'Solana',
-        alias: 'SOL',
-        icon: 'solana',
-        type: 'deposit',
-        from: 'C98 Wallet',
-        to: '0x5a...3531'
-    },
-    {
-        id: 7,
-        title: 'Withdrawal',
-        date: 'Oct 20, 24',
-        totalValue: 0.0023,
-        status: 'completed',
-        currency: 'Bitcoin',
-        alias: 'BTC',
-        icon: 'bitcoin',
-        type: 'withdrawal',
-        from: 'MetaMask',
-        to: '0x5a...3541'
-    }
-]
+const BalanceContent = observer(({defaultParam, refreshing, address, balances, transactions, onCopyAddress, onRefresh, onSend}) => {
 
-const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
+    const shortenAddress = (address) => {
+        return `${address?.slice(0, 4)}...${address?.slice(-3)}`;
+    }
+
+    const formatCurrency = (value) => {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 2,
+        }).format(value);
+    };
+
+    const capitalizeFirstLetter = (str) => {
+        if (!str) return '';
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    };
 
     const renderLeftHeader = () => {
         return (
@@ -123,8 +46,8 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
     const renderRightHeader = () => {
         return (
             <CBView style={[appStyles.row, {justifyContent: 'flex-end', width: dimens.widthScreen / 2}]}>
-                <CBTouchableOpacity style={[appStyles.row, {marginRight: 5, backgroundColor: 'rgba(0, 0, 0, 0.25)', paddingHorizontal: 12, paddingVertical: 5, borderRadius: 18}]}>
-                    <CBText style={[appStyles.text, {fontFamily: 'Saira-Medium', color: colors.white, marginRight: 5}]}>{'0x5a...3541'}</CBText>
+                <CBTouchableOpacity style={[appStyles.row, {marginRight: 5, backgroundColor: 'rgba(0, 0, 0, 0.25)', paddingHorizontal: 12, paddingVertical: 5, borderRadius: 18}]} onPress={onCopyAddress}>
+                    <CBText style={[appStyles.text, {color: colors.white, marginRight: 5}]}>{shortenAddress(address)}</CBText>
                     <CBIcon type={'ionicon'} name={'copy-outline'} color={colors.white} size={18}/>
                 </CBTouchableOpacity>
                 <CBTouchableOpacity style={{marginRight: 15, backgroundColor: 'rgba(0, 0, 0, 0.25)', padding: 5, borderRadius: 18}}>
@@ -137,14 +60,17 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
     const renderBalance = () => {
         return (
             <CBView style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 20, marginHorizontal: 15, padding: 15, marginTop: 30}}>
-                <CBView style={appStyles.row}>
-                    <CBText style={[appStyles.text, {marginRight: 8, marginTop: 5}]}>{'Total balance'}</CBText>
-                    <CBView style={[appStyles.row, {backgroundColor: colors.greenContent, paddingHorizontal: 5, paddingVertical: 4, borderRadius: 12}]}>
-                        <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.primaryTextDarkColor, marginLeft: 3}]}>{'23.00%'}</CBText>
+                <CBView style={[appStyles.row, {justifyContent: 'space-between'}]}>
+                    <CBView style={appStyles.row}>
+                        <CBText style={[appStyles.text, {marginRight: 8, marginTop: 5}]}>{'Total balance'}</CBText>
+                        <CBView style={[appStyles.row, {backgroundColor: colors.greenContent, paddingHorizontal: 5, paddingVertical: 4, borderRadius: 12}]}>
+                            <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.primaryTextDarkColor, marginLeft: 3}]}>{'23.00%'}</CBText>
+                        </CBView>
                     </CBView>
+                    <CBIcon type={'ionicon'} name={'refresh-circle-outline'} color={colors.primaryTextColor} size={26} onPress={onRefresh}/>
                 </CBView>
                 <CBView style={[appStyles.row, {marginTop: 15}]}>
-                    <CBText style={[appStyles.heading, {fontSize: dimens.yottaLargeText}]}>{'$32,128.80'}</CBText>
+                    <CBText style={[appStyles.heading, {fontSize: dimens.yottaLargeText}]}>{balances ? `${formatCurrency(balances?.usdValue)}` : 'Loading...'}</CBText>
                 </CBView>
                 <CBView style={[appStyles.row, {marginTop: 30, marginBottom: 5, marginHorizontal: 15, justifyContent: 'center'}]}>
                     <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}} onPress={onSend}>
@@ -185,13 +111,15 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
                         <CBText style={[appStyles.text, {color: colors.brandingColor400}]}>{'See all'}</CBText>
                     </CBTouchableOpacity>
                 </CBView>
-                    <CBView style={{marginTop: 15, paddingHorizontal: 20, justifyContent: 'flex-start'}}>
+                    <CBView style={{height:  dimens.heightScreen, marginTop: 15, paddingHorizontal: 20, justifyContent: 'flex-start'}}>
                         <CBFlatList
-                            data={transactionData}
+                            refreshing={refreshing}
+                            data={transactions}
                             renderItem={({item, index}) => renderTransactionItem(item, index)}
-                            keyExtractor={(item) => item.id.toString()}
+                            keyExtractor={(item) => item.blockNumber.toString()}
                             showsVerticalScrollIndicator={false}
                             keyboardShouldPersistTaps={'always'}
+                            onRefresh={onRefresh}
                         />
                     </CBView>
             </CBView>
@@ -199,23 +127,29 @@ const BalanceContent = observer(({defaultParam, onRefresh, onSend}) => {
     }
 
     const renderTransactionItem = (item, index) => {
-        //test again
-        const isPlus = item.type === 'deposit' || item.type === 'receive';
+        const date = new Date(item.timestamp * 1000);
+
+        const formattedDate = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+        });
+        const isPlus = item.type === 'deposit' || item.method === 'transfer';
         return (
             <CBView key={index} style={[appStyles.row, {backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: 15, padding: 15, marginBottom: 10}]}>
                 <CBView style={[appStyles.row, {flex: 1}]}>
-                    <CBImage containerStyle={{borderTopLeftRadius: 15, borderTopRightRadius: 15}} style={{width: 32, height: 32}} source={ImageUtil.getImage(item.icon)}/>
+                    <CBImage containerStyle={{borderRadius: 15}} style={{width: 32, height: 32}} source={ImageUtil.getImage('viction')}/>
                     <CBView style={{marginLeft: 10}}>
-                        <CBText style={[appStyles.text, {fontFamily: 'GoogleSans-Medium'}]}>{item.currency}</CBText>
-                        <CBText style={[appStyles.subtext, {color: colors.primaryTextColor}]}>{item.alias}</CBText>
+                        <CBText style={[appStyles.text, {fontFamily: 'GoogleSans-Medium'}]}>{'Viction'}</CBText>
+                        <CBText style={[appStyles.subtext, {color: colors.primaryTextColor}]}>{'VIC'}</CBText>
                     </CBView>
                 </CBView>
                 <CBView style={[appStyles.row, {flex: 1, justifyContent: 'flex-end'}]}>
-                    <CBText style={[appStyles.subtext, {fontFamily: 'GoogleSans-Medium'}]}>{item.title}</CBText>
+                    <CBText style={[appStyles.subtext, {fontFamily: 'GoogleSans-Medium'}]}>{capitalizeFirstLetter(item.method)}</CBText>
                 </CBView>
                 <CBView style={{alignItems: 'flex-end', flex: 1, justifyContent: 'flex-end'}}>
-                    <CBText style={[appStyles.text, {fontSize: dimens.normalText, color: isPlus ? colors.greenContent : colors.redContent, fontFamily: 'GoogleSans-Medium'}]}>{`${isPlus ? '+' : '-'}${item.totalValue}${item.alias}`}</CBText>
-                    <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.primaryTextColor, marginLeft: 5}]}>{item.date}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.normalText, color: isPlus ? colors.greenContent : colors.redContent, fontFamily: 'GoogleSans-Medium'}]}>{`${isPlus ? '+' : '-'}${parseFloat(item.value) / Math.pow(10, 18)}VIC`}</CBText>
+                    <CBText style={[appStyles.subtext, {fontSize: dimens.smallText, color: colors.primaryTextColor, marginLeft: 5}]}>{formattedDate}</CBText>
                 </CBView>
             </CBView>
         )

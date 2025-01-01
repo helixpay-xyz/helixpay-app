@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, forwardRef, useRef, useState} from 'react';
 import {
     CBHeader,
     CBIcon,
@@ -7,6 +7,7 @@ import {
     CBTouchableOpacity,
     CBView,
     CBImage,
+    CBItemPicker,
     CBFlatList,
     CBInput, CBButton
 } from 'components';
@@ -17,34 +18,49 @@ import {observer} from 'mobx-react';
 import colors from 'configs/colors';
 import {strings} from "controls/i18n";
 import {Formik} from 'formik';
-import SelectDropdown from 'react-native-select-dropdown';
 import * as yup from 'yup';
 
 const assetData = [
     {
         "id": 1,
-        "name": "BTC",
+        "currency": "BTC",
         "icon": "bitcoin",
         "balance": 0.1
     },
     {
         "id": 2,
-        "name": "ETH",
+        "currency": "ETH",
         "icon": "eth",
         "balance": 2.0043
     },
     {
         "id": 3,
-        "name": "USDT",
-        "icon": "ic_usdt",
+        "currency": "USDT",
+        "icon": "usdt",
         "balance": 120
     }
 ]
 
 const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
 
+    const cbItemPicker = useRef();
+
     const onToggleError = (setFieldError, name) => () => {
         setFieldError(name, '');
+    };
+
+    const onOpenCurrency = () => {
+        cbItemPicker.current.show({
+            title: 'Select Currency',
+            source: assetData,
+            map: {text: 'name', value: 'currency'},
+            button: strings('button_close')
+        });
+    };
+
+    const onCurrencyPicked = (setFieldValue, setFieldError) => (currency) => {
+        setFieldValue('item', currency);
+        setFieldError('item', '');
     };
 
     const renderLeftHeader = () => {
@@ -73,31 +89,14 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
                 </CBTouchableOpacity>
             </CBView>
         )
-    }
-
-    const emojisWithIcons = [
-        {title: 'happy', icon: 'emoticon-happy-outline'},
-        {title: 'cool', icon: 'emoticon-cool-outline'},
-        {title: 'lol', icon: 'emoticon-lol-outline'},
-        {title: 'sad', icon: 'emoticon-sad-outline'},
-        {title: 'cry', icon: 'emoticon-cry-outline'},
-        {title: 'angry', icon: 'emoticon-angry-outline'},
-        {title: 'confused', icon: 'emoticon-confused-outline'},
-        {title: 'excited', icon: 'emoticon-excited-outline'},
-        {title: 'kiss', icon: 'emoticon-kiss-outline'},
-        {title: 'devil', icon: 'emoticon-devil-outline'},
-        {title: 'dead', icon: 'emoticon-dead-outline'},
-        {title: 'wink', icon: 'emoticon-wink-outline'},
-        {title: 'sick', icon: 'emoticon-sick-outline'},
-        {title: 'frown', icon: 'emoticon-frown-outline'},
-    ];
+    };
 
     const renderRecipient = () => {
         return (
             <CBView style={{marginHorizontal: 15, marginTop: 15}}>
                 <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{'Recipient'}</CBText>
                 <Formik
-                    initialValues={{address: '', amount: 0}}
+                    initialValues={{address: '', amount: 0, currency: ''}}
                     // validationSchema={validationSchema}
                     validateOnChange={true}
                     validateOnBlur={false}
@@ -106,7 +105,7 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
                         ({setFieldValue, setFieldError, handleChange, handleSubmit, values, errors}) => (
                             <>
                                 <CBInput
-                                    containerStyle={{marginTop: 15, marginBottom: 0}}
+                                    containerStyle={{marginTop: 5, marginBottom: 0}}
                                     inputContainerStyle={{borderWidth: 0}}
                                     placeholder={strings('placeholder_address')}
                                     returnKeyType={'go'}
@@ -121,52 +120,24 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
                                 <CBView style={{marginTop: 5}}>
                                     <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{'Asset'}</CBText>
                                     <CBView style={[appStyles.row, {marginTop: 10, justifyContent: 'space-between'}]}>
-                                        <CBView style={[appStyles.row]}>
-                                            <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage('eth')} resizeMode={'contain'}/>
-                                            <CBText style={[appStyles.text, {fontSize: dimens.xxxLargeText, fontFamily: 'GoogleSans-Medium', marginLeft: 10}]}>{'ETH'}</CBText>
-                                        </CBView>
-                                        {/*<SelectDropdown*/}
-                                        {/*    data={emojisWithIcons}*/}
-                                        {/*    onSelect={(selectedItem, index) => {*/}
-                                        {/*        console.log(selectedItem, index);*/}
-                                        {/*    }}*/}
-                                        {/*    renderButton={(selectedItem, isOpened) => {*/}
-                                        {/*        // return (*/}
-                                        {/*        //     <CBView style={{width: 150, backgroundColor: '#E9ECEF', borderRadius: 12, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 3}}>*/}
-                                        {/*        //         /!*{selectedItem && (*!/*/}
-                                        {/*        //             <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage('bitcoin')} resizeMode={'contain'}/>*/}
-                                        {/*        //         /!*)}*!/*/}
-                                        {/*        //         <CBText>*/}
-                                        {/*        //             {(selectedItem && selectedItem.name) || 'Select your mood'}*/}
-                                        {/*        //         </CBText>*/}
-                                        {/*        //         <CBIcon type={'ionicon'} name={isOpened ? 'chevron-up' : 'chevron-down'} size={25} />*/}
-                                        {/*        //     </CBView>*/}
-                                        {/*        // );*/}
-                                        {/*        return (*/}
-                                        {/*            <CBView>*/}
-                                        {/*                <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage('bitcoin')} resizeMode={'contain'}/>*/}
-                                        {/*                <CBText style={[appStyles.text, {fontSize: dimens.xxxLargeText, fontFamily: 'GoogleSans-Medium'}]}>{'BTC'}</CBText>*/}
-                                        {/*            </CBView>*/}
-                                        {/*        )*/}
-                                        {/*    }}*/}
-                                        {/*    showsVerticalScrollIndicator={false}*/}
-                                        {/*    renderItem={(item, index, isSelected) => {*/}
-                                        {/*        return (*/}
-                                        {/*            // <CBTouchableOpacity key={index} style={[appStyles.row, {paddingVertical: 15, borderBottomWidth: 1}]} onPress={() => onRefresh(item)}>*/}
-                                        {/*            //     <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage(item.icon)} resizeMode={'contain'}/>*/}
-                                        {/*            //     <CBView style={{marginLeft: 10}}>*/}
-                                        {/*            //         <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{item.name}</CBText>*/}
-                                        {/*            //         <CBText style={[appStyles.text, {fontSize: dimens.normalText, color: colors.grey3}]}>{item.balance} {item.name}</CBText>*/}
-                                        {/*            //     </CBView>*/}
-                                        {/*            // </CBTouchableOpacity>*/}
-                                        {/*            <CBView>*/}
-                                        {/*                <CBText>Ahihj</CBText>*/}
-                                        {/*            </CBView>*/}
-                                        {/*        );*/}
-                                        {/*    }}*/}
-                                        {/*    dropdownStyle={{ width: '40%', backgroundColor: '#E9ECEF', borderRadius: 12, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingHorizontal: 3}}*/}
-                                        {/*    buttonStyle={{height: 50, width: '40%', backgroundColor: 'transparent', justifyContent: 'space-between', flexDirection: 'row'}}*/}
+                                        {/*<CBInput*/}
+                                        {/*    containerStyle={{marginTop: 5, width: '40%'}}*/}
+                                        {/*    rightIcon={*/}
+                                        {/*        <CBTouchableOpacity style={appStyles.action} define={'none'} onPress={onOpenCurrency}>*/}
+                                        {/*            <CBIcon define={'icon'} type={'ionicon'} name={'chevron-down-outline'} size={20}/>*/}
+                                        {/*        </CBTouchableOpacity>*/}
+                                        {/*    }*/}
+                                        {/*    placeholder={strings('placeholder_problem')}*/}
+                                        {/*    InputComponent={forwardRef(({style: {color, height, paddingVertical, paddingHorizontal}, placeholderTextColor, placeholder}, ref) => <CBTouchableOpacity style={[appStyles.row, {flex: 1, height, paddingVertical, paddingHorizontal}]} define={'none'} onPress={onOpenCurrency}>*/}
+                                        {/*        <CBText style={[appStyles.text, {color: !values.item ? placeholderTextColor : color}]} numberOfLines={1} ellipsizeMode={'tail'}>{!values.item ? placeholder : values.item.name}</CBText>*/}
+                                        {/*    </CBTouchableOpacity>)}*/}
+                                        {/*    errorMessage={errors.item}*/}
                                         {/*/>*/}
+                                        {/*<CBItemPicker ref={cbItemPicker} value={values.currency} onPicked={onCurrencyPicked(setFieldValue, setFieldError)}/>*/}
+                                        <CBView style={appStyles.row}>
+                                            <CBImage style={{width: 36, height: 36, borderRadius: 18}} source={ImageUtil.getImage('viction')} resizeMode={'contain'}/>
+                                            <CBText style={[appStyles.text, {marginLeft: 5, fontFamily: 'NeueHaasDisplay-Mediu', fontSize: dimens.xxLargeText}]}>VIC</CBText>
+                                        </CBView>
 
                                         <CBInput
                                             containerStyle={{height: 50, marginBottom: 0, width: '20%', padding: 0}}
@@ -202,7 +173,6 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
     };
 
     const renderAssetItem = ({item, index, isSelected}) => {
-        console.log(`mienpv :: ${JSON.stringify(item)}`);
         return (
             <CBTouchableOpacity key={index} style={[appStyles.row, {paddingVertical: 15, borderBottomWidth: 1}]} onPress={() => onRefresh(item)}>
                 <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage(item.icon)} resizeMode={'contain'}/>

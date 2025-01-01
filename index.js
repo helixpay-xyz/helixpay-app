@@ -6,6 +6,7 @@ import messaging from '@react-native-firebase/messaging';
 import notifee, {EventType} from '@notifee/react-native';
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import CodePush from 'react-native-code-push';
+import { TextEncoder, TextDecoder } from 'text-encoding';
 import {name as appName} from './app.json';
 import App from './App';
 
@@ -13,6 +14,14 @@ Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.maxFontSizeMultiplier = 1.5;
 TextInput.defaultProps = TextInput.defaultProps || {};
 TextInput.defaultProps.maxFontSizeMultiplier = 1.5;
+
+if (typeof global.TextEncoder === 'undefined') {
+    global.TextEncoder = TextEncoder;
+}
+
+if (typeof global.TextDecoder === 'undefined') {
+    global.TextDecoder = TextDecoder;
+}
 
 require('moment/locale/en-gb');
 require('moment/locale/vi');
