@@ -105,10 +105,10 @@ export default class Introduction extends Base {
                         </CBView>
                         {/*<CBButton buttonStyle={appStyles.circle} icon={<CBIcon type={'feather'} name={index < introductions.length - 1 ? 'arrow-right' :  'check'} color={'#FFFFFF'} size={25}/>} onPress={this.onNextOrStart}/>*/}
                     </CBView>
-                    {index < 1 ? <CBTouchableOpacity style={[appStyles.row, {position: 'absolute', right: 15}]} define={'none'} onPress={this.onSkip}>
-                        <CBText style={[appStyles.text, {marginRight: 5}]} define={'text'}>{strings('action_skip')}</CBText>
-                        <CBIcon define={'icon'} type={'ionicon'} name={'arrow-forward-outline'} size={20}/>
-                    </CBTouchableOpacity> : null}
+                    {/*{index < 1 ? <CBTouchableOpacity style={[appStyles.row, {position: 'absolute', right: 15}]} define={'none'} onPress={this.onSkip}>*/}
+                    {/*    <CBText style={[appStyles.text, {marginRight: 5}]} define={'text'}>{strings('action_skip')}</CBText>*/}
+                    {/*    <CBIcon define={'icon'} type={'ionicon'} name={'arrow-forward-outline'} size={20}/>*/}
+                    {/*</CBTouchableOpacity> : null}*/}
                 </CBView>
             </CBImageBackground>
         );

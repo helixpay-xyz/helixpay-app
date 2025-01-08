@@ -1,22 +1,24 @@
-import React, { Component } from 'react';
-import {
-    CBContainer,
-    CBHeader,
-    CBIcon,
-    CBImageBackground,
-    CBRefreshControl,
-    CBText,
-    CBTouchableOpacity,
-    CBView,
-    CBScrollView, CBImage, CBFlatList
-} from 'components';
+import React, {useEffect, useRef} from 'react';
+import {CBHeader, CBIcon, CBImageBackground, CBText, CBTouchableOpacity, CBView, CBImage, CBFlatList} from 'components';
 import {appStyles} from 'configs/styles';
 import dimens from 'configs/dimens';
 import ImageUtil from 'utils/ImageUtil';
 import {observer} from 'mobx-react';
 import colors from 'configs/colors';
+import CreateUsernamePopup from 'screens/popup/CreateUsernamePopup';
 
-const BalanceContent = observer(({defaultParam, refreshing, address, balances, transactions, onCopyAddress, onRefresh, onSend}) => {
+const BalanceContent = observer(({defaultParam, refreshing, username, address, balances, transactions, onCreateUser, onCopyAddress, onRefresh, onSend}) => {
+
+    const createUsernamePopup = useRef(null);
+
+    useEffect(() => {
+        if (!username) {
+            createUsernamePopup.current.show({
+                title: 'Create username',
+                onCreateUser: onCreateUser,
+            });
+        }
+    }, []);
 
     const shortenAddress = (address) => {
         return `${address?.slice(0, 4)}...${address?.slice(-3)}`;
@@ -160,6 +162,7 @@ const BalanceContent = observer(({defaultParam, refreshing, address, balances, t
             <CBHeader containerStyle={{backgroundColor: 'transparent', borderBottomWidth: 0}} leftComponent={renderLeftHeader()} rightComponent={renderRightHeader()}/>
             {renderBalance()}
             {renderTransaction()}
+            <CreateUsernamePopup ref={createUsernamePopup} onCreateUser={onCreateUser}/>
         </CBImageBackground>
     );
 });

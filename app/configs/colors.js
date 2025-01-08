@@ -34,7 +34,7 @@ export default {
     grayDarkColor: '#555770',
 
     shadowColor: '#1C1C28',
-    contentColor: '#000001',
+    contentColor: '#141415',
     hideColor: '#E4E4EB',
     lineColor: '#E4E4EB',
     badgeColor: '#FF3B3B',

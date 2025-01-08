@@ -2,9 +2,9 @@ import React, {useState, useEffect, useRef, useContext, useMemo} from 'react';
 import { Keyboard } from 'react-native';
 import {CBButton,CBIcon, CBImageBackground, CBInput, CBText, CBTouchableOpacity, CBTouchableWithoutFeedback, CBView, CBScrollView,} from 'components';
 import Clipboard from '@react-native-clipboard/clipboard';
-// import { generateMnemonic } from '@scure/bip39';
-import { english, generateMnemonic, mnemonicToAccount } from 'viem/accounts';
-import { wordlist } from '@scure/bip39/wordlists/english';
+import {privateKeyToAccount, publicKeyToAddress, english, generateMnemonic, mnemonicToAccount } from 'viem/accounts';
+import { bytesToHex, hexToBytes, keccak256 } from 'viem';
+import {getPublicKey, getSharedSecret, ProjectivePoint, utils, CURVE} from '@noble/secp256k1';
 import { appStyles } from 'configs/styles';
 import { strings } from 'controls/i18n';
 import dimens from 'configs/dimens';
@@ -25,12 +25,6 @@ const SeedPhrase = () => {
     const [index, setIndex] = useState(0);
     const [isMatch, setIsMatch] = useState(false);
 
-    // const seedPhraseArray = useMemo(() => {
-    //     const generatedMnemonic = generateMnemonic();
-    //     // const testEncrypt = AesGcmCrypto.encrypt(generatedMnemonic, 'password');
-    //     return generatedMnemonic.split(' ');
-    // }, []);
-
     const { mnemonic, address } = useMemo(() => {
         const generatedMnemonic = generateMnemonic(english);
         const account = mnemonicToAccount(generatedMnemonic);
@@ -40,6 +34,8 @@ const SeedPhrase = () => {
             address: account.address,
         };
     }, []);
+
+
 
     const generateBase64Key = (password, randomBytes) => {
         const passwordBytes = [...password].map((char) => char.charCodeAt(0));
@@ -64,6 +60,7 @@ const SeedPhrase = () => {
             const plaintext = mnemonic;
             const key = generateBase64Key(password, randomBytes(16));
             const encryptedSeedPhrase = await AesGcmCrypto.encrypt(plaintext, false, key);
+            await AsyncStorage.setItem('@seedPhrase', mnemonic);
             await AsyncStorage.setItem('@address', address);
             await AsyncStorage.setItem('@encrypt_iv', encryptedSeedPhrase.iv);
             await AsyncStorage.setItem('@encrypt_tag', encryptedSeedPhrase.tag);
