@@ -222,8 +222,7 @@ export const appStyles = StyleSheet.create({
         paddingBottom: dimens.bottomSpace,
         backgroundColor: colors.contentColor,
         borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        overflow: 'hidden'
+        borderTopRightRadius: 10
     },
     knob: {
         width: 45,

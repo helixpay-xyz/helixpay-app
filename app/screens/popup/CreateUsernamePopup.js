@@ -1,11 +1,10 @@
 import React, {forwardRef, useImperativeHandle, useState} from 'react';
 import {useStateWithCallbackLazy} from 'hooks';
 import {Keyboard} from 'react-native';
-import {CBButton, CBImage, CBText, CBView} from 'components';
+import {CBButton, CBText, CBView} from 'components';
 import EventTracker from 'controls/EventTracker';
 import CBControl from 'controls/CBControl';
 import {moderateScale} from 'utils/ThemeUtil';
-import ImageUtil from 'utils/ImageUtil';
 import Modal, {ModalContent, ScaleAnimation} from 'react-native-modals';
 import {useTheme} from 'react-native-elements';
 import {appStyles} from 'configs/styles';
@@ -19,7 +18,7 @@ const CreateUsernamePopup = ({style, onAction}, ref) => {
     }));
     const [data, setData] = useState({});
     const [visible, setVisible] = useStateWithCallbackLazy(false);
-    const {uri = '', title = '', label = '', messages = [], note = '', buttons = [], onCreateUser, options = {}} = data;
+    const {title = '', buttons = [], onCreateUser, options = {}} = data;
     const show = (data) => {
         Keyboard.dismiss();
         setData(data);

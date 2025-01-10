@@ -62,9 +62,9 @@ const SeedPhrase = () => {
             const encryptedSeedPhrase = await AesGcmCrypto.encrypt(plaintext, false, key);
             await AsyncStorage.setItem('@seedPhrase', mnemonic);
             await AsyncStorage.setItem('@address', address);
-            await AsyncStorage.setItem('@encrypt_iv', encryptedSeedPhrase.iv);
-            await AsyncStorage.setItem('@encrypt_tag', encryptedSeedPhrase.tag);
-            await AsyncStorage.setItem('@encrypt_content', encryptedSeedPhrase.content);
+            // await AsyncStorage.setItem('@encrypt_iv', encryptedSeedPhrase.iv);
+            // await AsyncStorage.setItem('@encrypt_tag', encryptedSeedPhrase.tag);
+            // await AsyncStorage.setItem('@encrypt_content', encryptedSeedPhrase.content);
         } catch (error) {
             console.log(`mienpv :: ${error}`);
         }

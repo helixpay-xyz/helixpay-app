@@ -96,7 +96,7 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
             <CBView style={{marginHorizontal: 15, marginTop: 15}}>
                 <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{'Recipient'}</CBText>
                 <Formik
-                    initialValues={{address: '', amount: 0, currency: ''}}
+                    initialValues={{address: '', amount: 0, currency: 'VIC'}}
                     // validationSchema={validationSchema}
                     validateOnChange={true}
                     validateOnBlur={false}
@@ -107,7 +107,7 @@ const SendContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
                                 <CBInput
                                     containerStyle={{marginTop: 5, marginBottom: 0}}
                                     inputContainerStyle={{borderWidth: 0}}
-                                    placeholder={strings('placeholder_address')}
+                                    placeholder={strings('placeholder_receiver')}
                                     returnKeyType={'go'}
                                     autoCapitalize={'none'}
                                     maxLength={300}

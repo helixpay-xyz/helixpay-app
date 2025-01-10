@@ -38,6 +38,7 @@
   "placeholder_phone_number": "Enter phone number",
   "placeholder_password": "Enter password",
   "placeholder_address": "Enter address",
+  "placeholder_receiver": "Enter username or address",
 
   "toast_copied": "Copy successful!",
   "toast_resend": "Resend successful!",

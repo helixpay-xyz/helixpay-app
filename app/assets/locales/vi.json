@@ -38,6 +38,7 @@
   "placeholder_phone_number": "Nhập số điện thoại",
   "placeholder_password": "Enter password",
   "placeholder_address": "Enter address",
+  "placeholder_receiver": "Enter username or address",
 
   "toast_copied": "Sao chép thành công!",
   "toast_resend": "Gửi lại thành công!",
