@@ -182,7 +182,7 @@ export default class Balance extends Base {
         return `0x${stealthPrivateKeyBigInt.toString(16).padStart(64, "0")}`;
     };
 
-    onCreateUser = async () => {
+    onCreateUser = async (values) => {
         const seedPhrase = await AsyncStorage.getItem('@seedPhrase');
         const account = mnemonicToAccount(seedPhrase);
         const signature = await account.signMessage({
@@ -193,7 +193,7 @@ export default class Balance extends Base {
             stealthKey.spendingKey.publicKey,
             stealthKey.viewingKey.publicKey
         );
-        console.log(`mienpv :: ${JSON.stringify(stealthMeta)}`);
+        console.log(`mienpv :: ${JSON.stringify(values)}`);
 
     }
 

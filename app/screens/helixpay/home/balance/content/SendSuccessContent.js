@@ -79,7 +79,6 @@ const SendSuccessContent = observer(({defaultParam, order, onRefresh, onBack, on
     };
 
     const renderTransactionDetail = () => {
-        console.log(`mienpv :: ${JSON.stringify(order)}`);
         return (
             <CBView style={{ marginHorizontal: 15, marginTop: 30}}>
                 <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>

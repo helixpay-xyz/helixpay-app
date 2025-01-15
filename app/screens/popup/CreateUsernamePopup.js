@@ -1,7 +1,7 @@
 import React, {forwardRef, useImperativeHandle, useState} from 'react';
 import {useStateWithCallbackLazy} from 'hooks';
 import {Keyboard} from 'react-native';
-import {CBButton, CBText, CBView} from 'components';
+import {CBButton, CBInput, CBText, CBView} from 'components';
 import EventTracker from 'controls/EventTracker';
 import CBControl from 'controls/CBControl';
 import {moderateScale} from 'utils/ThemeUtil';
@@ -10,6 +10,9 @@ import {useTheme} from 'react-native-elements';
 import {appStyles} from 'configs/styles';
 import {helpers} from 'configs/themes';
 import dimens from 'configs/dimens';
+import {Formik} from 'formik';
+import colors from "configs/colors";
+import {strings} from "controls/i18n";
 
 const CreateUsernamePopup = ({style, onAction}, ref) => {
     useImperativeHandle(ref, () => ({
@@ -65,6 +68,11 @@ const CreateUsernamePopup = ({style, onAction}, ref) => {
             EventTracker.logEvent('information_popup', {action: `click_button_${button.tracking}`});
         }
     };
+
+    const onToggleError = (setFieldError, name) => () => {
+        setFieldError(name, '');
+    };
+
     const {theme} = useTheme();
     const popupStyle = helpers('popup', theme.colors.scheme);
     const buttonWith = (0.8 * dimens.widthScreen - 45) / 2 - 2.75;
@@ -79,7 +87,34 @@ const CreateUsernamePopup = ({style, onAction}, ref) => {
             <ModalContent style={[appStyles.popup, popupStyle]}>
                 <CBView style={{alignItems: 'center'}} >
                     <CBText style={[appStyles.title, {fontSize: moderateScale(20)}]}>{title}</CBText>
-                    <CBButton style={{marginTop: 20}} onPress={onCreateUser} title={'Create'} />
+                    <Formik
+                        initialValues={{username: ''}}
+                        validateOnChange={true}
+                        validateOnBlur={false}
+                        onSubmit={onCreateUser}>
+                        {
+                            ({setFieldValue, setFieldError, handleChange, handleSubmit, values, errors}) => (
+                                <>
+                                    <CBInput
+                                        containerStyle={{marginTop: 30, marginBottom: 0}}
+                                        inputContainerStyle={{borderColor: !!values.username ? theme.colors.primary : theme.colors.gray}}
+                                        rightIconContainerStyle={{paddingRight: 10}}
+                                        placeholder={strings('placeholder_username')}
+                                        returnKeyType={'go'}
+                                        autoCapitalize={'none'}
+                                        maxLength={64}
+                                        value={values.username}
+                                        // errorMessage={errors.password}
+                                        onChangeText={handleChange('username')}
+                                        onFocus={onToggleError(setFieldError, 'username')}
+                                        onSubmitEditing={handleSubmit}
+                                    />
+                                    <CBButton style={{width: 120}} titleStyle={[appStyles.text, {color: colors.backgroundColor }]} onPress={handleSubmit} title={'Create'} />
+                                </>
+
+                            )
+                        }
+                    </Formik>
                 </CBView>
             </ModalContent>
         </Modal>

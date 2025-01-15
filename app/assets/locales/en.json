@@ -36,6 +36,7 @@
   "input_phone_number": "Phone number",
 
   "placeholder_phone_number": "Enter phone number",
+  "placeholder_username": "Enter username",
   "placeholder_password": "Enter password",
   "placeholder_address": "Enter address",
   "placeholder_receiver": "Enter username or address",
