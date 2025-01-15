@@ -9,6 +9,7 @@ import dimens from 'configs/dimens';
 
 import Home from 'screens/helixpay/home/Home';
 import Send from 'screens/helixpay/home/balance/Send';
+import SendSuccess from 'screens/helixpay/home/balance/SendSuccess';
 import LoginOrRegister from "screens/helixpay/auth/LoginOrRegister";
 import CreateWallet from "screens/helixpay/auth/CreatWallet";
 import SeedPhrase from "screens/helixpay/auth/SeedPhrase";
@@ -49,6 +50,7 @@ export const UserStack = () => {
             }}>
             <Stack.Screen name={'Home'} component={Home} options={{headerShown: false}}/>
             <Stack.Screen name={'Send'} component={Send} options={{headerShown: false}}/>
+            <Stack.Screen name={'SendSuccess'} component={SendSuccess} options={{headerShown: false}}/>
             <Stack.Screen name={'LoginOrRegister'} component={LoginOrRegister} options={{...TransitionPresets.ModalSlideFromBottomIOS, headerShown: false, gestureEnabled: false}}/>
             <Stack.Screen name={'CreateWallet'} component={CreateWallet} options={{headerShown: false, gestureEnabled: false}}/>
             <Stack.Screen name={'SeedPhrase'} component={SeedPhrase} options={{headerShown: false, gestureEnabled: false}}/>

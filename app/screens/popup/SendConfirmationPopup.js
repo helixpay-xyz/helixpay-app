@@ -3,7 +3,7 @@ import {useStateWithCallbackLazy} from 'hooks';
 import {Keyboard, useColorScheme} from 'react-native';
 import Modal from 'react-native-modal';
 import {appStyles} from 'configs/styles';
-import {CBIcon, CBView, CBImageBackground, CBText, CBDivider, CBImage, CBButton} from 'components';
+import {CBIcon, CBView, CBText, CBDivider, CBImage, CBButton} from 'components';
 import {helpers} from 'configs/themes';
 import {useTheme} from 'react-native-elements';
 import dimens from 'configs/dimens';
@@ -18,7 +18,7 @@ const SendConfirmationPopup = ({style, onAction}, ref) => {
     }));
     const [data, setData] = useState({});
     const [visible, setVisible] = useStateWithCallbackLazy(false);
-    const {options = {}, title = '', order = []} = data;
+    const {options = {}, title = '', order = [], onSendSuccess} = data;
     const show = (data = {}) => {
         Keyboard.dismiss();
         setData(data);
@@ -52,11 +52,18 @@ const SendConfirmationPopup = ({style, onAction}, ref) => {
         hide();
     };
 
+    const onSendSuccessButton = () => {
+        if (onSendSuccess && typeof onSendSuccess === 'function') {
+            hide(onSendSuccess);
+        } else {
+            hide();
+        }
+    }
+
     const {theme} = useTheme();
     const scheme = useColorScheme();
     const knobStyle = helpers('knob', theme.colors.scheme);
     const sheetStyle = helpers('sheet', theme.colors.scheme);
-    console.log(`mienpv :: ${JSON.stringify(order)}`);
 
     return (
         <Modal
@@ -104,7 +111,7 @@ const SendConfirmationPopup = ({style, onAction}, ref) => {
                             <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{order[4]?.value}</CBText>
                         </CBView>
                     </CBView>
-                    <CBButton style={{margin: 15}} buttonStyle={{height: 50}} titleStyle={[appStyles.text, { color: colors.backgroundColor}]} title={strings('button_next')} />
+                    <CBButton style={{margin: 15}} buttonStyle={{height: 50}} titleStyle={[appStyles.text, { color: colors.backgroundColor}]} title={strings('button_next')} onPress={onSendSuccessButton}/>
                 </CBView>
             </CBView>
         </Modal>

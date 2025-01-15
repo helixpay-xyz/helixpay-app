@@ -4,6 +4,7 @@ import RootNavigation from 'screens/RootNavigation';
 import SendConfirmationPopup from 'screens/popup/SendConfirmationPopup';
 
 import Base from 'screens/Base';
+import {strings} from "controls/i18n";
 
 export default class Send extends Base {
 
@@ -17,7 +18,6 @@ export default class Send extends Base {
     }
 
     onSend = (values) => {
-        console.log(`mienpv :: ${JSON.stringify(values)}`);
         this.sendConfirmationRef.current.show(
             {
                 title: 'Confirm Order',
@@ -27,7 +27,8 @@ export default class Send extends Base {
                     { label: 'Send From', value: 'misterbo' },
                     { label: 'Receiver', value: values.address },
                     { label: 'Note', value: 'Nothing' }
-                ]
+                ],
+                onSendSuccess: this.onSendSuccess
             }
         );
     }
@@ -35,11 +36,20 @@ export default class Send extends Base {
     onBack = () => {
         RootNavigation.goBack();
     }
+
+    onAction = (name) => {
+        this.onSendSuccess();
+    };
+
+    onSendSuccess = () => {
+        RootNavigation.navigate('SendSuccess');
+    }
+
     render() {
         return (
         <>
             <SendContent defaultParam={this.defaultParam} onRefresh={this.onRefresh} onSend={this.onSend} onBack={this.onBack}/>
-            <SendConfirmationPopup ref={this.sendConfirmationRef} />
+            <SendConfirmationPopup ref={this.sendConfirmationRef} onAction={this.onAction}/>
         </>
         );
     }
