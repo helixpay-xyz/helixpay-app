@@ -8,6 +8,25 @@ export default class SendSuccess extends Base {
 
     constructor(props) {
         super(props);
+        this.state = {
+            order: []
+        }
+    };
+
+    componentDidMount() {
+        super.componentDidMount();
+        this.load();
+    };
+
+    componentWillUnmount() {
+        super.componentWillUnmount();
+    }
+
+    load() {
+        const order = this.defaultParam?.order;
+        this.setState({
+            order: order || []
+        });
     }
 
     onRefresh = () => {
@@ -18,10 +37,15 @@ export default class SendSuccess extends Base {
     onBack = () => {
         RootNavigation.goBack();
     }
+
+    onGoHome = () => {
+        RootNavigation.navigate('Home');
+    }
     render() {
+        const {order} = this.state;
         return (
         <>
-            <SendSuccessContent defaultParam={this.defaultParam} onRefresh={this.onRefresh} onSend={this.onSend} onBack={this.onBack}/>
+            <SendSuccessContent defaultParam={this.defaultParam} order={order} onRefresh={this.onRefresh} onBack={this.onBack} onGoHome={this.onGoHome}/>
         </>
         );
     }

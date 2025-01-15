@@ -9,7 +9,7 @@ import {
     CBImage,
     CBItemPicker,
     CBFlatList,
-    CBInput, CBButton
+    CBInput, CBButton, CBDivider
 } from 'components';
 import {appStyles} from 'configs/styles';
 import dimens from 'configs/dimens';
@@ -41,7 +41,7 @@ const assetData = [
     }
 ]
 
-const SendSuccessContent = observer(({defaultParam, onRefresh, onSend, onBack}) => {
+const SendSuccessContent = observer(({defaultParam, order, onRefresh, onBack, onGoHome}) => {
 
     const cbItemPicker = useRef();
 
@@ -58,11 +58,6 @@ const SendSuccessContent = observer(({defaultParam, onRefresh, onSend, onBack}) 
         });
     };
 
-    const onCurrencyPicked = (setFieldValue, setFieldError) => (currency) => {
-        setFieldValue('item', currency);
-        setFieldError('item', '');
-    };
-
     const renderLeftHeader = () => {
         return (
             <CBView style={[appStyles.row, {width: dimens.widthScreen / 2}]}>
@@ -73,121 +68,61 @@ const SendSuccessContent = observer(({defaultParam, onRefresh, onSend, onBack}) 
         )
     }
 
-    const renderCenterHeader = () => {
+    const renderContent = () => {
         return (
-            <CBView style={{justifyContent: 'center', alignItems: 'center'}}>
-                <CBText style={[appStyles.heading, {fontSize: dimens.xLargeText, fontFamily: 'Rubik-Medium'}]}>{'Send'}</CBText>
-            </CBView>
-        )
-    }
-
-    const renderRightHeader = () => {
-        return (
-            <CBView style={[appStyles.row, {justifyContent: 'flex-end', width: dimens.widthScreen / 2}]}>
-                <CBTouchableOpacity style={{marginRight: 15}}>
-                    <CBIcon type={'ionicon'} name={'information-circle-outline'} color={colors.white} size={28}/>
-                </CBTouchableOpacity>
+            <CBView style={{ marginHorizontal: 15, marginTop: 15, alignItems: 'center'}}>
+                <CBImage style={{width: 96, height: 96, marginVertical: 15}} source={ImageUtil.getImage('check_success')} resizeMode={'contain'}/>
+                <CBText style={[appStyles.text, {marginTop: 15, fontFamily: 'NeueHaasDisplay-Mediu', fontSize: dimens.xxLargeText}]}>{'Send Successful'}</CBText>
+                <CBText style={[appStyles.caption, {marginTop: 10}]}>{'The recipient can check the balance in the funding wallet'}</CBText>
             </CBView>
         )
     };
 
-    const renderRecipient = () => {
+    const renderTransactionDetail = () => {
+        console.log(`mienpv :: ${JSON.stringify(order)}`);
         return (
-            <CBView style={{marginHorizontal: 15, marginTop: 15}}>
-                <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{'Recipient'}</CBText>
-                <Formik
-                    initialValues={{address: '', amount: 0, currency: 'VIC'}}
-                    // validationSchema={validationSchema}
-                    validateOnChange={true}
-                    validateOnBlur={false}
-                    onSubmit={onSend}>
-                    {
-                        ({setFieldValue, setFieldError, handleChange, handleSubmit, values, errors}) => (
-                            <>
-                                <CBInput
-                                    containerStyle={{marginTop: 5, marginBottom: 0}}
-                                    inputContainerStyle={{borderWidth: 0}}
-                                    placeholder={strings('placeholder_receiver')}
-                                    returnKeyType={'go'}
-                                    autoCapitalize={'none'}
-                                    maxLength={300}
-                                    value={values.address}
-                                    errorMessage={errors.address}
-                                    onChangeText={handleChange('address')}
-                                    onFocus={onToggleError(setFieldError, 'address')}
-                                    onSubmitEditing={handleSubmit}
-                                />
-                                <CBView style={{marginTop: 5}}>
-                                    <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{'Asset'}</CBText>
-                                    <CBView style={[appStyles.row, {marginTop: 10, justifyContent: 'space-between'}]}>
-                                        {/*<CBInput*/}
-                                        {/*    containerStyle={{marginTop: 5, width: '40%'}}*/}
-                                        {/*    rightIcon={*/}
-                                        {/*        <CBTouchableOpacity style={appStyles.action} define={'none'} onPress={onOpenCurrency}>*/}
-                                        {/*            <CBIcon define={'icon'} type={'ionicon'} name={'chevron-down-outline'} size={20}/>*/}
-                                        {/*        </CBTouchableOpacity>*/}
-                                        {/*    }*/}
-                                        {/*    placeholder={strings('placeholder_problem')}*/}
-                                        {/*    InputComponent={forwardRef(({style: {color, height, paddingVertical, paddingHorizontal}, placeholderTextColor, placeholder}, ref) => <CBTouchableOpacity style={[appStyles.row, {flex: 1, height, paddingVertical, paddingHorizontal}]} define={'none'} onPress={onOpenCurrency}>*/}
-                                        {/*        <CBText style={[appStyles.text, {color: !values.item ? placeholderTextColor : color}]} numberOfLines={1} ellipsizeMode={'tail'}>{!values.item ? placeholder : values.item.name}</CBText>*/}
-                                        {/*    </CBTouchableOpacity>)}*/}
-                                        {/*    errorMessage={errors.item}*/}
-                                        {/*/>*/}
-                                        {/*<CBItemPicker ref={cbItemPicker} value={values.currency} onPicked={onCurrencyPicked(setFieldValue, setFieldError)}/>*/}
-                                        <CBView style={appStyles.row}>
-                                            <CBImage style={{width: 36, height: 36, borderRadius: 18}} source={ImageUtil.getImage('viction')} resizeMode={'contain'}/>
-                                            <CBText style={[appStyles.text, {marginLeft: 5, fontFamily: 'NeueHaasDisplay-Mediu', fontSize: dimens.xxLargeText}]}>VIC</CBText>
-                                        </CBView>
-
-                                        <CBInput
-                                            containerStyle={{height: 50, marginBottom: 0, width: '20%', padding: 0}}
-                                            inputContainerStyle={{borderBottomWidth: 0, borderWidth: 0,}}
-                                            // placeholder={strings('placeholder_address')}
-                                            inputStyle={[appStyles.text, {marginBottom: 0, fontSize: dimens.xxxLargeText, textAlign: 'right'}]}
-                                            keyboardType={'phone-pad'}
-                                            selectionColor="white"
-                                            maxLength={300}
-                                            value={values.amount}
-                                            errorMessage={errors.amount}
-                                            // onChangeText={handleChange('amount')}
-                                            onChangeText={(text) => {
-                                                const numericText = text.replace(/[^0-9]/g, ''); // Remove any non-numeric characters
-                                                handleChange('amount')(numericText); // Update the state with filtered value
-                                            }}
-                                            onFocus={onToggleError(setFieldError, 'amount')}
-                                            onSubmitEditing={handleSubmit}
-                                        />
-                                    </CBView>
-                                </CBView>
-                                <CBView style={{ marginTop: 'auto', marginBottom: 30 }}>
-                                    <CBButton containerStyle={{ marginTop: 15 }} buttonStyle={appStyles.button} title={strings('button_send')} titleStyle={[appStyles.text, { color: colors.backgroundColor,fontFamily: 'NeueHaasDisplay-Mediu'}]} onPress={handleSubmit}/>
-                                </CBView>
-                                {/*<CBButton disabled={!values?.seedPhrase} containerStyle={{ marginTop: 15, }} buttonStyle={appStyles.button} title={strings('button_confirm')} titleStyle={[appStyles.text, { fontFamily: 'SpaceGrotesk-Medium', color: colors.backgroundColor }]} onPress={handleSubmit}/>*/}
-                                {/*{!!values?.seedPhrase ? <CBText style={[appStyles.caption, {marginTop: 5, color: isMatch ? colors.greenContent : colors.errorTextColor}]}>{isMatch ? 'Matching' : 'Not match'}</CBText> : null}*/}
-                            </>
-                        )
-                    }
-                </Formik>
-            </CBView>
-        )
-    };
-
-    const renderAssetItem = ({item, index, isSelected}) => {
-        return (
-            <CBTouchableOpacity key={index} style={[appStyles.row, {paddingVertical: 15, borderBottomWidth: 1}]} onPress={() => onRefresh(item)}>
-                <CBImage style={{width: 32, height: 32}} source={ImageUtil.getImage(item.icon)} resizeMode={'contain'}/>
-                <CBView style={{marginLeft: 10}}>
-                    <CBText style={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'GoogleSans-Medium'}]}>{item.name}</CBText>
-                    <CBText style={[appStyles.text, {fontSize: dimens.normalText, color: colors.grey3}]}>{item.balance} {item.name}</CBText>
+            <CBView style={{ marginHorizontal: 15, marginTop: 30}}>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{order[2]?.label}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{order[2]?.value}</CBText>
                 </CBView>
-            </CBTouchableOpacity>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{order[3]?.label}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{order[3]?.value}</CBText>
+                </CBView>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{order[0]?.label}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{order[0]?.value}</CBText>
+                </CBView>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{order[4]?.label}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{order[4]?.value}</CBText>
+                </CBView>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{'Date'}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{'Jan 15 2025 23:00:12'}</CBText>
+                </CBView>
+                <CBView style={[appStyles.row, {paddingHorizontal: 15, marginBottom: 10, justifyContent: 'space-between'}]}>
+                    <CBText style={[appStyles.subtext]}>{'Order ID'}</CBText>
+                    <CBText style={[appStyles.text, {fontSize: dimens.mediumText}]}>{'103948439'}</CBText>
+                </CBView>
+            </CBView>
         )
-    }
+    };
 
     return (
         <CBImageBackground style={[{width: dimens.widthScreen, height: dimens.heightScreen, justifyContent: 'flex-start'}]} imageStyle={{width: dimens.widthScreen, height: dimens.heightScreen}} source={ImageUtil.getImage('background_4')}>
-            <CBHeader containerStyle={{backgroundColor: 'transparent', borderBottomWidth: 0}} leftComponent={renderLeftHeader()} centerComponent={renderCenterHeader} rightComponent={renderRightHeader()}/>
-            {renderRecipient()}
+            <CBView style={{flex: 1, justifyContent: 'space-between'}}>
+                <CBView>
+                    <CBHeader containerStyle={{backgroundColor: 'transparent', borderBottomWidth: 0}} leftComponent={renderLeftHeader()}/>
+                    {renderContent()}
+                    <CBDivider style={{marginTop: 30}}/>
+                    {renderTransactionDetail()}
+                </CBView>
+                <CBView style={[appStyles.footer, {marginBottom: 15}]}>
+                    <CBButton style={[appStyles.button, {width: dimens.widthScreen - 30, marginVertical: 15}]} buttonStyle={{height: 50}} titleStyle={[appStyles.text, {fontSize: dimens.largeText, fontFamily: 'NeueHaasDisplay-Mediu', color: colors.backgroundColor}]} title={'Done'} onPress={onGoHome}/>
+                </CBView>
+            </CBView>
         </CBImageBackground>
     );
 });

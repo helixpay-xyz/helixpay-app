@@ -5,6 +5,7 @@ import SendConfirmationPopup from 'screens/popup/SendConfirmationPopup';
 
 import Base from 'screens/Base';
 import {strings} from "controls/i18n";
+import JsonUtil from "utils/JsonUtil";
 
 export default class Send extends Base {
 
@@ -18,17 +19,18 @@ export default class Send extends Base {
     }
 
     onSend = (values) => {
+        const orderData = [
+            { label: 'Receive Amount', value: values.amount },
+            { label: 'Network', value: 'Viction' },
+            { label: 'Send From', value: 'misterbo' },
+            { label: 'Receiver', value: values.address },
+            { label: 'Note', value: 'Nothing' }
+        ]
         this.sendConfirmationRef.current.show(
             {
                 title: 'Confirm Order',
-                order : [
-                    { label: 'Receive Amount', value: values.amount },
-                    { label: 'Network', value: 'Viction' },
-                    { label: 'Send From', value: 'misterbo' },
-                    { label: 'Receiver', value: values.address },
-                    { label: 'Note', value: 'Nothing' }
-                ],
-                onSendSuccess: this.onSendSuccess
+                order : orderData,
+                onSendSuccess: this.onSendSuccess(orderData)
             }
         );
     }
@@ -41,8 +43,12 @@ export default class Send extends Base {
         this.onSendSuccess();
     };
 
-    onSendSuccess = () => {
-        RootNavigation.navigate('SendSuccess');
+    onSendSuccess = (order) => () => {
+        RootNavigation.navigate('SendSuccess', {
+            defaultParam: JsonUtil.buildDefaultParam({
+                order: order || [],
+            })
+        });
     }
 
     render() {

@@ -29,6 +29,7 @@ export default class ImageUtil {
         solana: require('assets/images/solana.png'),
         usdt: require('assets/images/usdt.png'),
         viction: require('assets/images/viction.png'),
+        check_success: require('assets/images/check_success.png'),
     };
 
     static getImage(imageUrl) {

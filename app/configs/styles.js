@@ -118,8 +118,6 @@ export const appStyles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingVertical: 10,
         paddingHorizontal: 15,
-        borderTopWidth: 1,
-        borderColor: colors.lineColor
     },
     button: {
         height: 45,
