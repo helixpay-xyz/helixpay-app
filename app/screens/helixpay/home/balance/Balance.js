@@ -10,17 +10,30 @@ import Toast from 'react-native-simple-toast';
 import { strings } from 'controls/i18n';
 import axios from 'axios';
 import {privateKeyToAccount, publicKeyToAddress, english, generateMnemonic, mnemonicToAccount } from 'viem/accounts';
-import { bytesToHex, hexToBytes, keccak256 } from 'viem';
+import {
+    bytesToHex,
+    createPublicClient,
+    defineChain,
+    hexToBytes,
+    keccak256,
+    http,
+    encodeFunctionData,
+    createWalletClient
+} from 'viem';
 import {getPublicKey, getSharedSecret, ProjectivePoint, utils, CURVE} from '@noble/secp256k1';
-
 const STEALTH_ADDRESS_SIGNATURE = "Stealth Signed Message:\n";
 
 import Base from 'screens/Base';
+import {victionTestnet} from "viem/chains";
 
 export default class Balance extends Base {
 
     constructor(props) {
         super(props);
+        this.client = createPublicClient({
+            chain: victionTestnet,
+            transport: http(),
+        });
         this.state = {
             address: null,
             refreshing: false,
@@ -193,9 +206,43 @@ export default class Balance extends Base {
             stealthKey.spendingKey.publicKey,
             stealthKey.viewingKey.publicKey
         );
-        console.log(`mienpv :: ${JSON.stringify(values)}`);
+        await this.sendTransaction(account, values.username, stealthMeta);
+    };
 
-    }
+    callData = (username, stealthMeta) =>  encodeFunctionData({
+        abi: require('assets/jsons/stealth.abi.json'),
+        functionName: "setStealthKeys",
+        args: [
+            username,
+            stealthMeta,
+        ],
+    });
+
+    toBytes32 = (str) => {
+        const paddedStr = str.padEnd(32, '\0');
+        const hexString = '0x' + [...paddedStr].map(c => c.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+        return hexString;
+    };
+
+    sendTransaction = async (account, username, stealthMeta) => {
+        const hexUserName = this.toBytes32(username);
+        try {
+            const walletClient = createWalletClient({
+                chain: victionTestnet,
+                account: account,
+                transport: http(),
+            });
+            const transactionHash = await walletClient.sendTransaction({
+                to: "0x5715729dcfFc6717eb53D4E4446322368d4cF7F3",
+                data: this.callData(hexUserName, stealthMeta),
+                gasLimit: 1000000n,
+                gas: 250000n,
+            });
+            console.log('Transaction Hash:', transactionHash);
+        } catch (error) {
+            console.error('Error sending transaction:', error);
+        }
+    };
 
     onSend = () => {
         RootNavigation.navigate('Send');
