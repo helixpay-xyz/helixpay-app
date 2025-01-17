@@ -25,7 +25,6 @@ const STEALTH_ADDRESS_SIGNATURE = "Stealth Signed Message:\n";
 
 import Base from 'screens/Base';
 import {victionTestnet} from "viem/chains";
-import TransactionUtil from "utils/TransactionUtil";
 
 export default class Balance extends Base {
 
@@ -120,16 +119,6 @@ export default class Balance extends Base {
         return { portion1, portion2, lastByte };
     };
 
-    parseKeysFromStealthMetaAddress = (stealthMeta) => {
-        const spendingPublicKey = `0x${stealthMeta.slice(2, 68)}`;
-        const viewingPublicKey = `0x${stealthMeta.slice(68)}`;
-
-        return {
-            spendingPublicKey,
-            viewingPublicKey,
-        };
-    };
-
     getViewTag = (hashSharedSecret) => {
         return `0x${hashSharedSecret.toString().substring(2, 4)}`;
     };
@@ -144,32 +133,6 @@ export default class Balance extends Base {
                 .add(hashedSharedSecretPoint)
                 .toRawBytes(false)
         );
-    };
-
-    generateStealthAddress = (stealthMeta) => {
-        const ephemeralPrivateKey = utils.randomPrivateKey();
-        const ephemeralPublicKey = getPublicKey(ephemeralPrivateKey, true);
-        const sharedSecret = getSharedSecret(
-            ephemeralPrivateKey,
-            ProjectivePoint.fromHex(stealthMeta.viewingPublicKey.slice(2)).toRawBytes(
-                true
-            )
-        );
-
-        const hashSharedSecret = keccak256(sharedSecret);
-        const viewTag = this.getViewTag(hashSharedSecret);
-
-        const newStealthPublicKey = this.getStealthPublicKey(
-            stealthMeta.spendingPublicKey,
-            hashSharedSecret
-        );
-        const newStealthAddress = publicKeyToAddress(newStealthPublicKey);
-
-        return {
-            stealthPublicKey: newStealthAddress,
-            ephemeralPublicKey: bytesToHex(ephemeralPublicKey),
-            viewTag,
-        };
     };
 
     addPriv = ({ a, b }) => {
