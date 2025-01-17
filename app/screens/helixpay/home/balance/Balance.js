@@ -204,11 +204,15 @@ export default class Balance extends Base {
 
     onSend = () => {
         RootNavigation.navigate('Send');
-    }
+    };
+
+    onReceive = () => {
+        RootNavigation.navigate('Receive');
+    };
 
     onRefresh = () => {
         this.load();
-    }
+    };
 
     onCopyAddress = () => {
         const { address } = this.state;
@@ -264,7 +268,7 @@ export default class Balance extends Base {
     render() {
         const {refreshing, address, username, balances, transactions} = this.state;
         return (
-            <BalanceContent defaultParam={this.defaultParam} refreshing={refreshing} username={username} address={address} balances={balances} transactions={transactions} onCreateUser={this.onCreateUser} onRefresh={this.onRefresh} onCopyAddress={this.onCopyAddress} onSend={this.onSend}/>
+            <BalanceContent defaultParam={this.defaultParam} refreshing={refreshing} username={username} address={address} balances={balances} transactions={transactions} onCreateUser={this.onCreateUser} onRefresh={this.onRefresh} onCopyAddress={this.onCopyAddress} onSend={this.onSend} onReceive={this.onReceive}/>
         );
     }
 }

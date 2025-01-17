@@ -7,7 +7,7 @@ import {observer} from 'mobx-react';
 import colors from 'configs/colors';
 import CreateUsernamePopup from 'screens/popup/CreateUsernamePopup';
 
-const BalanceContent = observer(({defaultParam, refreshing, username, address, balances, transactions, onCreateUser, onCopyAddress, onRefresh, onSend}) => {
+const BalanceContent = observer(({defaultParam, refreshing, username, address, balances, transactions, onCreateUser, onCopyAddress, onRefresh, onSend, onReceive}) => {
 
     const createUsernamePopup = useRef(null);
 
@@ -81,7 +81,7 @@ const BalanceContent = observer(({defaultParam, refreshing, username, address, b
                         </CBView>
                         <CBText style={[appStyles.text, {marginTop: 5, fontSize: dimens.normalText, fontFamily: 'GoogleSans-Medium'}]}>{'Send'}</CBText>
                     </CBTouchableOpacity>
-                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}}>
+                    <CBTouchableOpacity style={{width: dimens.widthScreen / 5 - 3, justifyContent: 'center', alignItems: 'center', marginHorizontal: 5}} onPress={onReceive}>
                         <CBView style={{backgroundColor: colors.brandingColor200, padding: 15, borderRadius: 30}}>
                             <CBIcon type={'ionicon'} name={'arrow-down-outline'} color={colors.backgroundColor} size={26}/>
                         </CBView>
