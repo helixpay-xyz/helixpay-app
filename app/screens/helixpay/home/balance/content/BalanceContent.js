@@ -40,7 +40,8 @@ const BalanceContent = observer(({defaultParam, refreshing, username, address, b
     const renderLeftHeader = () => {
         return (
             <CBView style={[appStyles.row, {width: dimens.widthScreen / 2}]}>
-                <CBImage containerStyle={{marginLeft: 5, borderRadius: 30}} style={{width: 42, height: 42}} source={ImageUtil.getImage('avatar')}/>
+                <CBText style={[appStyles.heading, {marginLeft: 15, fontSize: dimens.xLargeText}]} numberOfLines={1}>{'PendaPay'}</CBText>
+                {/*<CBImage containerStyle={{marginLeft: 5, borderRadius: 30}} style={{width: 42, height: 42}} source={ImageUtil.getImage('avatar')}/>*/}
             </CBView>
         )
     }
@@ -48,12 +49,11 @@ const BalanceContent = observer(({defaultParam, refreshing, username, address, b
     const renderRightHeader = () => {
         return (
             <CBView style={[appStyles.row, {justifyContent: 'flex-end', width: dimens.widthScreen / 2}]}>
-                <CBTouchableOpacity style={[appStyles.row, {marginRight: 5, backgroundColor: 'rgba(0, 0, 0, 0.25)', paddingHorizontal: 12, paddingVertical: 5, borderRadius: 18}]} onPress={onCopyAddress}>
-                    <CBText style={[appStyles.text, {color: colors.white, marginRight: 5}]}>{shortenAddress(address)}</CBText>
-                    <CBIcon type={'ionicon'} name={'copy-outline'} color={colors.white} size={18}/>
+                <CBTouchableOpacity style={{marginRight: 5, padding: 5, borderRadius: 18}}>
+                    <CBIcon type={'ionicon'} name={'qr-code-outline'} color={colors.white} size={24}/>
                 </CBTouchableOpacity>
-                <CBTouchableOpacity style={{marginRight: 15, backgroundColor: 'rgba(0, 0, 0, 0.25)', padding: 5, borderRadius: 18}}>
-                    <CBIcon type={'ionicon'} name={'add-outline'} color={colors.white} size={26}/>
+                <CBTouchableOpacity style={{marginRight: 15, padding: 5, borderRadius: 18}}>
+                    <CBIcon type={'ionicon'} name={'add-outline'} color={colors.white} size={28}/>
                 </CBTouchableOpacity>
             </CBView>
         )
